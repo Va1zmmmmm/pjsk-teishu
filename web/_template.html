@@ -641,6 +641,10 @@ const COVER_PH = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
 function fixCovers(root){
   root.querySelectorAll('img[src^="covers/"]').forEach(img => {
     const abn = img.getAttribute("src").slice(7).replace(/\.webp$/, "");
+    /* ⚠️ storage.sekai.best 对带了跨站 Referer 的请求直接 403（实测），
+       所以必须声明 no-referrer 才能从 github.io 上把封面拉下来；
+       file:// 打开时本来就没有 Referer，所以本地测试发现不了这个坑 */
+    img.referrerPolicy = "no-referrer";
     if (!abn || abn === "noimg"){ img.removeAttribute("onerror"); img.src = COVER_PH; return; }
     const jp = COVER_JP(abn);
     img.onerror = () => { img.onerror = () => { img.onerror = null; img.src = COVER_PH; };
