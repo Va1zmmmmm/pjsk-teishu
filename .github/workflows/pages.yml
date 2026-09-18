@@ -35,6 +35,9 @@ jobs:
         run: |
           mkdir -p _site
           cp -r web/. _site/
+          # 自定义域名必须落在**产物根目录**里：Actions 发布的站点认产物内的 CNAME，
+          # 仓库根目录的 CNAME 文件不进产物、不生效（2026-09-19 实测踩到）
+          echo "va1z.xyz" > _site/CNAME
           echo "=== _site 内容 ==="
           find _site -type f | sort
           echo "=== web 源内容 ==="
