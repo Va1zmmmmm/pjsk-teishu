@@ -26,6 +26,9 @@ jobs:
         with:
           # 仓库还没开 Pages 时由这一步自动开启（需要 workflow 的 pages: write 权限）
           enablement: true
+          # 自定义域名：Actions 发布的站点**不读仓库根目录的 CNAME 文件**，
+          # 必须在这里声明，否则 Pages 的 cname 一直是 null（2026-09-19 实测踩到）
+          cname: va1z.xyz
 
       - name: Copy web/ to site root
         shell: bash
