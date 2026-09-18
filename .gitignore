@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 凭据 —— 永远不要提交
+credentials.json
+pipeline/credentials.json
+.env
+*.key
+
+# 个人账号数据（本仓库是公共工具，个人成绩一律不进仓库）
+data/user_suite*.json
+data/user_results_all*.csv
+data/master_all.json
+data/analysis.json
+data/master_unfc*
+data/*.xlsx
+web/covers/
+web/unfc_teishu.html
+
+# 本地工具 / 临时产物
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+tmp/

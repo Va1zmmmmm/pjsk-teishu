@@ -1,0 +1,5364 @@
+{
+ "needLe": {
+  "title": "needLe",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "1:54",
+  "bpm_var": false
+ },
+ "ステラ": {
+  "title": "ステラ",
+  "bpm_lo": 197.0,
+  "bpm_hi": 197.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "霽れを待つ": {
+  "title": "霽れを待つ",
+  "bpm_lo": 168.0,
+  "bpm_hi": 168.0,
+  "duration": "1:54",
+  "bpm_var": false
+ },
+ "「1」": {
+  "title": "「1」",
+  "bpm_lo": 145.0,
+  "bpm_hi": 148.0,
+  "duration": "1:38",
+  "bpm_var": true
+ },
+ "フロムトーキョー": {
+  "title": "フロムトーキョー",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "流星のパルス": {
+  "title": "流星のパルス",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "STAGE OF SEKAI": {
+  "title": "STAGE OF SEKAI",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "Peaky Peaky": {
+  "title": "Peaky Peaky",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "1:45",
+  "bpm_var": false
+ },
+ "オーダーメイド": {
+  "title": "オーダーメイド",
+  "bpm_lo": 75.0,
+  "bpm_hi": 75.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "てらてら": {
+  "title": "てらてら",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "Voices": {
+  "title": "Voices",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "the WALL": {
+  "title": "the WALL",
+  "bpm_lo": 183.0,
+  "bpm_hi": 183.0,
+  "duration": "1:51",
+  "bpm_var": false
+ },
+ "Flyway": {
+  "title": "Flyway",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "相生": {
+  "title": "相生",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:41",
+  "bpm_var": false
+ },
+ "星を繋ぐ": {
+  "title": "星を繋ぐ",
+  "bpm_lo": 174.0,
+  "bpm_hi": 174.0,
+  "duration": "1:36",
+  "bpm_var": false
+ },
+ "purpose": {
+  "title": "purpose",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "1:48",
+  "bpm_var": false
+ },
+ "レグルス": {
+  "title": "レグルス",
+  "bpm_lo": 146.0,
+  "bpm_hi": 146.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "インテグラル": {
+  "title": "インテグラル",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "すれすれ": {
+  "title": "すれすれ",
+  "bpm_lo": 86.0,
+  "bpm_hi": 86.0,
+  "duration": "1:37",
+  "bpm_var": false
+ },
+ "それでも僕らは歌うことをやめない": {
+  "title": "それでも僕らは歌うことをやめない",
+  "bpm_lo": 182.0,
+  "bpm_hi": 182.0,
+  "duration": "1:38",
+  "bpm_var": false
+ },
+ "その音が鳴るなら": {
+  "title": "その音が鳴るなら",
+  "bpm_lo": 213.0,
+  "bpm_hi": 213.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "SToRY": {
+  "title": "SToRY",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "1:36",
+  "bpm_var": false
+ },
+ "Sympathy": {
+  "title": "Sympathy",
+  "bpm_lo": 184.0,
+  "bpm_hi": 184.0,
+  "duration": "1:37",
+  "bpm_var": false
+ },
+ "透明なパレット": {
+  "title": "透明なパレット",
+  "bpm_lo": 210.0,
+  "bpm_hi": 210.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "スター": {
+  "title": "スター",
+  "bpm_lo": 143.0,
+  "bpm_hi": 143.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "花結び": {
+  "title": "花結び",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "このまんまでいこう": {
+  "title": "このまんまでいこう",
+  "bpm_lo": 177.0,
+  "bpm_hi": 177.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "星に一番近い場所": {
+  "title": "星に一番近い場所",
+  "bpm_lo": 218.0,
+  "bpm_hi": 218.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "天秤、指先で触れて": {
+  "title": "天秤、指先で触れて",
+  "bpm_lo": 172.0,
+  "bpm_hi": 172.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "アイドル新鋭隊": {
+  "title": "アイドル新鋭隊",
+  "bpm_lo": 176.0,
+  "bpm_hi": 176.0,
+  "duration": "1:46",
+  "bpm_var": false
+ },
+ "モア！ジャンプ！モア！": {
+  "title": "モア！ジャンプ！モア！",
+  "bpm_lo": 202.0,
+  "bpm_hi": 202.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "Color of Drops": {
+  "title": "Color of Drops",
+  "bpm_lo": 152.0,
+  "bpm_hi": 152.0,
+  "duration": "1:54",
+  "bpm_var": false
+ },
+ "天使のクローバー": {
+  "title": "天使のクローバー",
+  "bpm_lo": 193.0,
+  "bpm_hi": 193.0,
+  "duration": "1:58",
+  "bpm_var": false
+ },
+ "アイノマテリアル": {
+  "title": "アイノマテリアル",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "アイスドロップ": {
+  "title": "アイスドロップ",
+  "bpm_lo": 158.0,
+  "bpm_hi": 158.0,
+  "duration": "1:46",
+  "bpm_var": false
+ },
+ "ワールドワイドワンダー": {
+  "title": "ワールドワイドワンダー",
+  "bpm_lo": 142.0,
+  "bpm_hi": 142.0,
+  "duration": "1:37",
+  "bpm_var": false
+ },
+ "メタモリボン": {
+  "title": "メタモリボン",
+  "bpm_lo": 123.0,
+  "bpm_hi": 123.0,
+  "duration": "1:43",
+  "bpm_var": false
+ },
+ "イフ": {
+  "title": "イフ",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "パラソルサイダー": {
+  "title": "パラソルサイダー",
+  "bpm_lo": 176.0,
+  "bpm_hi": 176.0,
+  "duration": "1:31",
+  "bpm_var": false
+ },
+ "DREAM PLACE": {
+  "title": "DREAM PLACE",
+  "bpm_lo": 136.0,
+  "bpm_hi": 136.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "フロート・プランナー": {
+  "title": "フロート・プランナー",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "1:43",
+  "bpm_var": false
+ },
+ "私は、私達は": {
+  "title": "私は、私達は",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:48",
+  "bpm_var": false
+ },
+ "ももいろの鍵": {
+  "title": "ももいろの鍵",
+  "bpm_lo": 165.0,
+  "bpm_hi": 165.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "チームメイト": {
+  "title": "チームメイト",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "はぐ": {
+  "title": "はぐ",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "MOTTO!!!": {
+  "title": "MOTTO!!!",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "JUMPIN’ OVER&#160;!": {
+  "title": "JUMPIN’ OVER&#160;!",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:49",
+  "bpm_var": false
+ },
+ "Supernova": {
+  "title": "Supernova",
+  "bpm_lo": 105.0,
+  "bpm_hi": 105.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "キラー": {
+  "title": "キラー",
+  "bpm_lo": 196.0,
+  "bpm_hi": 196.0,
+  "duration": "1:38",
+  "bpm_var": false
+ },
+ "はしる! とおく! とどく!": {
+  "title": "はしる! とおく! とどく!",
+  "bpm_lo": 182.0,
+  "bpm_hi": 182.0,
+  "duration": "1:49",
+  "bpm_var": false
+ },
+ "FUN!!": {
+  "title": "FUN!!",
+  "bpm_lo": 186.0,
+  "bpm_hi": 186.0,
+  "duration": "1:35",
+  "bpm_var": false
+ },
+ "アンチユー": {
+  "title": "アンチユー",
+  "bpm_lo": 129.0,
+  "bpm_hi": 129.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "イレヴンス": {
+  "title": "イレヴンス",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "1:38",
+  "bpm_var": false
+ },
+ "ありのままのストーリーを": {
+  "title": "ありのままのストーリーを",
+  "bpm_lo": 181.0,
+  "bpm_hi": 181.0,
+  "duration": "1:48",
+  "bpm_var": false
+ },
+ "あなたの空が泣くのなら": {
+  "title": "あなたの空が泣くのなら",
+  "bpm_lo": 88.0,
+  "bpm_hi": 88.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "Polar Star": {
+  "title": "Polar Star",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "1:36",
+  "bpm_var": false
+ },
+ "カラフルファンデーション": {
+  "title": "カラフルファンデーション",
+  "bpm_lo": 168.0,
+  "bpm_hi": 168.0,
+  "duration": "1:53",
+  "bpm_var": false
+ },
+ "Gimme more!": {
+  "title": "Gimme more!",
+  "bpm_lo": 123.0,
+  "bpm_hi": 123.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "スターダストレイン": {
+  "title": "スターダストレイン",
+  "bpm_lo": 20.0,
+  "bpm_hi": 118.0,
+  "duration": "2:00",
+  "bpm_var": true
+ },
+ "Ready Steady": {
+  "title": "Ready Steady",
+  "bpm_lo": 115.0,
+  "bpm_hi": 115.0,
+  "duration": "1:32",
+  "bpm_var": false
+ },
+ "Forward": {
+  "title": "Forward",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "1:54",
+  "bpm_var": false
+ },
+ "RAD DOGS": {
+  "title": "RAD DOGS",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "シネマ": {
+  "title": "シネマ",
+  "bpm_lo": 124.0,
+  "bpm_hi": 124.0,
+  "duration": "1:46",
+  "bpm_var": false
+ },
+ "Beat Eater": {
+  "title": "Beat Eater",
+  "bpm_lo": 137.0,
+  "bpm_hi": 137.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "ミライ": {
+  "title": "ミライ",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "2:38",
+  "bpm_var": false
+ },
+ "Flyer!": {
+  "title": "Flyer!",
+  "bpm_lo": 188.0,
+  "bpm_hi": 188.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "月光": {
+  "title": "月光",
+  "bpm_lo": 109.0,
+  "bpm_hi": 109.0,
+  "duration": "2:37",
+  "bpm_var": false
+ },
+ "Awake Now": {
+  "title": "Awake Now",
+  "bpm_lo": 117.0,
+  "bpm_hi": 117.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "街": {
+  "title": "街",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "虚ろを扇ぐ": {
+  "title": "虚ろを扇ぐ",
+  "bpm_lo": 124.0,
+  "bpm_hi": 124.0,
+  "duration": "2:36",
+  "bpm_var": false
+ },
+ "仮死化": {
+  "title": "仮死化",
+  "bpm_lo": 184.0,
+  "bpm_hi": 184.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "ひつじがいっぴき": {
+  "title": "ひつじがいっぴき",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "下剋上": {
+  "title": "下剋上",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:35",
+  "bpm_var": false
+ },
+ "リアライズ": {
+  "title": "リアライズ",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "1:33",
+  "bpm_var": false
+ },
+ "CR詠ZY": {
+  "title": "CR詠ZY",
+  "bpm_lo": 122.0,
+  "bpm_hi": 122.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "Beyond the way": {
+  "title": "Beyond the way",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "blender": {
+  "title": "blender",
+  "bpm_lo": 103.0,
+  "bpm_hi": 103.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "烈火": {
+  "title": "烈火",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "ULTRA C": {
+  "title": "ULTRA C",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "1:37",
+  "bpm_var": false
+ },
+ "フューエル": {
+  "title": "フューエル",
+  "bpm_lo": 156.0,
+  "bpm_hi": 156.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "ヘイヴン": {
+  "title": "ヘイヴン",
+  "bpm_lo": 144.0,
+  "bpm_hi": 144.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "ファイアダンス": {
+  "title": "ファイアダンス",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "1:31",
+  "bpm_var": false
+ },
+ "光線歌": {
+  "title": "光線歌",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "アクセラレイト": {
+  "title": "アクセラレイト",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "ファイター": {
+  "title": "ファイター",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "1:46",
+  "bpm_var": false
+ },
+ "透過する温度": {
+  "title": "透過する温度",
+  "bpm_lo": 100.0,
+  "bpm_hi": 100.0,
+  "duration": "1:51",
+  "bpm_var": false
+ },
+ "CRASH THE PARTY": {
+  "title": "CRASH THE PARTY",
+  "bpm_lo": 162.0,
+  "bpm_hi": 162.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "羽歌": {
+  "title": "羽歌",
+  "bpm_lo": 184.0,
+  "bpm_hi": 184.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "正解": {
+  "title": "正解",
+  "bpm_lo": 155.0,
+  "bpm_hi": 155.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "セカイはまだ始まってすらいない": {
+  "title": "セカイはまだ始まってすらいない",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "potatoになっていく": {
+  "title": "potatoになっていく",
+  "bpm_lo": 116.0,
+  "bpm_hi": 116.0,
+  "duration": "1:47",
+  "bpm_var": false
+ },
+ "ニジイロストーリーズ": {
+  "title": "ニジイロストーリーズ",
+  "bpm_lo": 115.0,
+  "bpm_hi": 230.0,
+  "duration": "2:01",
+  "bpm_var": true
+ },
+ "ワンスアポンアドリーム": {
+  "title": "ワンスアポンアドリーム",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "トンデモワンダーズ": {
+  "title": "トンデモワンダーズ",
+  "bpm_lo": 160.0,
+  "bpm_hi": 180.0,
+  "duration": "2:04",
+  "bpm_var": true
+ },
+ "Glory Steady Go!": {
+  "title": "Glory Steady Go!",
+  "bpm_lo": 131.0,
+  "bpm_hi": 131.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "ショウタイム·ルーラー": {
+  "title": "ショウタイム·ルーラー",
+  "bpm_lo": 204.0,
+  "bpm_hi": 204.0,
+  "duration": "1:48",
+  "bpm_var": false
+ },
+ "にっこり^^調査隊のテーマ": {
+  "title": "にっこり^^調査隊のテーマ",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "88☆彡": {
+  "title": "88☆彡",
+  "bpm_lo": 175.0,
+  "bpm_hi": 175.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "星空のメロディー": {
+  "title": "星空のメロディー",
+  "bpm_lo": 113.0,
+  "bpm_hi": 113.0,
+  "duration": "1:48",
+  "bpm_var": false
+ },
+ "星空オーケストラ": {
+  "title": "星空オーケストラ",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "Mr. Showtime": {
+  "title": "Mr. Showtime",
+  "bpm_lo": 218.0,
+  "bpm_hi": 218.0,
+  "duration": "2:18",
+  "bpm_var": false
+ },
+ "箱庭のコラル": {
+  "title": "箱庭のコラル",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "キラピピ★キラピカ": {
+  "title": "キラピピ★キラピカ",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "フィラメントフィーバー": {
+  "title": "フィラメントフィーバー",
+  "bpm_lo": 114.0,
+  "bpm_hi": 229.0,
+  "duration": "1:54",
+  "bpm_var": true
+ },
+ "サイバーパンクデッドボーイ": {
+  "title": "サイバーパンクデッドボーイ",
+  "bpm_lo": 157.0,
+  "bpm_hi": 157.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "世界を照らすテトラッド": {
+  "title": "世界を照らすテトラッド",
+  "bpm_lo": 155.0,
+  "bpm_hi": 155.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "オペラ！スペースオペラ！": {
+  "title": "オペラ！スペースオペラ！",
+  "bpm_lo": 198.0,
+  "bpm_hi": 198.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "成敗いたAAAAAす！": {
+  "title": "成敗いたAAAAAす！",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "ぼくのかみさま": {
+  "title": "ぼくのかみさま",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "スマイル*シンフォニー": {
+  "title": "スマイル*シンフォニー",
+  "bpm_lo": 122.0,
+  "bpm_hi": 122.0,
+  "duration": "1:34",
+  "bpm_var": false
+ },
+ "オールセーブチャレンジ": {
+  "title": "オールセーブチャレンジ",
+  "bpm_lo": 171.0,
+  "bpm_hi": 171.0,
+  "duration": "1:36",
+  "bpm_var": false
+ },
+ "アイリッド": {
+  "title": "アイリッド",
+  "bpm_lo": 124.0,
+  "bpm_hi": 124.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "サヨナラ天国また来て地獄": {
+  "title": "サヨナラ天国また来て地獄",
+  "bpm_lo": 113.0,
+  "bpm_hi": 113.0,
+  "duration": "1:49",
+  "bpm_var": false
+ },
+ "征け": {
+  "title": "征け",
+  "bpm_lo": 120.48,
+  "bpm_hi": 150.0,
+  "duration": "1:51",
+  "bpm_var": true
+ },
+ "とびだせ！わんだぴょい": {
+  "title": "とびだせ！わんだぴょい",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "傀儡のうつつ": {
+  "title": "傀儡のうつつ",
+  "bpm_lo": 142.0,
+  "bpm_hi": 142.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "オールイン・ワン": {
+  "title": "オールイン・ワン",
+  "bpm_lo": 195.0,
+  "bpm_hi": 210.0,
+  "duration": "2:09",
+  "bpm_var": true
+ },
+ "悔やむと書いてミライ": {
+  "title": "悔やむと書いてミライ",
+  "bpm_lo": 194.0,
+  "bpm_hi": 194.0,
+  "duration": "1:40",
+  "bpm_var": false
+ },
+ "携帯恋話": {
+  "title": "携帯恋話",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "ジャックポットサッドガール": {
+  "title": "ジャックポットサッドガール",
+  "bpm_lo": 204.0,
+  "bpm_hi": 204.0,
+  "duration": "1:23",
+  "bpm_var": false
+ },
+ "限りなく灰色へ": {
+  "title": "限りなく灰色へ",
+  "bpm_lo": 108.0,
+  "bpm_hi": 108.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "アイディスマイル": {
+  "title": "アイディスマイル",
+  "bpm_lo": 171.0,
+  "bpm_hi": 171.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "カナデトモスソラ": {
+  "title": "カナデトモスソラ",
+  "bpm_lo": 79.0,
+  "bpm_hi": 79.0,
+  "duration": "1:54",
+  "bpm_var": false
+ },
+ "再生": {
+  "title": "再生",
+  "bpm_lo": 76.0,
+  "bpm_hi": 76.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "ロウワー": {
+  "title": "ロウワー",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "1:47",
+  "bpm_var": false
+ },
+ "トリコロージュ": {
+  "title": "トリコロージュ",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "ノマド": {
+  "title": "ノマド",
+  "bpm_lo": 90.0,
+  "bpm_hi": 90.0,
+  "duration": "1:31",
+  "bpm_var": false
+ },
+ "バグ": {
+  "title": "バグ",
+  "bpm_lo": 186.0,
+  "bpm_hi": 186.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "君の夜をくれ": {
+  "title": "君の夜をくれ",
+  "bpm_lo": 80.0,
+  "bpm_hi": 80.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "Iなんです": {
+  "title": "Iなんです",
+  "bpm_lo": 92.5,
+  "bpm_hi": 185.0,
+  "duration": "1:46",
+  "bpm_var": true
+ },
+ "ザムザ": {
+  "title": "ザムザ",
+  "bpm_lo": 121.0,
+  "bpm_hi": 121.0,
+  "duration": "1:54",
+  "bpm_var": false
+ },
+ "キティ": {
+  "title": "キティ",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "1:54",
+  "bpm_var": false
+ },
+ "演劇": {
+  "title": "演劇",
+  "bpm_lo": 176.0,
+  "bpm_hi": 176.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "トワイライトライト": {
+  "title": "トワイライトライト",
+  "bpm_lo": 88.0,
+  "bpm_hi": 88.0,
+  "duration": "1:44",
+  "bpm_var": false
+ },
+ "25時の情熱": {
+  "title": "25時の情熱",
+  "bpm_lo": 86.0,
+  "bpm_hi": 86.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "私は雨": {
+  "title": "私は雨",
+  "bpm_lo": 144.0,
+  "bpm_hi": 144.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "エンパープル": {
+  "title": "エンパープル",
+  "bpm_lo": 136.0,
+  "bpm_hi": 136.0,
+  "duration": "1:58",
+  "bpm_var": false
+ },
+ "化けの花": {
+  "title": "化けの花",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "余花にみとれて": {
+  "title": "余花にみとれて",
+  "bpm_lo": 83.0,
+  "bpm_hi": 83.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "そこに在る、光。": {
+  "title": "そこに在る、光。",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "1:36",
+  "bpm_var": false
+ },
+ "D/N/A": {
+  "title": "D/N/A",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "虚無さん": {
+  "title": "虚無さん",
+  "bpm_lo": 115.0,
+  "bpm_hi": 115.0,
+  "duration": "1:34",
+  "bpm_var": false
+ },
+ "飾って": {
+  "title": "飾って",
+  "bpm_lo": 90.0,
+  "bpm_hi": 90.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "その絵の名前は": {
+  "title": "その絵の名前は",
+  "bpm_lo": 86.0,
+  "bpm_hi": 86.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "幸福刑": {
+  "title": "幸福刑",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "告白": {
+  "title": "告白",
+  "bpm_lo": 78.0,
+  "bpm_hi": 78.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "光": {
+  "title": "光",
+  "bpm_lo": 172.0,
+  "bpm_hi": 172.0,
+  "duration": "1:45",
+  "bpm_var": false
+ },
+ "alive": {
+  "title": "alive",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "1:58",
+  "bpm_var": false
+ },
+ "Brand New Day": {
+  "title": "Brand New Day",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "花を唄う": {
+  "title": "花を唄う",
+  "bpm_lo": 115.0,
+  "bpm_hi": 115.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "泡沫未来": {
+  "title": "泡沫未来",
+  "bpm_lo": 179.0,
+  "bpm_hi": 179.0,
+  "duration": "1:44",
+  "bpm_var": false
+ },
+ "そうだった！！": {
+  "title": "そうだった！！",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "magic number": {
+  "title": "magic number",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "1:51",
+  "bpm_var": false
+ },
+ "マシンガンポエムドール": {
+  "title": "マシンガンポエムドール",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "しっくおぶはうす！": {
+  "title": "しっくおぶはうす！",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:21",
+  "bpm_var": false
+ },
+ "去り人達のワルツ": {
+  "title": "去り人達のワルツ",
+  "bpm_lo": 178.0,
+  "bpm_hi": 178.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "ラストスコア": {
+  "title": "ラストスコア",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "ジウダス": {
+  "title": "ジウダス",
+  "bpm_lo": 198.0,
+  "bpm_hi": 198.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "ONESELF": {
+  "title": "ONESELF",
+  "bpm_lo": 160.0,
+  "bpm_hi": 170.0,
+  "duration": "2:09",
+  "bpm_var": true
+ },
+ "未完成讃歌": {
+  "title": "未完成讃歌",
+  "bpm_lo": 188.0,
+  "bpm_hi": 188.0,
+  "duration": "2:36",
+  "bpm_var": false
+ },
+ "それでもいいんだよ": {
+  "title": "それでもいいんだよ",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "ÅMARA(大未来電脳)": {
+  "title": "ÅMARA(大未来電脳)",
+  "bpm_lo": 112.0,
+  "bpm_hi": 229.0,
+  "duration": "2:34",
+  "bpm_var": true
+ },
+ "いちにのさんで": {
+  "title": "いちにのさんで",
+  "bpm_lo": 83.0,
+  "bpm_hi": 83.0,
+  "duration": "2:42",
+  "bpm_var": false
+ },
+ "陽だまりのセツナ": {
+  "title": "陽だまりのセツナ",
+  "bpm_lo": 217.0,
+  "bpm_hi": 217.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "What's up? Pop!": {
+  "title": "What's up? Pop!",
+  "bpm_lo": 85.0,
+  "bpm_hi": 230.0,
+  "duration": "2:40",
+  "bpm_var": true
+ },
+ "星界ちゃんと可不ちゃんのおつかい合騒曲": {
+  "title": "星界ちゃんと可不ちゃんのおつかい合騒曲",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "2:34",
+  "bpm_var": false
+ },
+ "天使の翼。": {
+  "title": "天使の翼。",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "2:49",
+  "bpm_var": false
+ },
+ "Where shall we go?": {
+  "title": "Where shall we go?",
+  "bpm_lo": 119.0,
+  "bpm_hi": 119.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "ヤミナベ!!!!": {
+  "title": "ヤミナベ!!!!",
+  "bpm_lo": 174.0,
+  "bpm_hi": 300.0,
+  "duration": "2:09",
+  "bpm_var": true
+ },
+ "エピローグに君はいない": {
+  "title": "エピローグに君はいない",
+  "bpm_lo": 85.0,
+  "bpm_hi": 85.0,
+  "duration": "1:53",
+  "bpm_var": false
+ },
+ "名も無き革命": {
+  "title": "名も無き革命",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "エターナルアリア": {
+  "title": "エターナルアリア",
+  "bpm_lo": 184.0,
+  "bpm_hi": 184.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "人生": {
+  "title": "人生",
+  "bpm_lo": 142.0,
+  "bpm_hi": 185.0,
+  "duration": "2:28",
+  "bpm_var": true
+ },
+ "スターダストメドレー": {
+  "title": "スターダストメドレー",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "心拍ペアリング": {
+  "title": "心拍ペアリング",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "1:27",
+  "bpm_var": false
+ },
+ "新人類": {
+  "title": "新人類",
+  "bpm_lo": 144.0,
+  "bpm_hi": 144.0,
+  "duration": "2:36",
+  "bpm_var": false
+ },
+ "ずんだパーリナイ": {
+  "title": "ずんだパーリナイ",
+  "bpm_lo": 150.0,
+  "bpm_hi": 170.0,
+  "duration": "2:46",
+  "bpm_var": true
+ },
+ "Disco No.39": {
+  "title": "Disco No.39",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:14",
+  "bpm_var": false
+ },
+ "ボトルケーキ": {
+  "title": "ボトルケーキ",
+  "bpm_lo": 107.0,
+  "bpm_hi": 107.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "CIRCUS PANIC!!!": {
+  "title": "CIRCUS PANIC!!!",
+  "bpm_lo": 136.0,
+  "bpm_hi": 166.0,
+  "duration": "2:18",
+  "bpm_var": true
+ },
+ "Un-Lock": {
+  "title": "Un-Lock",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "アイムマイン": {
+  "title": "アイムマイン",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:36",
+  "bpm_var": false
+ },
+ "Cool Me Down": {
+  "title": "Cool Me Down",
+  "bpm_lo": 174.0,
+  "bpm_hi": 174.0,
+  "duration": "2:29",
+  "bpm_var": false
+ },
+ "ARQETYPE": {
+  "title": "ARQETYPE",
+  "bpm_lo": 240.0,
+  "bpm_hi": 240.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "On&amp;On": {
+  "title": "On&amp;On",
+  "bpm_lo": 126.0,
+  "bpm_hi": 126.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "ショウタイム×オーディエンス": {
+  "title": "ショウタイム×オーディエンス",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "オーバーコード": {
+  "title": "オーバーコード",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "2:40",
+  "bpm_var": false
+ },
+ "心泥夢(syndrome)": {
+  "title": "心泥夢(syndrome)",
+  "bpm_lo": 123.0,
+  "bpm_hi": 123.0,
+  "duration": "2:41",
+  "bpm_var": false
+ },
+ "リレイアウター": {
+  "title": "リレイアウター",
+  "bpm_lo": 23.0,
+  "bpm_hi": 151.0,
+  "duration": "2:32",
+  "bpm_var": true
+ },
+ "おどロボ": {
+  "title": "おどロボ",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:44",
+  "bpm_var": false
+ },
+ "十六歳の心臓": {
+  "title": "十六歳の心臓",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "limbo": {
+  "title": "limbo",
+  "bpm_lo": 199.0,
+  "bpm_hi": 199.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "明鏡止水": {
+  "title": "明鏡止水",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "アコトバ": {
+  "title": "アコトバ",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "幽光、1/fのゆらめき": {
+  "title": "幽光、1/fのゆらめき",
+  "bpm_lo": 193.0,
+  "bpm_hi": 193.0,
+  "duration": "1:31",
+  "bpm_var": false
+ },
+ "嬢王": {
+  "title": "嬢王",
+  "bpm_lo": 150.0,
+  "bpm_hi": 200.0,
+  "duration": "2:23",
+  "bpm_var": true
+ },
+ "おぎゃりないざー": {
+  "title": "おぎゃりないざー",
+  "bpm_lo": 140.0,
+  "bpm_hi": 310.0,
+  "duration": "2:07",
+  "bpm_var": true
+ },
+ "シルバーコレクター": {
+  "title": "シルバーコレクター",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "ときめきジェットコースター": {
+  "title": "ときめきジェットコースター",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "I know 愛脳.": {
+  "title": "I know 愛脳.",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "合成するミライ": {
+  "title": "合成するミライ",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "LEADER": {
+  "title": "LEADER",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "ダイジョブですか？": {
+  "title": "ダイジョブですか？",
+  "bpm_lo": 151.0,
+  "bpm_hi": 254.0,
+  "duration": "2:30",
+  "bpm_var": true
+ },
+ "メリーゴーラウンド": {
+  "title": "メリーゴーラウンド",
+  "bpm_lo": 116.0,
+  "bpm_hi": 116.0,
+  "duration": "2:18",
+  "bpm_var": false
+ },
+ "イガク": {
+  "title": "イガク",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "あちこちデートさん": {
+  "title": "あちこちデートさん",
+  "bpm_lo": 46.0,
+  "bpm_hi": 107.0,
+  "duration": "2:02",
+  "bpm_var": true
+ },
+ "彗星ノ銀河": {
+  "title": "彗星ノ銀河",
+  "bpm_lo": 85.0,
+  "bpm_hi": 85.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "夏夜ノ唄": {
+  "title": "夏夜ノ唄",
+  "bpm_lo": 103.0,
+  "bpm_hi": 103.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "レイヤーノート": {
+  "title": "レイヤーノート",
+  "bpm_lo": 78.0,
+  "bpm_hi": 78.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "Unpoison": {
+  "title": "Unpoison",
+  "bpm_lo": 119.0,
+  "bpm_hi": 119.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "生命性シンドロウム": {
+  "title": "生命性シンドロウム",
+  "bpm_lo": 225.0,
+  "bpm_hi": 270.0,
+  "duration": "2:12",
+  "bpm_var": true
+ },
+ "メモリア": {
+  "title": "メモリア",
+  "bpm_lo": 205.0,
+  "bpm_hi": 205.0,
+  "duration": "2:39",
+  "bpm_var": false
+ },
+ "脳天": {
+  "title": "脳天",
+  "bpm_lo": 144.0,
+  "bpm_hi": 144.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "パリィ": {
+  "title": "パリィ",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "シークレット・シーカー": {
+  "title": "シークレット・シーカー",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "1:54",
+  "bpm_var": false
+ },
+ "はじまりの未来": {
+  "title": "はじまりの未来",
+  "bpm_lo": 156.0,
+  "bpm_hi": 156.0,
+  "duration": "2:14",
+  "bpm_var": false
+ },
+ "夏に透明": {
+  "title": "夏に透明",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "ハローセカイ": {
+  "title": "ハローセカイ",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "1:45",
+  "bpm_var": false
+ },
+ "ルルブ": {
+  "title": "ルルブ",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "プラネットヒーロー": {
+  "title": "プラネットヒーロー",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "星宙メランコリア": {
+  "title": "星宙メランコリア",
+  "bpm_lo": 196.0,
+  "bpm_hi": 196.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "フィッシュアンドTips": {
+  "title": "フィッシュアンドTips",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "庭師のおはなしによると": {
+  "title": "庭師のおはなしによると",
+  "bpm_lo": 198.0,
+  "bpm_hi": 317.0,
+  "duration": "1:57",
+  "bpm_var": true
+ },
+ "Twilight Melody": {
+  "title": "Twilight Melody",
+  "bpm_lo": 165.0,
+  "bpm_hi": 165.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "笑えたらえーやん！": {
+  "title": "笑えたらえーやん！",
+  "bpm_lo": 174.0,
+  "bpm_hi": 174.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "エクスプロウル": {
+  "title": "エクスプロウル",
+  "bpm_lo": 164.0,
+  "bpm_hi": 164.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "花弁、それにまつわる音声": {
+  "title": "花弁、それにまつわる音声",
+  "bpm_lo": 108.0,
+  "bpm_hi": 108.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "マリオネットダンサー": {
+  "title": "マリオネットダンサー",
+  "bpm_lo": 112.0,
+  "bpm_hi": 112.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "リリィララ": {
+  "title": "リリィララ",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "SAN値直葬": {
+  "title": "SAN値直葬",
+  "bpm_lo": 168.0,
+  "bpm_hi": 168.0,
+  "duration": "2:29",
+  "bpm_var": false
+ },
+ "ブラッドドール": {
+  "title": "ブラッドドール",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "ネクラチューンサーカス": {
+  "title": "ネクラチューンサーカス",
+  "bpm_lo": 164.0,
+  "bpm_hi": 254.0,
+  "duration": "2:06",
+  "bpm_var": true
+ },
+ "アベリア": {
+  "title": "アベリア",
+  "bpm_lo": 183.0,
+  "bpm_hi": 183.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "金時計": {
+  "title": "金時計",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "怪獣になりたい": {
+  "title": "怪獣になりたい",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "0.0000034": {
+  "title": "0.0000034",
+  "bpm_lo": 239.0,
+  "bpm_hi": 239.0,
+  "duration": "2:34",
+  "bpm_var": false
+ },
+ "ドリーム・キス": {
+  "title": "ドリーム・キス",
+  "bpm_lo": 117.0,
+  "bpm_hi": 117.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "Internet Junk Junkie": {
+  "title": "Internet Junk Junkie",
+  "bpm_lo": 165.0,
+  "bpm_hi": 205.0,
+  "duration": "2:04",
+  "bpm_var": true
+ },
+ "アリア": {
+  "title": "アリア",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "幕を下ろそう、パレードへ": {
+  "title": "幕を下ろそう、パレードへ",
+  "bpm_lo": 146.0,
+  "bpm_hi": 146.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "Ribbon": {
+  "title": "Ribbon",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "天藍のアイスヘヴン": {
+  "title": "天藍のアイスヘヴン",
+  "bpm_lo": 214.0,
+  "bpm_hi": 214.0,
+  "duration": "2:14",
+  "bpm_var": false
+ },
+ "導火愛": {
+  "title": "導火愛",
+  "bpm_lo": 114.0,
+  "bpm_hi": 114.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "ストラタでまちあわせ": {
+  "title": "ストラタでまちあわせ",
+  "bpm_lo": 86.0,
+  "bpm_hi": 86.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "初音狂奏曲第01番「彗惺」": {
+  "title": "初音狂奏曲第01番「彗惺」",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "2:36",
+  "bpm_var": false
+ },
+ "ひかりのあつめかた": {
+  "title": "ひかりのあつめかた",
+  "bpm_lo": 40.0,
+  "bpm_hi": 240.0,
+  "duration": "2:09",
+  "bpm_var": true
+ },
+ "ラプス": {
+  "title": "ラプス",
+  "bpm_lo": 161.0,
+  "bpm_hi": 161.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "デロスサントス": {
+  "title": "デロスサントス",
+  "bpm_lo": 84.0,
+  "bpm_hi": 110.0,
+  "duration": "2:05",
+  "bpm_var": true
+ },
+ "一億年恋してる": {
+  "title": "一億年恋してる",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "君に贈る未来": {
+  "title": "君に贈る未来",
+  "bpm_lo": 186.0,
+  "bpm_hi": 186.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "セカイ": {
+  "title": "セカイ",
+  "bpm_lo": 133.0,
+  "bpm_hi": 133.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "ワ一ワ一ワ一ルド": {
+  "title": "ワ一ワ一ワ一ルド",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "1:49",
+  "bpm_var": false
+ },
+ "群青讃歌": {
+  "title": "群青讃歌",
+  "bpm_lo": 168.0,
+  "bpm_hi": 168.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "アイデンティティ": {
+  "title": "アイデンティティ",
+  "bpm_lo": 195.0,
+  "bpm_hi": 195.0,
+  "duration": "2:36",
+  "bpm_var": false
+ },
+ "青色絵具": {
+  "title": "青色絵具",
+  "bpm_lo": 126.0,
+  "bpm_hi": 126.0,
+  "duration": "2:36",
+  "bpm_var": false
+ },
+ "コスモスパイス": {
+  "title": "コスモスパイス",
+  "bpm_lo": 165.0,
+  "bpm_hi": 165.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "徳川カップヌードル禁止令": {
+  "title": "徳川カップヌードル禁止令",
+  "bpm_lo": 178.0,
+  "bpm_hi": 178.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "サラマンダー": {
+  "title": "サラマンダー",
+  "bpm_lo": 172.0,
+  "bpm_hi": 172.0,
+  "duration": "2:37",
+  "bpm_var": false
+ },
+ "Journey": {
+  "title": "Journey",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:46",
+  "bpm_var": false
+ },
+ "フレー": {
+  "title": "フレー",
+  "bpm_lo": 168.0,
+  "bpm_hi": 168.0,
+  "duration": "2:18",
+  "bpm_var": false
+ },
+ "Be The MUSIC!": {
+  "title": "Be The MUSIC!",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:35",
+  "bpm_var": false
+ },
+ "我らステインバスターズ！": {
+  "title": "我らステインバスターズ！",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "1:44",
+  "bpm_var": false
+ },
+ "NEO": {
+  "title": "NEO",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "熱風": {
+  "title": "熱風",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "Worlders": {
+  "title": "Worlders",
+  "bpm_lo": 137.5,
+  "bpm_hi": 137.5,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "フュージョン": {
+  "title": "フュージョン",
+  "bpm_lo": 188.0,
+  "bpm_hi": 188.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "ペンタトニック": {
+  "title": "ペンタトニック",
+  "bpm_lo": 161.0,
+  "bpm_hi": 161.0,
+  "duration": "1:46",
+  "bpm_var": false
+ },
+ "世界の歩き方": {
+  "title": "世界の歩き方",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "1:43",
+  "bpm_var": false
+ },
+ "ドリーマーズビート": {
+  "title": "ドリーマーズビート",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "旅に帰る": {
+  "title": "旅に帰る",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:58",
+  "bpm_var": false
+ },
+ "レム": {
+  "title": "レム",
+  "bpm_lo": 85.0,
+  "bpm_hi": 85.0,
+  "duration": "1:35",
+  "bpm_var": false
+ },
+ "アンチサイノウ": {
+  "title": "アンチサイノウ",
+  "bpm_lo": 209.0,
+  "bpm_hi": 209.0,
+  "duration": "1:31",
+  "bpm_var": false
+ },
+ "ロキ": {
+  "title": "ロキ",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "1:47",
+  "bpm_var": false
+ },
+ "テオ": {
+  "title": "テオ",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "ヒバナ -Reloaded-": {
+  "title": "ヒバナ -Reloaded-",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "1:35",
+  "bpm_var": false
+ },
+ "アスノヨゾラ哨戒班": {
+  "title": "アスノヨゾラ哨戒班",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "青く駆けろ！": {
+  "title": "青く駆けろ！",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "ウミユリ海底譚": {
+  "title": "ウミユリ海底譚",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "ドラマツルギー": {
+  "title": "ドラマツルギー",
+  "bpm_lo": 149.0,
+  "bpm_hi": 149.0,
+  "duration": "1:35",
+  "bpm_var": false
+ },
+ "タイムマシン": {
+  "title": "タイムマシン",
+  "bpm_lo": 126.0,
+  "bpm_hi": 126.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "from Y to Y": {
+  "title": "from Y to Y",
+  "bpm_lo": 98.0,
+  "bpm_hi": 98.0,
+  "duration": "2:35",
+  "bpm_var": false
+ },
+ "いかないで": {
+  "title": "いかないで",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "六兆年と一夜物語": {
+  "title": "六兆年と一夜物語",
+  "bpm_lo": 116.0,
+  "bpm_hi": 186.0,
+  "duration": "2:03",
+  "bpm_var": true
+ },
+ "カゲロウデイズ": {
+  "title": "カゲロウデイズ",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "ロストワンの号哭": {
+  "title": "ロストワンの号哭",
+  "bpm_lo": 162.0,
+  "bpm_hi": 162.0,
+  "duration": "1:47",
+  "bpm_var": false
+ },
+ "ray": {
+  "title": "ray",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "Hello,world!": {
+  "title": "Hello,world!",
+  "bpm_lo": 211.0,
+  "bpm_hi": 211.0,
+  "duration": "1:40",
+  "bpm_var": false
+ },
+ "ゴーストルール": {
+  "title": "ゴーストルール",
+  "bpm_lo": 210.0,
+  "bpm_hi": 210.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "心拍数♯0822": {
+  "title": "心拍数♯0822",
+  "bpm_lo": 114.0,
+  "bpm_hi": 114.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "僕らまだアンダーグラウンド": {
+  "title": "僕らまだアンダーグラウンド",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "ロストエンファウンド": {
+  "title": "ロストエンファウンド",
+  "bpm_lo": 92.0,
+  "bpm_hi": 184.0,
+  "duration": "2:36",
+  "bpm_var": true
+ },
+ "Calc.": {
+  "title": "Calc.",
+  "bpm_lo": 173.0,
+  "bpm_hi": 173.0,
+  "duration": "2:24",
+  "bpm_var": false
+ },
+ "天ノ弱": {
+  "title": "天ノ弱",
+  "bpm_lo": 200.0,
+  "bpm_hi": 205.0,
+  "duration": "1:49",
+  "bpm_var": true
+ },
+ "夜もすがら君想ふ": {
+  "title": "夜もすがら君想ふ",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "2:25",
+  "bpm_var": false
+ },
+ "Hello, Worker": {
+  "title": "Hello, Worker",
+  "bpm_lo": 168.0,
+  "bpm_hi": 168.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "アトラクトライト": {
+  "title": "アトラクトライト",
+  "bpm_lo": 196.0,
+  "bpm_hi": 196.0,
+  "duration": "2:25",
+  "bpm_var": false
+ },
+ "快晴": {
+  "title": "快晴",
+  "bpm_lo": 172.0,
+  "bpm_hi": 172.0,
+  "duration": "2:31",
+  "bpm_var": false
+ },
+ "glow": {
+  "title": "glow",
+  "bpm_lo": 85.0,
+  "bpm_hi": 85.0,
+  "duration": "2:38",
+  "bpm_var": false
+ },
+ "サマータイムレコード": {
+  "title": "サマータイムレコード",
+  "bpm_lo": 178.0,
+  "bpm_hi": 178.0,
+  "duration": "2:29",
+  "bpm_var": false
+ },
+ "天樂": {
+  "title": "天樂",
+  "bpm_lo": 232.0,
+  "bpm_hi": 232.0,
+  "duration": "2:31",
+  "bpm_var": false
+ },
+ "初めての恋が終わる時": {
+  "title": "初めての恋が終わる時",
+  "bpm_lo": 100.0,
+  "bpm_hi": 180.0,
+  "duration": "2:14",
+  "bpm_var": true
+ },
+ "ハイドアンド・シーク": {
+  "title": "ハイドアンド・シーク",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "幾望の月": {
+  "title": "幾望の月",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "東京テディベア": {
+  "title": "東京テディベア",
+  "bpm_lo": 204.0,
+  "bpm_hi": 204.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "抜錨": {
+  "title": "抜錨",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "林檎売りの泡沫少女": {
+  "title": "林檎売りの泡沫少女",
+  "bpm_lo": 225.2,
+  "bpm_hi": 225.2,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "モザイクロール (Reloaded)": {
+  "title": "モザイクロール (Reloaded)",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "ワールド・ランプシェード [reunion]": {
+  "title": "ワールド・ランプシェード [reunion]",
+  "bpm_lo": 193.0,
+  "bpm_hi": 193.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "Henceforth": {
+  "title": "Henceforth",
+  "bpm_lo": 158.0,
+  "bpm_hi": 158.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "终焉逃避行": {
+  "title": "终焉逃避行",
+  "bpm_lo": 147.0,
+  "bpm_hi": 147.0,
+  "duration": "1:40",
+  "bpm_var": false
+ },
+ "透明エレジー": {
+  "title": "透明エレジー",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "エンヴィキャットウォーク": {
+  "title": "エンヴィキャットウォーク",
+  "bpm_lo": 160.0,
+  "bpm_hi": 190.0,
+  "duration": "2:11",
+  "bpm_var": true
+ },
+ "深海シティアンダーグラウンド": {
+  "title": "深海シティアンダーグラウンド",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "おどりゃんせ": {
+  "title": "おどりゃんせ",
+  "bpm_lo": 172.0,
+  "bpm_hi": 172.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "ロケットサイダー": {
+  "title": "ロケットサイダー",
+  "bpm_lo": 198.0,
+  "bpm_hi": 198.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "君が飛び降りるのなら": {
+  "title": "君が飛び降りるのなら",
+  "bpm_lo": 210.0,
+  "bpm_hi": 210.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "ラムネ": {
+  "title": "ラムネ",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "ヘッジホッグ": {
+  "title": "ヘッジホッグ",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "ラズベリー＊モンスター": {
+  "title": "ラズベリー＊モンスター",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "アディショナルメモリー": {
+  "title": "アディショナルメモリー",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "ハッピーシンセサイザ": {
+  "title": "ハッピーシンセサイザ",
+  "bpm_lo": 127.0,
+  "bpm_hi": 127.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "Nostalogic": {
+  "title": "Nostalogic",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "ツギハギスタッカート": {
+  "title": "ツギハギスタッカート",
+  "bpm_lo": 139.0,
+  "bpm_hi": 139.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "ニア": {
+  "title": "ニア",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "ビバハピ": {
+  "title": "ビバハピ",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "1:34",
+  "bpm_var": false
+ },
+ "メルティランドナイトメア": {
+  "title": "メルティランドナイトメア",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "恋愛裁判": {
+  "title": "恋愛裁判",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "ミルククラウン・オン・ソーネチカ": {
+  "title": "ミルククラウン・オン・ソーネチカ",
+  "bpm_lo": 127.5,
+  "bpm_hi": 127.5,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "どりーみんチュチュ": {
+  "title": "どりーみんチュチュ",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "ロミオとシンデレラ": {
+  "title": "ロミオとシンデレラ",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:54",
+  "bpm_var": false
+ },
+ "地球最後の告白を": {
+  "title": "地球最後の告白を",
+  "bpm_lo": 140.0,
+  "bpm_hi": 190.0,
+  "duration": "2:08",
+  "bpm_var": true
+ },
+ "マシュマリー": {
+  "title": "マシュマリー",
+  "bpm_lo": 182.0,
+  "bpm_hi": 182.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "Happy Halloween": {
+  "title": "Happy Halloween",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "からくりピエロ": {
+  "title": "からくりピエロ",
+  "bpm_lo": 102.0,
+  "bpm_hi": 102.0,
+  "duration": "2:18",
+  "bpm_var": false
+ },
+ "少女レイ": {
+  "title": "少女レイ",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:39",
+  "bpm_var": false
+ },
+ "心予報": {
+  "title": "心予報",
+  "bpm_lo": 143.0,
+  "bpm_hi": 143.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "ダーリンダンス": {
+  "title": "ダーリンダンス",
+  "bpm_lo": 153.0,
+  "bpm_hi": 153.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "ヴァンパイア": {
+  "title": "ヴァンパイア",
+  "bpm_lo": 164.0,
+  "bpm_hi": 164.0,
+  "duration": "2:21",
+  "bpm_var": false
+ },
+ "トリノコシティ": {
+  "title": "トリノコシティ",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "ロンリーユニバース": {
+  "title": "ロンリーユニバース",
+  "bpm_lo": 100.0,
+  "bpm_hi": 100.0,
+  "duration": "2:21",
+  "bpm_var": false
+ },
+ "気まぐれメルシィ": {
+  "title": "気まぐれメルシィ",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "2:28",
+  "bpm_var": false
+ },
+ "Booo!": {
+  "title": "Booo!",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "1:37",
+  "bpm_var": false
+ },
+ "深海少女": {
+  "title": "深海少女",
+  "bpm_lo": 137.0,
+  "bpm_hi": 137.0,
+  "duration": "2:25",
+  "bpm_var": false
+ },
+ "セツナトリップ": {
+  "title": "セツナトリップ",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:35",
+  "bpm_var": false
+ },
+ "きゅうくらりん": {
+  "title": "きゅうくらりん",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "1:49",
+  "bpm_var": false
+ },
+ "白い雪のプリンセスは": {
+  "title": "白い雪のプリンセスは",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "メランコリック": {
+  "title": "メランコリック",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:27",
+  "bpm_var": false
+ },
+ "悪役にキスシーンを": {
+  "title": "悪役にキスシーンを",
+  "bpm_lo": 124.0,
+  "bpm_hi": 124.0,
+  "duration": "2:32",
+  "bpm_var": false
+ },
+ "さよならプリンセス": {
+  "title": "さよならプリンセス",
+  "bpm_lo": 195.0,
+  "bpm_hi": 195.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "くうになる": {
+  "title": "くうになる",
+  "bpm_lo": 166.0,
+  "bpm_hi": 166.0,
+  "duration": "1:48",
+  "bpm_var": false
+ },
+ "flos": {
+  "title": "flos",
+  "bpm_lo": 118.0,
+  "bpm_hi": 118.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "だめにんげんだ!": {
+  "title": "だめにんげんだ!",
+  "bpm_lo": 179.0,
+  "bpm_hi": 179.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "ポッピンキャンディ☆フィーバー！": {
+  "title": "ポッピンキャンディ☆フィーバー！",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "スーパーヒーロー": {
+  "title": "スーパーヒーロー",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "如月アテンション": {
+  "title": "如月アテンション",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "1:58",
+  "bpm_var": false
+ },
+ "キャットフード": {
+  "title": "キャットフード",
+  "bpm_lo": 174.0,
+  "bpm_hi": 174.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "妄想アスパルテーム": {
+  "title": "妄想アスパルテーム",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "snooze": {
+  "title": "snooze",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "オーバーライド": {
+  "title": "オーバーライド",
+  "bpm_lo": 204.0,
+  "bpm_hi": 204.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "回る空うさぎ": {
+  "title": "回る空うさぎ",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "8.32": {
+  "title": "8.32",
+  "bpm_lo": 110.0,
+  "bpm_hi": 110.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "東京サマーセッション": {
+  "title": "東京サマーセッション",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "ルマ": {
+  "title": "ルマ",
+  "bpm_lo": 154.0,
+  "bpm_hi": 154.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "魔法少女とチョコレゐト": {
+  "title": "魔法少女とチョコレゐト",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "erase or zero": {
+  "title": "erase or zero",
+  "bpm_lo": 136.0,
+  "bpm_hi": 136.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "あなたしか見えないの": {
+  "title": "あなたしか見えないの",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "オツキミリサイタル": {
+  "title": "オツキミリサイタル",
+  "bpm_lo": 189.0,
+  "bpm_hi": 189.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "shake it!": {
+  "title": "shake it!",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "劣等上等": {
+  "title": "劣等上等",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "1:38",
+  "bpm_var": false
+ },
+ "ドクター＝ファンクビート": {
+  "title": "ドクター＝ファンクビート",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "フラジール": {
+  "title": "フラジール",
+  "bpm_lo": 127.0,
+  "bpm_hi": 127.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "Just Be Friends": {
+  "title": "Just Be Friends",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "夜咄ディセイブ": {
+  "title": "夜咄ディセイブ",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "ECHO": {
+  "title": "ECHO",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "drop pop candy": {
+  "title": "drop pop candy",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "1:46",
+  "bpm_var": false
+ },
+ "威風堂々": {
+  "title": "威風堂々",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:25",
+  "bpm_var": false
+ },
+ "幽霊東京": {
+  "title": "幽霊東京",
+  "bpm_lo": 124.0,
+  "bpm_hi": 124.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "トラフィック・ジャム": {
+  "title": "トラフィック・ジャム",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "チルドレンレコード": {
+  "title": "チルドレンレコード",
+  "bpm_lo": 210.0,
+  "bpm_hi": 210.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "悪魔の踊り方": {
+  "title": "悪魔の踊り方",
+  "bpm_lo": 106.0,
+  "bpm_hi": 106.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "オルターエゴ": {
+  "title": "オルターエゴ",
+  "bpm_lo": 176.0,
+  "bpm_hi": 176.0,
+  "duration": "2:32",
+  "bpm_var": false
+ },
+ "ガランド": {
+  "title": "ガランド",
+  "bpm_lo": 93.0,
+  "bpm_hi": 93.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "踊": {
+  "title": "踊",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:21",
+  "bpm_var": false
+ },
+ "雨とペトラ": {
+  "title": "雨とペトラ",
+  "bpm_lo": 195.0,
+  "bpm_hi": 195.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "PaⅢ.SENSATION": {
+  "title": "PaⅢ.SENSATION",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "阿吽のビーツ": {
+  "title": "阿吽のビーツ",
+  "bpm_lo": 103.0,
+  "bpm_hi": 103.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "YY": {
+  "title": "YY",
+  "bpm_lo": 123.0,
+  "bpm_hi": 123.0,
+  "duration": "2:24",
+  "bpm_var": false
+ },
+ "DAYBREAK FRONTLINE": {
+  "title": "DAYBREAK FRONTLINE",
+  "bpm_lo": 136.0,
+  "bpm_hi": 136.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "帝国少女": {
+  "title": "帝国少女",
+  "bpm_lo": 118.0,
+  "bpm_hi": 118.0,
+  "duration": "2:28",
+  "bpm_var": false
+ },
+ "フェレス": {
+  "title": "フェレス",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "エゴイスト": {
+  "title": "エゴイスト",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:27",
+  "bpm_var": false
+ },
+ "絶え間なく藍色": {
+  "title": "絶え間なく藍色",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "シャンティ": {
+  "title": "シャンティ",
+  "bpm_lo": 144.0,
+  "bpm_hi": 144.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "脳内革命ガール": {
+  "title": "脳内革命ガール",
+  "bpm_lo": 240.0,
+  "bpm_hi": 240.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "恋は戦争": {
+  "title": "恋は戦争",
+  "bpm_lo": 175.0,
+  "bpm_hi": 175.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "春嵐": {
+  "title": "春嵐",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "金木犀": {
+  "title": "金木犀",
+  "bpm_lo": 123.0,
+  "bpm_hi": 123.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "マーシャル・マキシマイザー": {
+  "title": "マーシャル・マキシマイザー",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "1:35",
+  "bpm_var": false
+ },
+ "え？あぁ、そう。": {
+  "title": "え？あぁ、そう。",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "酔いどれ知らず": {
+  "title": "酔いどれ知らず",
+  "bpm_lo": 115.0,
+  "bpm_hi": 115.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "WAVE": {
+  "title": "WAVE",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "コールボーイ": {
+  "title": "コールボーイ",
+  "bpm_lo": 109.0,
+  "bpm_hi": 109.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "花溺れ": {
+  "title": "花溺れ",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "CH4NGE": {
+  "title": "CH4NGE",
+  "bpm_lo": 115.0,
+  "bpm_hi": 115.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "ルーマー": {
+  "title": "ルーマー",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "三日月ステップ": {
+  "title": "三日月ステップ",
+  "bpm_lo": 167.0,
+  "bpm_hi": 167.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "花に風": {
+  "title": "花に風",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "紗痲": {
+  "title": "紗痲",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "Surges": {
+  "title": "Surges",
+  "bpm_lo": 137.0,
+  "bpm_hi": 137.0,
+  "duration": "2:14",
+  "bpm_var": false
+ },
+ "偽物人間40号": {
+  "title": "偽物人間40号",
+  "bpm_lo": 112.0,
+  "bpm_hi": 112.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "ハウトゥー世界征服": {
+  "title": "ハウトゥー世界征服",
+  "bpm_lo": 151.0,
+  "bpm_hi": 151.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "ヤンキーボーイ・ヤンキーガール": {
+  "title": "ヤンキーボーイ・ヤンキーガール",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "About me": {
+  "title": "About me",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "永遠甚だしい": {
+  "title": "永遠甚だしい",
+  "bpm_lo": 153.0,
+  "bpm_hi": 153.0,
+  "duration": "2:14",
+  "bpm_var": false
+ },
+ "ハナタバ": {
+  "title": "ハナタバ",
+  "bpm_lo": 119.0,
+  "bpm_hi": 119.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "ロスタイムメモリー": {
+  "title": "ロスタイムメモリー",
+  "bpm_lo": 202.0,
+  "bpm_hi": 202.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "ブリキノダンス": {
+  "title": "ブリキノダンス",
+  "bpm_lo": 172.0,
+  "bpm_hi": 172.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "スイートマジック": {
+  "title": "スイートマジック",
+  "bpm_lo": 123.0,
+  "bpm_hi": 123.0,
+  "duration": "2:29",
+  "bpm_var": false
+ },
+ "ぼうけんのしょがきえました！": {
+  "title": "ぼうけんのしょがきえました！",
+  "bpm_lo": 176.0,
+  "bpm_hi": 176.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "脫法ロック": {
+  "title": "脫法ロック",
+  "bpm_lo": 155.0,
+  "bpm_hi": 155.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "ダンスロボットダンス": {
+  "title": "ダンスロボットダンス",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "ミラクルペイント": {
+  "title": "ミラクルペイント",
+  "bpm_lo": 215.0,
+  "bpm_hi": 215.0,
+  "duration": "2:26",
+  "bpm_var": false
+ },
+ "チュルリラ・チュルリラ・ダッダッダ！": {
+  "title": "チュルリラ・チュルリラ・ダッダッダ！",
+  "bpm_lo": 220.0,
+  "bpm_hi": 220.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "ポジティブ☆ダンスタイム": {
+  "title": "ポジティブ☆ダンスタイム",
+  "bpm_lo": 210.0,
+  "bpm_hi": 210.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "お気に召すまま": {
+  "title": "お気に召すまま",
+  "bpm_lo": 143.0,
+  "bpm_hi": 143.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "KING": {
+  "title": "KING",
+  "bpm_lo": 166.0,
+  "bpm_hi": 166.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "テレキャスタービーボーイ": {
+  "title": "テレキャスタービーボーイ",
+  "bpm_lo": 182.0,
+  "bpm_hi": 182.0,
+  "duration": "1:37",
+  "bpm_var": false
+ },
+ "フィクサー": {
+  "title": "フィクサー",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "ナンセンス文学": {
+  "title": "ナンセンス文学",
+  "bpm_lo": 154.0,
+  "bpm_hi": 154.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "いーあるふぁんくらぶ": {
+  "title": "いーあるふぁんくらぶ",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "リモコン": {
+  "title": "リモコン",
+  "bpm_lo": 165.0,
+  "bpm_hi": 165.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "神のまにまに": {
+  "title": "神のまにまに",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "グッバイ宣言": {
+  "title": "グッバイ宣言",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "エイリアンエイリアン": {
+  "title": "エイリアンエイリアン",
+  "bpm_lo": 152.0,
+  "bpm_hi": 152.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "踊れオーケストラ": {
+  "title": "踊れオーケストラ",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "1:49",
+  "bpm_var": false
+ },
+ "エゴロック": {
+  "title": "エゴロック",
+  "bpm_lo": 225.0,
+  "bpm_hi": 225.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "ラブカ？": {
+  "title": "ラブカ？",
+  "bpm_lo": 78.0,
+  "bpm_hi": 135.0,
+  "duration": "1:43",
+  "bpm_var": true
+ },
+ "ネトゲ廃人シュプレヒコール": {
+  "title": "ネトゲ廃人シュプレヒコール",
+  "bpm_lo": 175.0,
+  "bpm_hi": 175.0,
+  "duration": "2:28",
+  "bpm_var": false
+ },
+ "1925": {
+  "title": "1925",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "おこちゃま戦争": {
+  "title": "おこちゃま戦争",
+  "bpm_lo": 175.0,
+  "bpm_hi": 175.0,
+  "duration": "2:26",
+  "bpm_var": false
+ },
+ "嗚呼、素晴らしきニャン生": {
+  "title": "嗚呼、素晴らしきニャン生",
+  "bpm_lo": 194.0,
+  "bpm_hi": 194.0,
+  "duration": "2:30",
+  "bpm_var": false
+ },
+ "太陽系デスコ": {
+  "title": "太陽系デスコ",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:26",
+  "bpm_var": false
+ },
+ "すきなことだけでいいです": {
+  "title": "すきなことだけでいいです",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:35",
+  "bpm_var": false
+ },
+ "我儘姫": {
+  "title": "我儘姫",
+  "bpm_lo": 116.0,
+  "bpm_hi": 126.0,
+  "duration": "2:21",
+  "bpm_var": true
+ },
+ "強風オールバック": {
+  "title": "強風オールバック",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:17",
+  "bpm_var": false
+ },
+ "古書屋敷殺人事件": {
+  "title": "古書屋敷殺人事件",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "1000年生きてる": {
+  "title": "1000年生きてる",
+  "bpm_lo": 100.0,
+  "bpm_hi": 100.0,
+  "duration": "1:48",
+  "bpm_var": false
+ },
+ "おちゃめ機能": {
+  "title": "おちゃめ機能",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "きょうもハレバレ": {
+  "title": "きょうもハレバレ",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "QUEEN": {
+  "title": "QUEEN",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "ちがう!!!": {
+  "title": "ちがう!!!",
+  "bpm_lo": 181.0,
+  "bpm_hi": 181.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "転生林檎": {
+  "title": "転生林檎",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "1:53",
+  "bpm_var": false
+ },
+ "混沌ブギ": {
+  "title": "混沌ブギ",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "厨病激発ボーイ": {
+  "title": "厨病激発ボーイ",
+  "bpm_lo": 180.0,
+  "bpm_hi": 190.0,
+  "duration": "2:11",
+  "bpm_var": true
+ },
+ "ライアーダンサー": {
+  "title": "ライアーダンサー",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "ドレミファロンド": {
+  "title": "ドレミファロンド",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "このふざけた素晴らしき世界は、僕の為にある": {
+  "title": "このふざけた素晴らしき世界は、僕の為にある",
+  "bpm_lo": 152.0,
+  "bpm_hi": 152.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "人マニア": {
+  "title": "人マニア",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "い〜やい〜やい〜や": {
+  "title": "い〜やい〜やい〜や",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "惑星ループ": {
+  "title": "惑星ループ",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "魔法少女幸福論": {
+  "title": "魔法少女幸福論",
+  "bpm_lo": 142.0,
+  "bpm_hi": 180.0,
+  "duration": "2:13",
+  "bpm_var": true
+ },
+ "卑怯戦隊うろたんだー": {
+  "title": "卑怯戦隊うろたんだー",
+  "bpm_lo": 152.0,
+  "bpm_hi": 152.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "天才ロック": {
+  "title": "天才ロック",
+  "bpm_lo": 196.0,
+  "bpm_hi": 196.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "空想フォレスト": {
+  "title": "空想フォレスト",
+  "bpm_lo": 174.0,
+  "bpm_hi": 174.0,
+  "duration": "1:58",
+  "bpm_var": false
+ },
+ "シャルル": {
+  "title": "シャルル",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "1:44",
+  "bpm_var": false
+ },
+ "ハロ／ハワユ": {
+  "title": "ハロ／ハワユ",
+  "bpm_lo": 95.0,
+  "bpm_hi": 95.0,
+  "duration": "2:26",
+  "bpm_var": false
+ },
+ "自傷無色": {
+  "title": "自傷無色",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "1:44",
+  "bpm_var": false
+ },
+ "命に嫌われている": {
+  "title": "命に嫌われている",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "乙女解剖": {
+  "title": "乙女解剖",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "1:51",
+  "bpm_var": false
+ },
+ "独りんぼエンヴィー": {
+  "title": "独りんぼエンヴィー",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "1:14",
+  "bpm_var": false
+ },
+ "とても痛い痛がりたい": {
+  "title": "とても痛い痛がりたい",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "1:53",
+  "bpm_var": false
+ },
+ "ボッカデラベリタ": {
+  "title": "ボッカデラベリタ",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "夜に駆ける": {
+  "title": "夜に駆ける",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "ビターチョコデコレーション": {
+  "title": "ビターチョコデコレーション",
+  "bpm_lo": 174.0,
+  "bpm_hi": 174.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "カトラリー": {
+  "title": "カトラリー",
+  "bpm_lo": 108.0,
+  "bpm_hi": 108.0,
+  "duration": "1:51",
+  "bpm_var": false
+ },
+ "ベノム": {
+  "title": "ベノム",
+  "bpm_lo": 152.0,
+  "bpm_hi": 152.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "ヴィラン": {
+  "title": "ヴィラン",
+  "bpm_lo": 102.0,
+  "bpm_hi": 102.0,
+  "duration": "2:30",
+  "bpm_var": false
+ },
+ "うっせぇわ": {
+  "title": "うっせぇわ",
+  "bpm_lo": 178.0,
+  "bpm_hi": 178.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "愛して愛して愛して": {
+  "title": "愛して愛して愛して",
+  "bpm_lo": 115.0,
+  "bpm_hi": 115.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "妄想感傷代償連盟": {
+  "title": "妄想感傷代償連盟",
+  "bpm_lo": 110.0,
+  "bpm_hi": 110.0,
+  "duration": "2:21",
+  "bpm_var": false
+ },
+ "メリュー": {
+  "title": "メリュー",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "ジェヘナ": {
+  "title": "ジェヘナ",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:33",
+  "bpm_var": false
+ },
+ "フォニイ": {
+  "title": "フォニイ",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:24",
+  "bpm_var": false
+ },
+ "泥中に咲く": {
+  "title": "泥中に咲く",
+  "bpm_lo": 85.0,
+  "bpm_hi": 85.0,
+  "duration": "2:25",
+  "bpm_var": false
+ },
+ "ノンブレス・オブリージュ": {
+  "title": "ノンブレス・オブリージュ",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "それがあなたの幸せとしても": {
+  "title": "それがあなたの幸せとしても",
+  "bpm_lo": 71.0,
+  "bpm_hi": 77.0,
+  "duration": "2:07",
+  "bpm_var": true
+ },
+ "アイロニ": {
+  "title": "アイロニ",
+  "bpm_lo": 90.0,
+  "bpm_hi": 90.0,
+  "duration": "2:24",
+  "bpm_var": false
+ },
+ "命ばっかり": {
+  "title": "命ばっかり",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "とても素敵な六月でした": {
+  "title": "とても素敵な六月でした",
+  "bpm_lo": 210.0,
+  "bpm_hi": 210.0,
+  "duration": "2:34",
+  "bpm_var": false
+ },
+ "心做し": {
+  "title": "心做し",
+  "bpm_lo": 84.0,
+  "bpm_hi": 84.0,
+  "duration": "2:18",
+  "bpm_var": false
+ },
+ "神っぽいな": {
+  "title": "神っぽいな",
+  "bpm_lo": 142.0,
+  "bpm_hi": 142.0,
+  "duration": "2:27",
+  "bpm_var": false
+ },
+ "キュートなカノジョ": {
+  "title": "キュートなカノジョ",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "スロウダウナー": {
+  "title": "スロウダウナー",
+  "bpm_lo": 194.0,
+  "bpm_hi": 194.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "エンヴィーベイビー": {
+  "title": "エンヴィーベイビー",
+  "bpm_lo": 171.0,
+  "bpm_hi": 171.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "ラグトレイン": {
+  "title": "ラグトレイン",
+  "bpm_lo": 147.0,
+  "bpm_hi": 147.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "ド屑": {
+  "title": "ド屑",
+  "bpm_lo": 115.0,
+  "bpm_hi": 115.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "熱異常": {
+  "title": "熱異常",
+  "bpm_lo": 183.0,
+  "bpm_hi": 183.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "マインドブランド": {
+  "title": "マインドブランド",
+  "bpm_lo": 156.0,
+  "bpm_hi": 156.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "Shadow Shadow": {
+  "title": "Shadow Shadow",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "キャットラビング": {
+  "title": "キャットラビング",
+  "bpm_lo": 163.0,
+  "bpm_hi": 163.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "サイハテ": {
+  "title": "サイハテ",
+  "bpm_lo": 146.0,
+  "bpm_hi": 146.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "スーサイドパレヱド": {
+  "title": "スーサイドパレヱド",
+  "bpm_lo": 176.0,
+  "bpm_hi": 176.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "失敗作少女": {
+  "title": "失敗作少女",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "生きる": {
+  "title": "生きる",
+  "bpm_lo": 112.0,
+  "bpm_hi": 112.0,
+  "duration": "1:41",
+  "bpm_var": false
+ },
+ "あの夏が飽和する。": {
+  "title": "あの夏が飽和する。",
+  "bpm_lo": 90.0,
+  "bpm_hi": 90.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "ロストアンブレラ": {
+  "title": "ロストアンブレラ",
+  "bpm_lo": 137.0,
+  "bpm_hi": 137.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "鎖の少女-Re Alive-": {
+  "title": "鎖の少女-Re Alive-",
+  "bpm_lo": 100.0,
+  "bpm_hi": 135.0,
+  "duration": "2:12",
+  "bpm_var": true
+ },
+ "Who?": {
+  "title": "Who?",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "1:58",
+  "bpm_var": false
+ },
+ "比較症候群": {
+  "title": "比較症候群",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "プロポーズ": {
+  "title": "プロポーズ",
+  "bpm_lo": 126.0,
+  "bpm_hi": 126.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "アヤノの幸福理論": {
+  "title": "アヤノの幸福理論",
+  "bpm_lo": 86.0,
+  "bpm_hi": 86.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "Tell Your World": {
+  "title": "Tell Your World",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "ネクストネスト": {
+  "title": "ネクストネスト",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "メルト": {
+  "title": "メルト",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "3:02",
+  "bpm_var": false
+ },
+ "初音ミクの消失": {
+  "title": "初音ミクの消失",
+  "bpm_lo": 240.0,
+  "bpm_hi": 240.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "Blessing": {
+  "title": "Blessing",
+  "bpm_lo": 110.0,
+  "bpm_hi": 110.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "ワールドイズマイン": {
+  "title": "ワールドイズマイン",
+  "bpm_lo": 100.0,
+  "bpm_hi": 165.0,
+  "duration": "2:50",
+  "bpm_var": true
+ },
+ "Hand in Hand": {
+  "title": "Hand in Hand",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "Gimme×Gimme": {
+  "title": "Gimme×Gimme",
+  "bpm_lo": 105.0,
+  "bpm_hi": 105.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "ジャンキーナイトタウンオーケストラ": {
+  "title": "ジャンキーナイトタウンオーケストラ",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "on the rocks": {
+  "title": "on the rocks",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "39みゅーじっく！": {
+  "title": "39みゅーじっく！",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "Leia - Remind": {
+  "title": "Leia - Remind",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "ローリンガール": {
+  "title": "ローリンガール",
+  "bpm_lo": 195.0,
+  "bpm_hi": 195.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "裏表ラバーズ": {
+  "title": "裏表ラバーズ",
+  "bpm_lo": 159.0,
+  "bpm_hi": 159.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "アンノウン・マザーグース": {
+  "title": "アンノウン・マザーグース",
+  "bpm_lo": 222.0,
+  "bpm_hi": 222.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "愛されなくても君がいる": {
+  "title": "愛されなくても君がいる",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "ODDS&amp;ENDS": {
+  "title": "ODDS&amp;ENDS",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "1:33",
+  "bpm_var": false
+ },
+ "グリーンライツ・セレナーデ": {
+  "title": "グリーンライツ・セレナーデ",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "*ハロー、プラネット。": {
+  "title": "*ハロー、プラネット。",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "千本桜": {
+  "title": "千本桜",
+  "bpm_lo": 154.0,
+  "bpm_hi": 154.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "ブレス・ユア・ブレス": {
+  "title": "ブレス・ユア・ブレス",
+  "bpm_lo": 152.0,
+  "bpm_hi": 152.0,
+  "duration": "1:34",
+  "bpm_var": false
+ },
+ "ワールズエンド・ダンスホール": {
+  "title": "ワールズエンド・ダンスホール",
+  "bpm_lo": 171.0,
+  "bpm_hi": 171.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "ヒビカセ": {
+  "title": "ヒビカセ",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "みくみくにしてあげる♪【してやんよ】": {
+  "title": "みくみくにしてあげる♪【してやんよ】",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "1:41",
+  "bpm_var": false
+ },
+ "初音ミクの激唱": {
+  "title": "初音ミクの激唱",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:40",
+  "bpm_var": false
+ },
+ "炉心融解": {
+  "title": "炉心融解",
+  "bpm_lo": 165.0,
+  "bpm_hi": 165.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "拝啓ドッペルゲンガー": {
+  "title": "拝啓ドッペルゲンガー",
+  "bpm_lo": 182.0,
+  "bpm_hi": 182.0,
+  "duration": "2:35",
+  "bpm_var": false
+ },
+ "トキヲ・ファンカ": {
+  "title": "トキヲ・ファンカ",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "1:47",
+  "bpm_var": false
+ },
+ "だれかの心臓になれたなら": {
+  "title": "だれかの心臓になれたなら",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "右肩の蝶": {
+  "title": "右肩の蝶",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "初音天地開闢神話": {
+  "title": "初音天地開闢神話",
+  "bpm_lo": 240.0,
+  "bpm_hi": 240.0,
+  "duration": "3:02",
+  "bpm_var": false
+ },
+ "悪ノ娘": {
+  "title": "悪ノ娘",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "1:31",
+  "bpm_var": false
+ },
+ "悪ノ召使": {
+  "title": "悪ノ召使",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "1:34",
+  "bpm_var": false
+ },
+ "サンドリヨン 10th Anniversary": {
+  "title": "サンドリヨン 10th Anniversary",
+  "bpm_lo": 147.0,
+  "bpm_hi": 147.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "君色マリンスノウ": {
+  "title": "君色マリンスノウ",
+  "bpm_lo": 202.0,
+  "bpm_hi": 202.0,
+  "duration": "2:31",
+  "bpm_var": false
+ },
+ "Miku": {
+  "title": "Miku",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:35",
+  "bpm_var": false
+ },
+ "マトリョシカ": {
+  "title": "マトリョシカ",
+  "bpm_lo": 205.0,
+  "bpm_hi": 205.0,
+  "duration": "1:46",
+  "bpm_var": false
+ },
+ "ドーナツホール 2024": {
+  "title": "ドーナツホール 2024",
+  "bpm_lo": 252.0,
+  "bpm_hi": 252.0,
+  "duration": "2:18",
+  "bpm_var": false
+ },
+ "砂の惑星": {
+  "title": "砂の惑星",
+  "bpm_lo": 95.0,
+  "bpm_hi": 95.0,
+  "duration": "2:14",
+  "bpm_var": false
+ },
+ "ルカルカ★ナイトフィーバー": {
+  "title": "ルカルカ★ナイトフィーバー",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "ピアノ×フォルテ×スキャンダル": {
+  "title": "ピアノ×フォルテ×スキャンダル",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "千年の独奏歌": {
+  "title": "千年の独奏歌",
+  "bpm_lo": 108.0,
+  "bpm_hi": 108.0,
+  "duration": "2:31",
+  "bpm_var": false
+ },
+ "ブラック★ロックシューター": {
+  "title": "ブラック★ロックシューター",
+  "bpm_lo": 140.0,
+  "bpm_hi": 165.0,
+  "duration": "1:55",
+  "bpm_var": true
+ },
+ "脳漿炸裂ガール": {
+  "title": "脳漿炸裂ガール",
+  "bpm_lo": 155.0,
+  "bpm_hi": 155.0,
+  "duration": "2:24",
+  "bpm_var": false
+ },
+ "ぼくらの16bit戦争": {
+  "title": "ぼくらの16bit戦争",
+  "bpm_lo": 122.0,
+  "bpm_hi": 122.0,
+  "duration": "2:28",
+  "bpm_var": false
+ },
+ "フロイライン＝ビブリォチカ": {
+  "title": "フロイライン＝ビブリォチカ",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:25",
+  "bpm_var": false
+ },
+ "フューチャー・イヴ": {
+  "title": "フューチャー・イヴ",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:33",
+  "bpm_var": false
+ },
+ "アンハッピーリフレイン": {
+  "title": "アンハッピーリフレイン",
+  "bpm_lo": 205.0,
+  "bpm_hi": 205.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "ダブルラリアット": {
+  "title": "ダブルラリアット",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "インビジブル": {
+  "title": "インビジブル",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "2:24",
+  "bpm_var": false
+ },
+ "Bad ∞ End ∞ Night": {
+  "title": "Bad ∞ End ∞ Night",
+  "bpm_lo": 132.0,
+  "bpm_hi": 204.0,
+  "duration": "1:58",
+  "bpm_var": true
+ },
+ "こちら、幸福安心委員会です。": {
+  "title": "こちら、幸福安心委員会です。",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:26",
+  "bpm_var": false
+ },
+ "Change me": {
+  "title": "Change me",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:27",
+  "bpm_var": false
+ },
+ "パラジクロロベンゼン": {
+  "title": "パラジクロロベンゼン",
+  "bpm_lo": 120.0,
+  "bpm_hi": 125.0,
+  "duration": "2:29",
+  "bpm_var": true
+ },
+ "星屑ユートピア": {
+  "title": "星屑ユートピア",
+  "bpm_lo": 240.0,
+  "bpm_hi": 240.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "あったかいと": {
+  "title": "あったかいと",
+  "bpm_lo": 178.0,
+  "bpm_hi": 178.0,
+  "duration": "2:28",
+  "bpm_var": false
+ },
+ "腐れ外道とチョコレゐト": {
+  "title": "腐れ外道とチョコレゐト",
+  "bpm_lo": 260.0,
+  "bpm_hi": 260.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "カンタレラ": {
+  "title": "カンタレラ",
+  "bpm_lo": 144.0,
+  "bpm_hi": 144.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "FREELY TOMORROW": {
+  "title": "FREELY TOMORROW",
+  "bpm_lo": 129.0,
+  "bpm_hi": 129.0,
+  "duration": "2:18",
+  "bpm_var": false
+ },
+ "リンちゃんなう！": {
+  "title": "リンちゃんなう！",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:28",
+  "bpm_var": false
+ },
+ "夜明けと蛍": {
+  "title": "夜明けと蛍",
+  "bpm_lo": 80.0,
+  "bpm_hi": 80.0,
+  "duration": "2:25",
+  "bpm_var": false
+ },
+ "p.h.": {
+  "title": "p.h.",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "1:51",
+  "bpm_var": false
+ },
+ "Goodbye": {
+  "title": "Goodbye",
+  "bpm_lo": 133.0,
+  "bpm_hi": 133.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "SnowMix♪": {
+  "title": "SnowMix♪",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:38",
+  "bpm_var": false
+ },
+ "Copycat": {
+  "title": "Copycat",
+  "bpm_lo": 137.0,
+  "bpm_hi": 137.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "レイニースノードロップ": {
+  "title": "レイニースノードロップ",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "2:31",
+  "bpm_var": false
+ },
+ "ココロ": {
+  "title": "ココロ",
+  "bpm_lo": 110.0,
+  "bpm_hi": 140.0,
+  "duration": "2:21",
+  "bpm_var": true
+ },
+ "ストロボラスト": {
+  "title": "ストロボラスト",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "パレットには君がいっぱい": {
+  "title": "パレットには君がいっぱい",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "Q": {
+  "title": "Q",
+  "bpm_lo": 116.0,
+  "bpm_hi": 120.0,
+  "duration": "2:10",
+  "bpm_var": true
+ },
+ "39": {
+  "title": "39",
+  "bpm_lo": 175.0,
+  "bpm_hi": 175.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "Highlight": {
+  "title": "Highlight",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "1:37",
+  "bpm_var": false
+ },
+ "トラッシュ・アンド・トラッシュ！": {
+  "title": "トラッシュ・アンド・トラッシュ！",
+  "bpm_lo": 177.0,
+  "bpm_hi": 220.0,
+  "duration": "2:18",
+  "bpm_var": true
+ },
+ "Vampire's ∞ pathoS": {
+  "title": "Vampire's ∞ pathoS",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "METEOR": {
+  "title": "METEOR",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:19",
+  "bpm_var": false
+ },
+ "インタビュア": {
+  "title": "インタビュア",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "2:25",
+  "bpm_var": false
+ },
+ "私の恋はヘルファイア": {
+  "title": "私の恋はヘルファイア",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:30",
+  "bpm_var": false
+ },
+ "スノーマン": {
+  "title": "スノーマン",
+  "bpm_lo": 127.0,
+  "bpm_hi": 127.0,
+  "duration": "2:24",
+  "bpm_var": false
+ },
+ "魔法みたいなミュージック！": {
+  "title": "魔法みたいなミュージック！",
+  "bpm_lo": 210.0,
+  "bpm_hi": 210.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "悪食娘コンチータ": {
+  "title": "悪食娘コンチータ",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "1:42",
+  "bpm_var": false
+ },
+ "眠らせ姫からの贈り物": {
+  "title": "眠らせ姫からの贈り物",
+  "bpm_lo": 126.0,
+  "bpm_hi": 126.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "円尾坂の仕立屋": {
+  "title": "円尾坂の仕立屋",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "悪徳のジャッジメント": {
+  "title": "悪徳のジャッジメント",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "Sharing The World": {
+  "title": "Sharing The World",
+  "bpm_lo": 129.0,
+  "bpm_hi": 129.0,
+  "duration": "2:30",
+  "bpm_var": false
+ },
+ "Blue Star": {
+  "title": "Blue Star",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "2:27",
+  "bpm_var": false
+ },
+ "Wonder Style": {
+  "title": "Wonder Style",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "UNDERWATER": {
+  "title": "UNDERWATER",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:28",
+  "bpm_var": false
+ },
+ "Afterglow": {
+  "title": "Afterglow",
+  "bpm_lo": 68.75,
+  "bpm_hi": 183.0,
+  "duration": "2:26",
+  "bpm_var": true
+ },
+ "Decade": {
+  "title": "Decade",
+  "bpm_lo": 127.0,
+  "bpm_hi": 127.0,
+  "duration": "2:24",
+  "bpm_var": false
+ },
+ "ブループラネット": {
+  "title": "ブループラネット",
+  "bpm_lo": 186.0,
+  "bpm_hi": 186.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "HERO": {
+  "title": "HERO",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "ラッキー☆オーブ": {
+  "title": "ラッキー☆オーブ",
+  "bpm_lo": 126.0,
+  "bpm_hi": 126.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "まにまに": {
+  "title": "まにまに",
+  "bpm_lo": 174.0,
+  "bpm_hi": 174.0,
+  "duration": "1:53",
+  "bpm_var": false
+ },
+ "豚になってyeah yeah": {
+  "title": "豚になってyeah yeah",
+  "bpm_lo": 115.0,
+  "bpm_hi": 115.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "デビルじゃないもん": {
+  "title": "デビルじゃないもん",
+  "bpm_lo": 154.0,
+  "bpm_hi": 154.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "番凩": {
+  "title": "番凩",
+  "bpm_lo": 90.0,
+  "bpm_hi": 128.0,
+  "duration": "2:05",
+  "bpm_var": true
+ },
+ "Dear": {
+  "title": "Dear",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:30",
+  "bpm_var": false
+ },
+ "難聴系男子が倒せない": {
+  "title": "難聴系男子が倒せない",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "一千光年": {
+  "title": "一千光年",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "ヒアソビ": {
+  "title": "ヒアソビ",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "『んっあっあっ。』": {
+  "title": "『んっあっあっ。』",
+  "bpm_lo": 123.0,
+  "bpm_hi": 123.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "ハッピーチートデー": {
+  "title": "ハッピーチートデー",
+  "bpm_lo": 124.0,
+  "bpm_hi": 124.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "ハジメテノオト": {
+  "title": "ハジメテノオト",
+  "bpm_lo": 100.0,
+  "bpm_hi": 100.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "えれくとりっく・えんじぇぅ": {
+  "title": "えれくとりっく・えんじぇぅ",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "レッドランドマーカー": {
+  "title": "レッドランドマーカー",
+  "bpm_lo": 174.0,
+  "bpm_hi": 174.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "あいのうた": {
+  "title": "あいのうた",
+  "bpm_lo": 139.0,
+  "bpm_hi": 139.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "ガーネットの涙": {
+  "title": "ガーネットの涙",
+  "bpm_lo": 139.0,
+  "bpm_hi": 139.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "だんだん早くなる": {
+  "title": "だんだん早くなる",
+  "bpm_lo": 90.0,
+  "bpm_hi": 160.0,
+  "duration": "2:21",
+  "bpm_var": true
+ },
+ "アンテナ39": {
+  "title": "アンテナ39",
+  "bpm_lo": 147.0,
+  "bpm_hi": 147.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "カルチャ": {
+  "title": "カルチャ",
+  "bpm_lo": 172.0,
+  "bpm_hi": 172.0,
+  "duration": "1:49",
+  "bpm_var": false
+ },
+ "メズマライザー": {
+  "title": "メズマライザー",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "メインキャラクター": {
+  "title": "メインキャラクター",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "きみとぼくのレゾナンス": {
+  "title": "きみとぼくのレゾナンス",
+  "bpm_lo": 130.0,
+  "bpm_hi": 160.0,
+  "duration": "2:12",
+  "bpm_var": true
+ },
+ "Blackjack": {
+  "title": "Blackjack",
+  "bpm_lo": 114.0,
+  "bpm_hi": 114.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "みかぼし": {
+  "title": "みかぼし",
+  "bpm_lo": 188.0,
+  "bpm_hi": 188.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "アンヘル": {
+  "title": "アンヘル",
+  "bpm_lo": 184.0,
+  "bpm_hi": 184.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "プロトディスコ": {
+  "title": "プロトディスコ",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "のだ": {
+  "title": "のだ",
+  "bpm_lo": 142.0,
+  "bpm_hi": 142.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "パンダヒーロー": {
+  "title": "パンダヒーロー",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "1:40",
+  "bpm_var": false
+ },
+ "結ンデ開イテ羅刹ト骸": {
+  "title": "結ンデ開イテ羅刹ト骸",
+  "bpm_lo": 169.33,
+  "bpm_hi": 169.33,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "クリスタルスノウ": {
+  "title": "クリスタルスノウ",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "1:44",
+  "bpm_var": false
+ },
+ "Packaged": {
+  "title": "Packaged",
+  "bpm_lo": 125.0,
+  "bpm_hi": 125.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "Call!!": {
+  "title": "Call!!",
+  "bpm_lo": 108.0,
+  "bpm_hi": 108.0,
+  "duration": "1:41",
+  "bpm_var": false
+ },
+ "吉原ラメント 再来盤": {
+  "title": "吉原ラメント 再来盤",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "マンハッタン": {
+  "title": "マンハッタン",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "クイーンオブハート": {
+  "title": "クイーンオブハート",
+  "bpm_lo": 235.0,
+  "bpm_hi": 235.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "バレリーコ": {
+  "title": "バレリーコ",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "Connecting": {
+  "title": "Connecting",
+  "bpm_lo": 91.0,
+  "bpm_hi": 91.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "テトリス": {
+  "title": "テトリス",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:34",
+  "bpm_var": false
+ },
+ "モニタリング": {
+  "title": "モニタリング",
+  "bpm_lo": 132.0,
+  "bpm_hi": 132.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "M@GICAL☆CURE! LOVE♥SHOT!": {
+  "title": "M@GICAL☆CURE! LOVE♥SHOT!",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "Hello Builder": {
+  "title": "Hello Builder",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "imaginary love story": {
+  "title": "imaginary love story",
+  "bpm_lo": 175.0,
+  "bpm_hi": 175.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "Intergalactic Bound": {
+  "title": "Intergalactic Bound",
+  "bpm_lo": 140.0,
+  "bpm_hi": 140.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "ラストラス": {
+  "title": "ラストラス",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "少女A": {
+  "title": "少女A",
+  "bpm_lo": 260.0,
+  "bpm_hi": 260.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "ヴィーナス": {
+  "title": "ヴィーナス",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "げんてん": {
+  "title": "げんてん",
+  "bpm_lo": 141.0,
+  "bpm_hi": 141.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "㋰責任集合体": {
+  "title": "㋰責任集合体",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "ホワイトハッピー": {
+  "title": "ホワイトハッピー",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "カレシのジュード": {
+  "title": "カレシのジュード",
+  "bpm_lo": 165.0,
+  "bpm_hi": 165.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "パメラ": {
+  "title": "パメラ",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "IMAWANOKIWA": {
+  "title": "IMAWANOKIWA",
+  "bpm_lo": 178.0,
+  "bpm_hi": 178.0,
+  "duration": "2:17",
+  "bpm_var": false
+ },
+ "ぼかろころしあむ": {
+  "title": "ぼかろころしあむ",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "上弦の月": {
+  "title": "上弦の月",
+  "bpm_lo": 82.0,
+  "bpm_hi": 82.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "黒塗り世界宛て書簡": {
+  "title": "黒塗り世界宛て書簡",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "好き！雪！本気マジック": {
+  "title": "好き！雪！本気マジック",
+  "bpm_lo": 167.0,
+  "bpm_hi": 167.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "Snow Fairy Story": {
+  "title": "Snow Fairy Story",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "雪がとける前に": {
+  "title": "雪がとける前に",
+  "bpm_lo": 167.0,
+  "bpm_hi": 167.0,
+  "duration": "1:34",
+  "bpm_var": false
+ },
+ "スターナイトスノウ": {
+  "title": "スターナイトスノウ",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "四角い地球を丸くする": {
+  "title": "四角い地球を丸くする",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "2:17",
+  "bpm_var": false
+ },
+ "アイ": {
+  "title": "アイ",
+  "bpm_lo": 192.0,
+  "bpm_hi": 192.0,
+  "duration": "1:49",
+  "bpm_var": false
+ },
+ "ぽかぽかの星": {
+  "title": "ぽかぽかの星",
+  "bpm_lo": 227.0,
+  "bpm_hi": 227.0,
+  "duration": "1:47",
+  "bpm_var": false
+ },
+ "Fondant Step": {
+  "title": "Fondant Step",
+  "bpm_lo": 84.0,
+  "bpm_hi": 141.0,
+  "duration": "2:09",
+  "bpm_var": true
+ },
+ "SHIAWASE FOR YOU!": {
+  "title": "SHIAWASE FOR YOU!",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "1:43",
+  "bpm_var": false
+ },
+ "ハオ": {
+  "title": "ハオ",
+  "bpm_lo": 176.0,
+  "bpm_hi": 176.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "Catch the Wave": {
+  "title": "Catch the Wave",
+  "bpm_lo": 153.0,
+  "bpm_hi": 153.0,
+  "duration": "1:32",
+  "bpm_var": false
+ },
+ "ダイダイダイダイダイキライ": {
+  "title": "ダイダイダイダイダイキライ",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "1:51",
+  "bpm_var": false
+ },
+ "ワンダーラスト": {
+  "title": "ワンダーラスト",
+  "bpm_lo": 178.0,
+  "bpm_hi": 230.0,
+  "duration": "2:26",
+  "bpm_var": true
+ },
+ "あいしていたのに": {
+  "title": "あいしていたのに",
+  "bpm_lo": 92.0,
+  "bpm_hi": 92.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "フロイライン＝オジョウサマ": {
+  "title": "フロイライン＝オジョウサマ",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "Nyanyanyanyanyanyanya!": {
+  "title": "Nyanyanyanyanyanyanya!",
+  "bpm_lo": 142.0,
+  "bpm_hi": 142.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "T氏の話を信じるな": {
+  "title": "T氏の話を信じるな",
+  "bpm_lo": 143.0,
+  "bpm_hi": 143.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "いますぐ輪廻": {
+  "title": "いますぐ輪廻",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "アイ・メイカー！": {
+  "title": "アイ・メイカー！",
+  "bpm_lo": 174.72,
+  "bpm_hi": 185.0,
+  "duration": "2:13",
+  "bpm_var": true
+ },
+ "アストロノーツ": {
+  "title": "アストロノーツ",
+  "bpm_lo": 72.07,
+  "bpm_hi": 170.58,
+  "duration": "2:01",
+  "bpm_var": true
+ },
+ "シティライツ": {
+  "title": "シティライツ",
+  "bpm_lo": 76.0,
+  "bpm_hi": 142.0,
+  "duration": "2:01",
+  "bpm_var": true
+ },
+ "ピッコーン！！": {
+  "title": "ピッコーン！！",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "空に免じて": {
+  "title": "空に免じて",
+  "bpm_lo": 76.0,
+  "bpm_hi": 76.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "エンドマークに希望と涙を添えて": {
+  "title": "エンドマークに希望と涙を添えて",
+  "bpm_lo": 257.0,
+  "bpm_hi": 257.0,
+  "duration": "2:21",
+  "bpm_var": false
+ },
+ "the EmpErroR": {
+  "title": "the EmpErroR",
+  "bpm_lo": 240.0,
+  "bpm_hi": 240.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "Don't Fight The Music": {
+  "title": "Don't Fight The Music",
+  "bpm_lo": 74.0,
+  "bpm_hi": 200.0,
+  "duration": "2:40",
+  "bpm_var": true
+ },
+ "folern": {
+  "title": "folern",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "2:21",
+  "bpm_var": false
+ },
+ "Sage": {
+  "title": "Sage",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:30",
+  "bpm_var": false
+ },
+ "MarbleBlue.": {
+  "title": "MarbleBlue.",
+  "bpm_lo": 198.22,
+  "bpm_hi": 198.22,
+  "duration": "2:43",
+  "bpm_var": false
+ },
+ "超最終鬼畜妹フランドール・Ｓ": {
+  "title": "超最終鬼畜妹フランドール・Ｓ",
+  "bpm_lo": 210.0,
+  "bpm_hi": 210.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "Bad Apple!! feat.SEKAI": {
+  "title": "Bad Apple!! feat.SEKAI",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "2:26",
+  "bpm_var": false
+ },
+ "Help me, ERINNNNNN!!": {
+  "title": "Help me, ERINNNNNN!!",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:25",
+  "bpm_var": false
+ },
+ "Fire◎Flower (Rerec)": {
+  "title": "Fire◎Flower (Rerec)",
+  "bpm_lo": 153.0,
+  "bpm_hi": 175.0,
+  "duration": "1:43",
+  "bpm_var": true
+ },
+ "チルノのパーフェクトさんすう学園": {
+  "title": "チルノのパーフェクトさんすう学園",
+  "bpm_lo": 179.0,
+  "bpm_hi": 179.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "とうほう☆ワンダーランド": {
+  "title": "とうほう☆ワンダーランド",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "超ナイト・オブ・ナイツ": {
+  "title": "超ナイト・オブ・ナイツ",
+  "bpm_lo": 193.0,
+  "bpm_hi": 193.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "Life Will Change": {
+  "title": "Life Will Change",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "電光刹歌": {
+  "title": "電光刹歌",
+  "bpm_lo": 207.0,
+  "bpm_hi": 207.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "ウィーアーピコピコハンマーズ!!!!": {
+  "title": "ウィーアーピコピコハンマーズ!!!!",
+  "bpm_lo": 202.0,
+  "bpm_hi": 202.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "ジェットブラック": {
+  "title": "ジェットブラック",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "トレジャーガーデン": {
+  "title": "トレジャーガーデン",
+  "bpm_lo": 268.0,
+  "bpm_hi": 268.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "最愛人生ランナー": {
+  "title": "最愛人生ランナー",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "バイオレンストリガー": {
+  "title": "バイオレンストリガー",
+  "bpm_lo": 196.0,
+  "bpm_hi": 196.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "ラヴィ": {
+  "title": "ラヴィ",
+  "bpm_lo": 183.0,
+  "bpm_hi": 183.0,
+  "duration": "2:12",
+  "bpm_var": false
+ },
+ "アルカリレットウセイ": {
+  "title": "アルカリレットウセイ",
+  "bpm_lo": 158.0,
+  "bpm_hi": 158.0,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "SAIRAI": {
+  "title": "SAIRAI",
+  "bpm_lo": 95.0,
+  "bpm_hi": 95.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "CHAOS": {
+  "title": "CHAOS",
+  "bpm_lo": 99.0,
+  "bpm_hi": 150.0,
+  "duration": "2:24",
+  "bpm_var": true
+ },
+ "Saika": {
+  "title": "Saika",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:09",
+  "bpm_var": false
+ },
+ "99 Glooms": {
+  "title": "99 Glooms",
+  "bpm_lo": 185.0,
+  "bpm_hi": 185.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "ANiMA": {
+  "title": "ANiMA",
+  "bpm_lo": 183.5,
+  "bpm_hi": 183.5,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "Masquerade": {
+  "title": "Masquerade",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "プロセカULTIMATE楽曲メドレー": {
+  "title": "プロセカULTIMATE楽曲メドレー",
+  "bpm_lo": 162.0,
+  "bpm_hi": 300.0,
+  "duration": "5:23",
+  "bpm_var": true
+ },
+ "MASTER高難易度楽曲メドレー": {
+  "title": "MASTER高難易度楽曲メドレー",
+  "bpm_lo": 122.0,
+  "bpm_hi": 260.0,
+  "duration": "5:15",
+  "bpm_var": true
+ },
+ "周年記念高難易度書き下ろし楽曲メドレー": {
+  "title": "周年記念高難易度書き下ろし楽曲メドレー",
+  "bpm_lo": 115.0,
+  "bpm_hi": 400.0,
+  "duration": "4:39",
+  "bpm_var": true
+ },
+ "さいたま2000": {
+  "title": "さいたま2000",
+  "bpm_lo": 200.0,
+  "bpm_hi": 200.0,
+  "duration": "1:57",
+  "bpm_var": false
+ },
+ "初音ミクの消失−劇場版−": {
+  "title": "初音ミクの消失−劇場版−",
+  "bpm_lo": 100.0,
+  "bpm_hi": 240.0,
+  "duration": "2:21",
+  "bpm_var": true
+ },
+ "幽玄ノ乱": {
+  "title": "幽玄ノ乱",
+  "bpm_lo": 160.0,
+  "bpm_hi": 300.0,
+  "duration": "2:07",
+  "bpm_var": true
+ },
+ "sweety glitch": {
+  "title": "sweety glitch",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "2:28",
+  "bpm_var": false
+ },
+ "Unsung Melodies": {
+  "title": "Unsung Melodies",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "1:46",
+  "bpm_var": false
+ },
+ "Ten Thousand Stars": {
+  "title": "Ten Thousand Stars",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:15",
+  "bpm_var": false
+ },
+ "Can't Make A Song!!": {
+  "title": "Can't Make A Song!!",
+  "bpm_lo": 100.0,
+  "bpm_hi": 165.0,
+  "duration": "2:08",
+  "bpm_var": true
+ },
+ "Artifact": {
+  "title": "Artifact",
+  "bpm_lo": 172.0,
+  "bpm_hi": 172.0,
+  "duration": "2:14",
+  "bpm_var": false
+ },
+ "MikuFiesta": {
+  "title": "MikuFiesta",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "Thousand Little Voices": {
+  "title": "Thousand Little Voices",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:27",
+  "bpm_var": false
+ },
+ "Plaything": {
+  "title": "Plaything",
+  "bpm_lo": 102.5,
+  "bpm_hi": 102.5,
+  "duration": "2:14",
+  "bpm_var": false
+ },
+ "FAKE HEART": {
+  "title": "FAKE HEART",
+  "bpm_lo": 164.0,
+  "bpm_hi": 164.0,
+  "duration": "1:59",
+  "bpm_var": false
+ },
+ "Just 1dB Louder": {
+  "title": "Just 1dB Louder",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "1:55",
+  "bpm_var": false
+ },
+ "NAKAKAPAGPABAGABAG": {
+  "title": "NAKAKAPAGPABAGABAG",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
+ "Karma": {
+  "title": "Karma",
+  "bpm_lo": 134.0,
+  "bpm_hi": 134.0,
+  "duration": "2:22",
+  "bpm_var": false
+ },
+ "Last of Me": {
+  "title": "Last of Me",
+  "bpm_lo": 169.0,
+  "bpm_hi": 169.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "ELECTRIC WEEKEND ZONE": {
+  "title": "ELECTRIC WEEKEND ZONE",
+  "bpm_lo": 142.0,
+  "bpm_hi": 142.0,
+  "duration": "2:21",
+  "bpm_var": false
+ },
+ "Sad Machine": {
+  "title": "Sad Machine",
+  "bpm_lo": 88.5,
+  "bpm_hi": 88.5,
+  "duration": "2:05",
+  "bpm_var": false
+ },
+ "MONSTER": {
+  "title": "MONSTER",
+  "bpm_lo": 118.0,
+  "bpm_hi": 118.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "New Worlds": {
+  "title": "New Worlds",
+  "bpm_lo": 167.0,
+  "bpm_hi": 167.0,
+  "duration": "2:13",
+  "bpm_var": false
+ },
+ "i DO what i WANT": {
+  "title": "i DO what i WANT",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "Chu! Future☆Express!": {
+  "title": "Chu! Future☆Express!",
+  "bpm_lo": 195.0,
+  "bpm_hi": 195.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "shrimp miku": {
+  "title": "shrimp miku",
+  "bpm_lo": 120.0,
+  "bpm_hi": 120.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "LOVELY♥CAVITY": {
+  "title": "LOVELY♥CAVITY",
+  "bpm_lo": 150.0,
+  "bpm_hi": 150.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "Cheerleader (feat. Hatsune Miku)": {
+  "title": "Cheerleader (feat. Hatsune Miku)",
+  "bpm_lo": 148.0,
+  "bpm_hi": 148.0,
+  "duration": "1:50",
+  "bpm_var": false
+ },
+ "CONNECT:COMMUNE": {
+  "title": "CONNECT:COMMUNE",
+  "bpm_lo": 156.0,
+  "bpm_hi": 156.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "Room for a Fantasy": {
+  "title": "Room for a Fantasy",
+  "bpm_lo": 102.0,
+  "bpm_hi": 102.0,
+  "duration": "2:08",
+  "bpm_var": false
+ },
+ "장산범": {
+  "title": "장산범",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "2:01",
+  "bpm_var": false
+ },
+ "Alone": {
+  "title": "Alone",
+  "bpm_lo": 131.0,
+  "bpm_hi": 131.0,
+  "duration": "2:16",
+  "bpm_var": false
+ },
+ "벚꽃비": {
+  "title": "벚꽃비",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:26",
+  "bpm_var": false
+ },
+ "각개전투": {
+  "title": "각개전투",
+  "bpm_lo": 140.0,
+  "bpm_hi": 170.0,
+  "duration": "2:31",
+  "bpm_var": true
+ },
+ "별빛 세레나데": {
+  "title": "별빛 세레나데",
+  "bpm_lo": 230.0,
+  "bpm_hi": 230.0,
+  "duration": "2:24",
+  "bpm_var": false
+ },
+ "비밀 인형극 II": {
+  "title": "비밀 인형극 II",
+  "bpm_lo": 128.0,
+  "bpm_hi": 128.0,
+  "duration": "2:10",
+  "bpm_var": false
+ },
+ "Carpe Diem!": {
+  "title": "Carpe Diem!",
+  "bpm_lo": 147.0,
+  "bpm_hi": 147.0,
+  "duration": "1:51",
+  "bpm_var": false
+ },
+ "둔갑": {
+  "title": "둔갑",
+  "bpm_lo": 100.0,
+  "bpm_hi": 100.0,
+  "duration": "2:21",
+  "bpm_var": false
+ },
+ "우산": {
+  "title": "우산",
+  "bpm_lo": 112.0,
+  "bpm_hi": 112.0,
+  "duration": "2:23",
+  "bpm_var": false
+ },
+ "시미유쿠": {
+  "title": "시미유쿠",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "一样": {
+  "title": "一样",
+  "bpm_lo": 155.0,
+  "bpm_hi": 155.0,
+  "duration": "1:46",
+  "bpm_var": false
+ },
+ "初岚": {
+  "title": "初岚",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "2:32",
+  "bpm_var": false
+ },
+ "镜中少女": {
+  "title": "镜中少女",
+  "bpm_lo": 108.0,
+  "bpm_hi": 108.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "Pick Me Up": {
+  "title": "Pick Me Up",
+  "bpm_lo": 139.0,
+  "bpm_hi": 139.0,
+  "duration": "2:11",
+  "bpm_var": false
+ },
+ "踏步、出发": {
+  "title": "踏步、出发",
+  "bpm_lo": 78.0,
+  "bpm_hi": 78.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "My Stage With You": {
+  "title": "My Stage With You",
+  "bpm_lo": 170.0,
+  "bpm_hi": 170.0,
+  "duration": "1:39",
+  "bpm_var": false
+ },
+ "We Leave The World Together": {
+  "title": "We Leave The World Together",
+  "bpm_lo": 105.0,
+  "bpm_hi": 105.0,
+  "duration": "2:02",
+  "bpm_var": false
+ },
+ "梦色星球": {
+  "title": "梦色星球",
+  "bpm_lo": 130.0,
+  "bpm_hi": 130.0,
+  "duration": "2:20",
+  "bpm_var": false
+ },
+ "低彩度记事": {
+  "title": "低彩度记事",
+  "bpm_lo": 138.0,
+  "bpm_hi": 138.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
+ "前ノハナシ": {
+  "title": "前ノハナシ",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "1:52",
+  "bpm_var": false
+ },
+ "Hype Dive": {
+  "title": "Hype Dive",
+  "bpm_lo": 160.0,
+  "bpm_hi": 160.0,
+  "duration": "1:28",
+  "bpm_var": false
+ },
+ "越过海岸线": {
+  "title": "越过海岸线",
+  "bpm_lo": 157.0,
+  "bpm_hi": 157.0,
+  "duration": "2:00",
+  "bpm_var": false
+ },
+ "月西江·春雷": {
+  "title": "月西江·春雷",
+  "bpm_lo": 70.0,
+  "bpm_hi": 70.0,
+  "duration": "2:04",
+  "bpm_var": false
+ },
+ "ヒマン=ヒダイ焦燥曲": {
+  "title": "ヒマン=ヒダイ焦燥曲",
+  "bpm_lo": 180.0,
+  "bpm_hi": 180.0,
+  "duration": "2:06",
+  "bpm_var": false
+ },
+ "まいまいまい": {
+  "title": "まいまいまい",
+  "bpm_lo": 145.0,
+  "bpm_hi": 145.0,
+  "duration": "1:44",
+  "bpm_var": false
+ },
+ "Mag1c": {
+  "title": "Mag1c",
+  "bpm_lo": 105.0,
+  "bpm_hi": 129.0,
+  "duration": "2:02",
+  "bpm_var": true
+ },
+ "アサガオの散る頃に": {
+  "title": "アサガオの散る頃に",
+  "bpm_lo": 85.0,
+  "bpm_hi": 85.0,
+  "duration": "2:30",
+  "bpm_var": false
+ },
+ "どんな結末がお望みだい？": {
+  "title": "どんな結末がお望みだい？",
+  "bpm_lo": 190.0,
+  "bpm_hi": 190.0,
+  "duration": "1:35",
+  "bpm_var": false
+ }
+}
