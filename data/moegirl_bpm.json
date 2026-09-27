@@ -818,6 +818,13 @@
   "duration": "2:09",
   "bpm_var": true
  },
+ "ヘレディティ": {
+  "title": "ヘレディティ",
+  "bpm_lo": 135.0,
+  "bpm_hi": 135.0,
+  "duration": "2:07",
+  "bpm_var": false
+ },
  "悔やむと書いてミライ": {
   "title": "悔やむと書いてミライ",
   "bpm_lo": 194.0,
@@ -1747,6 +1754,20 @@
   "bpm_lo": 186.0,
   "bpm_hi": 186.0,
   "duration": "2:01",
+  "bpm_var": false
+ },
+ "こわれちゃった！！": {
+  "title": "こわれちゃった！！",
+  "bpm_lo": 63.0,
+  "bpm_hi": 279.0,
+  "duration": "1:58",
+  "bpm_var": true
+ },
+ "きのせい": {
+  "title": "きのせい",
+  "bpm_lo": 105.0,
+  "bpm_hi": 105.0,
+  "duration": "1:43",
   "bpm_var": false
  },
  "セカイ": {
@@ -4759,6 +4780,13 @@
   "duration": "2:11",
   "bpm_var": false
  },
+ "敗走": {
+  "title": "敗走",
+  "bpm_lo": 76.0,
+  "bpm_hi": 76.0,
+  "duration": "1:56",
+  "bpm_var": false
+ },
  "エンドマークに希望と涙を添えて": {
   "title": "エンドマークに希望と涙を添えて",
   "bpm_lo": 257.0,
@@ -5025,13 +5053,6 @@
   "duration": "2:08",
   "bpm_var": true
  },
- "Artifact": {
-  "title": "Artifact",
-  "bpm_lo": 172.0,
-  "bpm_hi": 172.0,
-  "duration": "2:14",
-  "bpm_var": false
- },
  "MikuFiesta": {
   "title": "MikuFiesta",
   "bpm_lo": 128.0,
@@ -5123,6 +5144,13 @@
   "duration": "2:11",
   "bpm_var": false
  },
+ "Artifact": {
+  "title": "Artifact",
+  "bpm_lo": 172.0,
+  "bpm_hi": 172.0,
+  "duration": "2:14",
+  "bpm_var": false
+ },
  "Chu! Future☆Express!": {
   "title": "Chu! Future☆Express!",
   "bpm_lo": 195.0,
@@ -5163,6 +5191,13 @@
   "bpm_lo": 102.0,
   "bpm_hi": 102.0,
   "duration": "2:08",
+  "bpm_var": false
+ },
+ "Giddy!": {
+  "title": "Giddy!",
+  "bpm_lo": 175.0,
+  "bpm_hi": 175.0,
+  "duration": "1:37",
   "bpm_var": false
  },
  "장산범": {
@@ -5346,6 +5381,41 @@
   "bpm_hi": 129.0,
   "duration": "2:02",
   "bpm_var": true
+ },
+ "絶景": {
+  "title": "絶景",
+  "bpm_lo": 60.0,
+  "bpm_hi": 169.0,
+  "duration": "1:55",
+  "bpm_var": true
+ },
+ "The Encounter Code": {
+  "title": "The Encounter Code",
+  "bpm_lo": 212.0,
+  "bpm_hi": 212.0,
+  "duration": "2:03",
+  "bpm_var": false
+ },
+ "ln(guis·tics)": {
+  "title": "ln(guis·tics)",
+  "bpm_lo": 175.0,
+  "bpm_hi": 175.0,
+  "duration": "2:14",
+  "bpm_var": false
+ },
+ "Remnath": {
+  "title": "Remnath",
+  "bpm_lo": 187.0,
+  "bpm_hi": 187.0,
+  "duration": "1:51",
+  "bpm_var": false
+ },
+ "When Enemies Collapse": {
+  "title": "When Enemies Collapse",
+  "bpm_lo": 158.0,
+  "bpm_hi": 158.0,
+  "duration": "1:50",
+  "bpm_var": false
  },
  "アサガオの散る頃に": {
   "title": "アサガオの散る頃に",
