@@ -10,7 +10,7 @@ import json
 import os
 from collections import defaultdict
 
-DATA = r"C:\Users\Liz\Desktop\bot\cc\pjsk\data"
+DATA = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 unfc = json.load(open(os.path.join(DATA, "master_unfc_full.json"), encoding="utf-8"))
 
 

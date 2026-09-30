@@ -13,11 +13,32 @@ import re
 import os
 import csv
 import json
+import urllib.request
 
-SRC = r"C:\Users\Liz\Desktop\bot\cc\tmp\teishu_probe\pjsekai_master.html"
-OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+BASE = os.path.dirname(os.path.abspath(__file__))
+PROJ = os.path.dirname(BASE)
+OUT = os.path.join(PROJ, "data")
+CACHE = os.path.join(OUT, "pjsekai_teishu_master.html")
+OLD_CACHE = os.path.join(os.path.dirname(PROJ), "tmp", "teishu_probe", "pjsekai_master.html")
 
-html = open(SRC, encoding="utf-8").read()
+URL = "https://pjsekai.com/?%E6%A5%BD%E6%9B%B2%E9%9B%A3%E6%98%93%E5%BA%A6%E8%A1%A8MASTER"
+UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
+
+
+def get_html():
+    for p in (CACHE, OLD_CACHE):
+        if os.path.exists(p) and os.path.getsize(p) > 500000:
+            print("使用缓存:", p)
+            return open(p, encoding="utf-8", errors="ignore").read()
+    print("下载楽曲難易度表 MASTER…")
+    req = urllib.request.Request(URL, headers={**UA, "Accept-Language": "ja,en;q=0.9"})
+    doc = urllib.request.urlopen(req, timeout=90).read().decode("utf-8", "ignore")
+    open(CACHE, "w", encoding="utf-8").write(doc)
+    print(f"已缓存 {CACHE} ({len(doc)} 字符)")
+    return doc
+
+
+html = get_html()
 
 # 1. 切出每个 Lv.X 小节
 sections = []  # (level, chunk)
