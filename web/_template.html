@@ -4,12 +4,52 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PJSK MASTER 定数表（全量）</title>
+<script>
+/* 开灯/关灯：首屏渲染前就从 localStorage 恢复主题，避免闪烁 */
+try{ if (localStorage.getItem("pjsk_theme") === "light")
+  document.documentElement.dataset.theme = "light"; }catch(e){}
+</script>
 <style>
 :root{
   --bg:#0d1117; --bg2:#141b24; --card:#182029; --card2:#1e2833;
   --line:#2a3542; --fg:#e6edf3; --fg2:#9aa7b4; --fg3:#6b7885;
   --cyan:#31c8f0; --pink:#ff5c8a; --gold:#ffc857; --green:#3fd07b; --red:#ff6b6b; --purple:#a78bfa;
 }
+/* ---------- 亮色主题（开灯） ----------
+   只改这一处变量 + 下面一组 html[data-theme=light] 覆盖；
+   新增样式时请继续用 var(--*)，别写死深色，否则会只在暗色下正常。 */
+html[data-theme=light]{
+  --bg:#f2f4f7; --bg2:#ffffff; --card:#ffffff; --card2:#edf1f5;
+  --line:#d3dce4; --fg:#182430; --fg2:#455565; --fg3:#7d8b99;
+  --cyan:#0b8fb5; --pink:#d6336c; --gold:#a07600; --green:#1a9950; --red:#d64545; --purple:#7a5cd6;
+}
+html[data-theme=light] header{background:rgba(242,244,247,.94)}
+html[data-theme=light] .tabs{background:rgba(242,244,247,.96)}
+html[data-theme=light] .bar{background:rgba(255,255,255,.96)}
+html[data-theme=light] .pbar{background:#d3dce48c}
+html[data-theme=light] .lvbar .b{background:linear-gradient(180deg,#9cc3d3,#6d99aa)}
+html[data-theme=light] .lvbar.on .b{background:linear-gradient(180deg,var(--cyan),#0a6d8a)}
+html[data-theme=light] .card:hover{box-shadow:0 8px 22px #18243026}
+html[data-theme=light] .card .thumb,html[data-theme=light] td img,
+html[data-theme=light] .modal .cover,html[data-theme=light] .brow img{background:#e8edf2}
+/* 封面图上的深色半透明角标：暗色下文字吃变量没问题，亮色下变量变深会糊，强制浅色 */
+html[data-theme=light] .card .rk{color:#e6edf3}
+html[data-theme=light] .card .lv{color:#ffd76e}
+html[data-theme=light] .st.never{color:#ff9ec0}
+html[data-theme=light] .st.tried{color:#ffd76e}
+html[data-theme=light] .st.fc{color:#6ee7a8}
+html[data-theme=light] td,html[data-theme=light] .srcs td{border-bottom-color:#e2e8ee}
+html[data-theme=light] tr:hover td{background:#f0f4f8}
+html[data-theme=light] .b50head{background:linear-gradient(135deg,#ffffff,#eef3f8)}
+html[data-theme=light] .brow .rk1{color:#c9930a}
+html[data-theme=light] .brow .rk2{color:#8a97a5}
+html[data-theme=light] .brow .rk3{color:#c07b3f}
+html[data-theme=light] .zbar .tr{background:#e8edf2}
+html[data-theme=light] .zbar .tr u{background:#b8c4cf}
+html[data-theme=light] .persona{background:linear-gradient(135deg,#ffffff,#f2f6fa);border-color:#d3dce4}
+html[data-theme=light] .tips{color:var(--fg)}
+html[data-theme=light] .modal code{background:#edf1f5}
+html[data-theme=light] #btnTheme{border-color:var(--gold);color:var(--gold)}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
   font-family:"Segoe UI","Microsoft YaHei",-apple-system,sans-serif;}
@@ -272,9 +312,11 @@ footer b{color:var(--fg2)}
 
 /* ---------- 公共版（GitHub Pages）专用样式 ---------- */
 .pubonly[hidden]{display:none!important}
-#btnSuite{margin-left:auto;background:linear-gradient(135deg,var(--cyan),var(--pink));border:0;
+.grow{margin-left:auto}
+#btnSuite{background:linear-gradient(135deg,var(--cyan),var(--pink));border:0;
   color:#0d1117;font-weight:800;padding:7px 15px;font-size:12.5px;border-radius:9px}
 #btnSuite:hover{color:#0d1117;opacity:.88;border:0}
+#btnTheme{padding:6px 12px;font-size:12.5px;white-space:nowrap}
 .snapshot{font-size:11px;color:var(--gold);white-space:nowrap}
 .snapshot.none{color:var(--fg3)}
 .pubempty{text-align:center;padding:52px 22px;border:1px dashed var(--line);border-radius:12px;
@@ -290,7 +332,6 @@ footer b{color:var(--fg2)}
 .modal code{background:#0e141b;border:1px solid var(--line);border-radius:5px;padding:1px 5px;
   font-size:12px;color:var(--gold);word-break:break-all}
 @media(max-width:820px){
-  #btnSuite{margin-left:0}
   .modal .top{flex-direction:column} .modal .cover{width:100%;height:auto;aspect-ratio:1/1}
   .bar{top:auto;position:static} th{top:0}
 }
@@ -319,8 +360,10 @@ footer b{color:var(--fg2)}
   </div>
   <span class="hint" id="vHint"></span>
   <span class="hint pubonly" id="suiteInfo" hidden></span>
+  <span class="grow"></span>
   <button id="btnSuite" class="pubonly" hidden
     title="上传你从 haruki 导出的 suite JSON —— 全部计算都在你的浏览器里完成，数据不上传">📥 导入我的数据</button>
+  <button id="btnTheme" title="切换亮色/暗色主题（记住选择）">☀ 开灯</button>
 </div></div>
 
 <!-- 曲目列表专用控件：只在卡片/表格视图显示 -->
@@ -1430,6 +1473,24 @@ document.getElementById("q").oninput = e => { S.q = e.target.value.trim(); rende
 document.getElementById("sort").onchange = e => { S.sort = e.target.value; render(); };
 function syncDir(){ document.getElementById("dir").textContent = S.dir > 0 ? "▲ 升序" : "▼ 降序"; }
 document.getElementById("dir").onclick = () => { S.dir *= -1; syncDir(); render(); };
+/* ---------- 主题切换（开灯/关灯）---------- */
+(function(){
+  const btn = document.getElementById("btnTheme");
+  const isLight = () => document.documentElement.dataset.theme === "light";
+  const sync = () => {
+    btn.textContent = isLight() ? "🌙 关灯" : "☀ 开灯";
+    btn.title = isLight() ? "切回暗色主题（记住选择）" : "切换亮色主题（记住选择）";
+  };
+  btn.onclick = () => {
+    const light = !isLight();
+    if (light) document.documentElement.dataset.theme = "light";
+    else delete document.documentElement.dataset.theme;
+    try { localStorage.setItem("pjsk_theme", light ? "light" : "dark"); } catch(e){}
+    sync();
+  };
+  sync();
+})();
+
 /* ---------- 视图切换 ---------- */
 const VIEWS = [["cards","vCards","卡片墙"], ["table","vTable","表格"],
                ["b50","vB50","B50 榜单"], ["report","vRep","分析报告"]];
