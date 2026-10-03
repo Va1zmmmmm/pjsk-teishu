@@ -8,8 +8,11 @@
 2. cn_alias / name_display —— 曲名口径
    国服名权威源 = cn_master_musics.json 的 infos[0].title（游戏自身本地化）；
    该字段仍是日文时（多为未实装曲 / 部分曲目国服沿用原名），用萌百译名补齐（moegirl_names.json）。
-3. quick_income —— 「✅快速收益」统一口径（在此一处算，web 与 excel 共用，避免两边漂移）
-   没打过 且 已实装 且（日服 8 档为最下位/下位 或 定数 ≤ 官方星级+0.4）
+3. quick_income —— 「快速收益」标注（web 与 excel 共用，此处只做搬运，不再自己算口径）
+   唯一口径在 quick_income.py（v3.1：清单 = 所有有收益的未 FC 谱面，收益 = 定数 − 榜尾门槛 > 0；
+   再按 难度差 分 🟢/🟡/🔴 三档，只分档不剔除），由 build_analysis.py 计算后写进
+   data/analysis.json 的 `quick.ids`。
+   ⇒ 必须先跑 build_analysis.py（refresh_all.py 里已排在其前面），否则快速收益全空。
 
 用法: python scripts/annotate_names_release.py
 """
@@ -47,6 +50,17 @@ def main():
     now_ms = time.time() * 1000
     n_unrel = n_alias = n_quick = n_tips = n_zh = 0
 
+    # 快速收益 v3：口径在 quick_income.py / build_analysis.py，这里只按 musicId 搬运
+    ana_path = os.path.join(DATA, "analysis.json")
+    quick_ids = set()
+    if os.path.exists(ana_path):
+        ana = json.load(open(ana_path, encoding="utf-8"))
+        quick_ids = set((ana.get("quick") or {}).get("ids") or [])
+        if not quick_ids:
+            print("⚠️ analysis.json 里没有 quick.ids —— 先跑 build_analysis.py（v3 起口径在那里）")
+    else:
+        print("⚠️ 缺 data/analysis.json —— 快速收益将全部为空；先跑 build_analysis.py")
+
     for r in unfc:
         m = musics.get(r["musicId"], {})
         rel = m.get("releasedAt") or 0
@@ -72,13 +86,8 @@ def main():
             r["name_display"] = cn or jp
             r["name_basis"] = "official"
 
-        tei = r.get("final_teishu")
-        r["quick_income"] = bool(
-            not r.get("played", True)
-            and not r["unreleased"]
-            and (r.get("p8_judge") in ("最下位", "下位")
-                 or (tei is not None and tei <= r["playLevel"] + 0.4))
-        )
+        # 快速收益：与 master_all.json / 网页同一份 id 清单（口径唯一出处 quick_income.py）
+        r["quick_income"] = bool(r["musicId"] in quick_ids)
 
         # 攻略 tips（pjsekai.com 楽曲難易度表 MASTER 的 要素 + メモ）→ 优先用中文译文
         t = tips.get(jp) or tips.get(cn) or tips_norm.get(norm(jp)) or tips_norm.get(norm(cn))

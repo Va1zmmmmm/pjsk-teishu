@@ -134,6 +134,10 @@ button.violet.on{background:#a78bfa1f;border-color:var(--purple);color:var(--pur
 .tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:7px;min-height:15px}
 .tag{font-size:9.5px;padding:1px 5px;border-radius:4px;border:1px solid var(--line);color:var(--fg3)}
 .tag.q{color:var(--green);border-color:#3fd07b55;background:#3fd07b12}
+/* 快速收益三档（v3.2）：绿=不越级、黄=略越级、红=暂时先别碰（只描述越级程度，不代表打得过） */
+.tag.tier-g{color:var(--green);border-color:#3fd07b55;background:#3fd07b12}
+.tag.tier-y{color:var(--gold);border-color:#ffc85755;background:#ffc85712}
+.tag.tier-r{color:var(--red);border-color:#ff6b6b55;background:#ff6b6b12}
 .tag.v{color:var(--purple);border-color:#a78bfa55;background:#a78bfa12}
 .tag.w{color:var(--gold);border-color:#ffc85755;background:#ffc85712}
 .tag.low{color:var(--red);border-color:#ff6b6b55;background:#ff6b6b12}
@@ -347,6 +351,8 @@ footer b{color:var(--fg2)}
     </div>
     <div class="stats" id="stats"></div>
     <div class="pbar"><i id="pfill"></i></div>
+    <!-- 三种「水平尺」显式列出：免得把进榜门槛(30.50)当成自己的定数（栗子 2026-10-04 提过这个歧义） -->
+    <div class="hint" id="ruler" style="margin-top:8px;line-height:1.7"></div>
   </div>
 </header>
 <!-- 视图切换：独立一行，任何视图下都可见（曾跟筛选栏一起被隐藏，切到 B50 后无法返回）
@@ -379,6 +385,7 @@ footer b{color:var(--fg2)}
     <option value="bpm">BPM</option>
     <option value="hs">最高分</option>
     <option value="name">曲名</option>
+    <option value="rec">推荐度（先打哪些）</option>
   </select>
   <button id="dir" title="切换升降序">▲ 升序</button>
   <div class="sep"></div>
@@ -386,7 +393,8 @@ footer b{color:var(--fg2)}
   <button id="fFC" class="green" title="只看已 FC（官方成绩或本地标记）">已 FC</button>
   <button id="fNever" class="pink">没打过</button>
   <button id="fTried">打过未 FC</button>
-  <button id="fQuick">✅ 快速收益</button>
+  <button id="fQuick" title="没 FC 的曲里、定数高于你 B50 榜第 50 名（进榜门槛）的那些 —— FC 掉能挤进 B50 榜。含越级的，只按档位排序、不剔除">💰 能进 B50 的未 FC</button>
+  <button id="fGreen" class="green" title="只看 🟢 不越级：个人难度（定数 + 0.15×(弱标签个数 − 强标签个数)）在你 B50 + 1 以内。注意：这只说它最不越级，不代表你已经能 FC">🟢 不越级</button>
   <button id="fVar">速度变化谱</button>
   <button id="fLow">低可信</button>
   <div class="sep"></div>
@@ -418,8 +426,18 @@ footer b{color:var(--fg2)}
   <b>状态</b>：已 FC = 该曲 MASTER 有 full_combo / full_perfect 记录（或你在本地标了已 FC）；「打过未 FC」= 有成绩但没 FC；「没打过」= 无 MASTER 游玩记录；「未实装」= 国服数据里已排期但尚未上线的曲（默认隐藏）。<br>
   <b>定数</b>：源2 = pjsekai.com 日服 8 档难度分类 → 伪定数（官方星级 + 档内位置，映射 最下位−0 / 最下位0.2 / 下位0.4 / 適正0.5 / 上位0.7 / 最上位0.9 / 最上位＋0.95）；
   源C = 同星级（全量 622 首内）「物量排名 + NPS 排名」/2 复合，仅 8 档缺时兜底（标「低可信」）。<br>
-  <b>快速收益</b> = 没打过 且 已实装 且 <b>定数 ≤ 你的 FC 上限 + 0.3</b>
-  （FC 上限 = 你已 FC 曲目里的最高定数，当前 <b id="ceilTxt">—</b>）。<b>⚠ 个人差</b> = 社区源分歧 ≥0.6。<br>
+  <b>快速收益</b>（v3.2，2026-10-03/04）—— 下面两个概念用的是<b>不同的尺子</b>，别混：
+  <b>① 能不能进榜</b>：<b>定数 &gt; 进榜门槛</b>（= 你 B50 榜第 50 名的分数，当前 <b id="cutTxt">—</b>）
+  ⇒ 才叫「有收益」＝ FC 掉能挤进 B50 榜；B50 实际涨幅 ≈（定数 − 门槛）/ 50。
+  <b>② 越不越级</b>：<b>个人难度 − 你的 B50</b>（当前 <b id="b50Txt">—</b>）分三档 ——
+  <b>🟢 不越级 &lt;1</b> ／ <b>🟡 略越级 1~2</b> ／ <b>🔴 暂时先别碰 ≥2</b>（🔴 就是「先按顺序放着」，不是「你打不过」）；
+  <b>个人难度 = 定数 + 0.10 × (弱项分 − 强项分)</b>；每个弱标签 1 分，<b>重度弱项（|z| ≥ 2，目前是读谱难 / 长曲）算 2 分</b>，强标签同理（越苦越压分、越擅长越涨分），
+  弱标签 = 苦手分析里 z ≤ −0.5 的那些（读谱难 / 长曲 / 局所难 / 个人差 / 散打 / 划键难 / 跳拍节奏 / 变速），
+  强标签 = z ≥ +0.5 的那些（极小音符 / 物量 / 变拍子）。
+  ⚠️ <b>档位只是「越级程度的定量描述」，不是「你打得过 / 能 FC」的结论</b>——列在这里的每一首本来都是你还没清掉的曲；
+  ⚠️ <b>配置差/越级只影响档位和排序，不会从清单里删掉</b>。
+  排序可选「推荐度（先打哪些）」，或点「🟢 不越级」只看最不越级的那批。
+  <b>⚠ 个人差</b> = 社区源分歧 ≥0.6。<br>
   <b>个人定数</b> = 社区定数 + 0.01 ×（该曲你多打的次数），**直接显示在卡片/表格的「定数」上**，
   并在旁边标出 +0.0N 角标；社区原值可在表格「社区定数」列或详情弹窗查看。<br>
   <span id="frPlays"><b>游玩次数</b>默认 1 次，由你手工维护；**已同步到服务器**（换浏览器/手机都能看到同一份），
@@ -506,7 +524,7 @@ function unpackSuite(o){
   return { uploadTime: o.t || null, status: status };
 }
 
-/* 玩家 FC 上限 = 已 FC 曲目里的最高定数（快速收益的基准，与 gen_web_view.py 同口径） */
+/* 玩家 FC 上限 = 已 FC 曲目里的最高定数（页脚参考显示；快速收益 v3 已不再用它当门槛） */
 function fcCeilOf(songs, stateOf){
   let ceil = null;
   songs.forEach(s => {
@@ -515,9 +533,70 @@ function fcCeilOf(songs, stateOf){
   });
   return ceil;
 }
-/* 快速收益 = 没打过 且 已实装 且 定数 ≤ FC上限 + 0.3 */
-function isQuickIncome(s, u, ceil){
-  return !s.unrel && !u && s.teishu != null && ceil != null && s.teishu <= ceil + 0.3;
+/* 快速收益 v3.3（2026-10-04，与 scripts/quick_income.py 同一套公式，改一处要同步另一处）：
+     能否进榜 = 定数 > 进榜门槛（进榜门槛 = 你 B50 榜第 50 名的 score；进榜余量 = 定数 − 门槛）
+     弱项分   = 每个弱标签（z ≤ −0.5）1 分，**其中重度弱项（|z| ≥ QUICK_ZHEAVY）算 2 分**；强项分同理
+     个人难度 = 定数 + QUICK_K ×（弱项分 − 强项分）
+     难度差   = 个人难度 − B50 → 🟢 不越级 <1 ｜ 🟡 略越级 <2 ｜ 🔴 暂时先别碰 ≥2
+   ⚠️ 档位是**定量描述越级程度**，不是「你打得过/能清」的结论——清单里每一首都是你还没清掉的曲
+   （栗子 2026-10-03：「绿灯也未必是能清，我要能清我早就清掉了」）。
+   ⚠️ 🔴 的语义（栗子 2026-10-04）：「那一栏里的歌其实都已经算是越级很多了」→ 叫「暂时先别碰」。
+   ⚠️ 清单 = **所有能进 B50 的未 FC 谱面**（打过未 FC + 完全没打过），配置/越级只用来**分档排序**，
+   不从清单里剔除。（v3 第一版做成硬门槛、9 首砍到 2 首，被栗子当场否掉：
+   「你也不能一味的丢啊，我不是还有这么多有收益的、没 FC 的谱面吗」）
+   为何「粗粒度分级」而不是「按 |z| 连续加权」（栗子 2026-10-04 定的原则：越苦的越压分、越擅长的越涨分）：
+   569 首打过留一法评测 —— 只看定数 0.9672 ｜ **重度算两倍 0.9734（最高）** ｜ 等重数个数 0.9728 ｜
+   线性加权 0.9721 ｜ 开方加权 0.9721 ｜ 纯 Σz 0.9718。连续加权更差是因为
+   读谱难/局所难/散打/个人差常同时出现在同一谱面，各按 |z| 全额相加会重复计价。 */
+const QUICK_K = 0.10, QUICK_ZWEAK = -0.5, QUICK_ZSTRONG = 0.5, QUICK_ZHEAVY = 2.0;
+const QUICK_OK = 1.0, QUICK_MID = 2.0;
+const TIER_LABEL = { g: "🟢 不越级", y: "🟡 略越级", r: "🔴 暂时先别碰" };
+/* 档位的诚实说法：只讲越级程度，不讲「打得过」；🔴 是「先按顺序放着」不是「你打不过」 */
+const TIER_HINT = { g: "个人难度在你 B50 + 1 以内（跟你现有 FC 水平相当，最不越级）",
+                    y: "个人难度高出你 B50 1~2（略越级）",
+                    r: "个人难度高出你 B50 2 以上（越级很多，建议先放着，别硬啃）" };
+/* 单个标签的分值：|z| ≥ QUICK_ZHEAVY（重度）算 2 分，否则 1 分 */
+const quickTagW = z => (Math.abs(z) >= QUICK_ZHEAVY ? 2 : 1);
+function quickWeakN(elems, zmap){                       // 弱标签个数（展示用）
+  let n = 0; (elems || []).forEach(t => { const z = zmap[t]; if (z != null && z <= QUICK_ZWEAK) n++; }); return n;
+}
+function quickStrongN(elems, zmap){                     // 强标签个数（展示用）
+  let n = 0; (elems || []).forEach(t => { const z = zmap[t]; if (z != null && z >= QUICK_ZSTRONG) n++; }); return n;
+}
+function quickWeakScore(elems, zmap){                   // 弱项分（重度算 2）
+  let v = 0; (elems || []).forEach(t => { const z = zmap[t]; if (z != null && z <= QUICK_ZWEAK) v += quickTagW(z); }); return v;
+}
+function quickStrongScore(elems, zmap){                 // 强项分（重度算 2）
+  let v = 0; (elems || []).forEach(t => { const z = zmap[t]; if (z != null && z >= QUICK_ZSTRONG) v += quickTagW(z); }); return v;
+}
+function quickDifficulty(s, zmap){
+  return s.teishu + QUICK_K * (quickWeakScore(s.elems, zmap) - quickStrongScore(s.elems, zmap));
+}
+function quickTier(gap){
+  return gap == null ? null : (gap < QUICK_OK ? "g" : (gap < QUICK_MID ? "y" : "r"));
+}
+/* 能进榜 = 还没 FC 且已实装 且 进榜余量 > 0（定数高于进榜门槛） */
+function isQuickIncome(s, u, cut){
+  if (s.unrel || s.teishu == null || cut == null) return false;
+  if (u && (u.fc || u.ap)) return false;
+  return (s.teishu - cut) > 0;
+}
+/* 一次性算出这首的进榜余量/弱项分/难度差/档位（两版共用，免得跟烘焙值打架） */
+function quickFields(s, b50, cut, zmap){
+  if (s.teishu == null || cut == null)
+    return { gain:null, gap:null, tier:null, weakS:0, strongS:0, weakN:0, strongN:0, net:0, tags:[], strongTags:[], heavy:[] };
+  const ws = quickWeakScore(s.elems, zmap), ss = quickStrongScore(s.elems, zmap);
+  const pdiff = s.teishu + QUICK_K * (ws - ss);
+  const gap = (b50 == null) ? null : (Math.round((pdiff - b50) * 100) / 100);
+  const r2 = x => Math.round(x * 100) / 100;
+  return {
+    gain: r2(s.teishu - cut), gap: gap, tier: quickTier(gap),
+    weakS: ws, strongS: ss, weakN: quickWeakN(s.elems, zmap), strongN: quickStrongN(s.elems, zmap),
+    net: ws - ss,
+    tags: (s.elems || []).filter(t => zmap[t] != null && zmap[t] <= QUICK_ZWEAK),
+    strongTags: (s.elems || []).filter(t => zmap[t] != null && zmap[t] >= QUICK_ZSTRONG),
+    heavy: (s.elems || []).filter(t => zmap[t] != null && Math.abs(zmap[t]) >= QUICK_ZHEAVY),
+  };
 }
 
 /* B50 + 提升空间 + 苦手/擅长 + 水平报告。
@@ -600,6 +679,8 @@ function buildAnalysis(songs, stateOf){
   tags.sort((a, b) => a.z - b.z);
   const weak = tags.filter(t => t.z <= -0.5).slice(0, 8);
   const strong = tags.slice().reverse().filter(t => t.z >= 0.5).slice(0, 8);
+  const tagZ = {};                       // 全部标签的 z（快速收益按它判定弱/强标签，再数个数）
+  tags.forEach(t => { tagZ[t.tag] = t.z; });
 
   /* ---- 水平报告素材 ---- */
   const firstMax = (arr, better) => arr.length ? arr.reduce((a, b) => better(a, b) ? a : b) : null;
@@ -623,6 +704,7 @@ function buildAnalysis(songs, stateOf){
   };
   return { b50: b50, gainCut: cut, gains: gains.slice(0, 20), nGains: gains.length,
            weak: weak, strong: strong, tagPool: played.length, tagTotal: tags.length,
+           zmap: tagZ,        /* 快速收益 v3 要用全部标签的 z（不只 weak/strong） */
            report: report };
 }
 /*__PJSK_CORE_END__*/
@@ -649,7 +731,11 @@ const hasUserData = () => suiteLoaded || Object.keys(done).length > 0;
    投影之后，下面的渲染 / 统计 / B50 / 报告代码一个字都不用改 */
 function applyStatus(){
   const ceil = fcCeilOf(DATA.songs, stateOf);
-  let nQuick = 0;
+  /* ⚠️ 顺序要紧：快速收益依赖 B50 与榜尾门槛、标签 z，必须先算分析再标快速收益 */
+  DATA.analysis = buildAnalysis(DATA.songs, stateOf);
+  A = DATA.analysis;
+  const b50 = (A.b50 || {}).rating, cut = A.gainCut, zmap = A.zmap || {};
+  let nQuick = 0, nGreen = 0;
   DATA.songs.forEach(s => {
     const u = stateOf(s.id);
     s.played = !!u;
@@ -657,18 +743,31 @@ function applyStatus(){
     s.manualOnly = !suiteStatus[s.id] && !!done[s.id];
     s.ap = !!(u && u.ap);
     s.hs = u ? (u.hs || 0) : 0;
-    s.quick = isQuickIncome(s, u, ceil);
-    if (s.quick) nQuick++;
+    const q = quickFields(s, b50, cut, zmap);
+    s.qgain = q.gain; s.qgap = q.gap; s.qtier = q.tier;
+    s.qweakS = q.weakS; s.qstrongS = q.strongS; s.qweakN = q.weakN; s.qstrongN = q.strongN;
+    s.qnet = q.net; s.qtags = q.tags; s.qstrongTags = q.strongTags; s.qheavy = q.heavy;
+    s.quick = isQuickIncome(s, u, cut);
+    if (s.quick){ nQuick++; if (s.qtier === "g") nGreen++; }
   });
   DATA.meta.fcCeil = ceil;
   DATA.meta.quick = nQuick;
-  DATA.analysis = buildAnalysis(DATA.songs, stateOf);
-  A = DATA.analysis;
+  DATA.meta.quickGreen = nGreen;
+  DATA.meta.b50 = b50;
   syncCeilTxt();
 }
 function syncCeilTxt(){
   const el = document.getElementById("ceilTxt");
   if (el) el.textContent = DATA.meta.fcCeil == null ? "—" : Number(DATA.meta.fcCeil).toFixed(2);
+  syncRulerTxt();
+}
+/* 页脚里的两个基准数字（进榜门槛 / B50）——私用版读烘焙的 DATA.analysis，公共版导入后由 A 提供 */
+function syncRulerTxt(){
+  const ana = (typeof A !== "undefined" && A) ? A : (DATA.analysis || {});
+  const cut = ana.gainCut, b50 = ana.b50 && ana.b50.rating;
+  const c = document.getElementById("cutTxt"), b = document.getElementById("b50Txt");
+  if (c) c.textContent = (cut == null) ? "—" : Number(cut).toFixed(2);
+  if (b) b.textContent = (b50 == null) ? "—" : Number(b50).toFixed(2);
 }
 
 /* ---------- 公共版：封面走远端 URL（cn → jp → 占位图 三级兜底）----------
@@ -696,6 +795,14 @@ function fixCovers(root){
   });
 }
 /* B50 行里用的是 s.abn || "noimg"，占位图对得上 */
+/* 私用版：本地 covers/ 里缺图时退成内联 SVG 占位（新曲/独占曲上游常常还没图，
+   例如 2026-10-04 的 798/799/800/801/11018）。公共版走 fixCovers() 的远端三级兜底。 */
+function fixLocalCovers(root){
+  if (PUBLIC) return;
+  (root || document).querySelectorAll('img[src^="covers/"]').forEach(img => {
+    if (!img.onerror) img.onerror = () => { img.onerror = null; img.src = COVER_PH; };
+  });
+}
 
 /* ---------- 公共版：导入弹窗 ---------- */
 const fmtTime = t => {
@@ -972,7 +1079,7 @@ function playHint(s, n){
 }
 
 /* ---------- 状态 ---------- */
-const S = { q:"", sort:"teishu", dir:1, fc:false, never:false, tried:false, quick:false,
+const S = { q:"", sort:"teishu", dir:1, fc:false, never:false, tried:false, quick:false, green:false,
             var:false, low:false, hide:false, unrel:false, view:"cards", lv:new Set() };
 
 /* 四状态：已 FC（官方成绩或本地标记）/ 打过未 FC / 完全没打过 / 未实装 */
@@ -1015,7 +1122,8 @@ function renderStats(){
     ["d", triedN, "打过未 FC"],
     ["p", neverN, "没打过"],
     ["v", m.unreleased, "未实装"],
-    ["y", m.quick, "快速收益"],
+    ["y", m.quick, "能进 B50"],
+    ["p", (m.quickGreen != null ? m.quickGreen : songs.filter(s => s.qtier === "g").length), "🟢 不越级"],
   ];
   document.getElementById("stats").innerHTML = els.map(
     ([k,v,l]) => `<div class="stat ${k}"><b>${v}</b><span>${l}</span></div>`).join("");
@@ -1026,6 +1134,25 @@ function renderStats(){
     + (PUBLIC ? "数据快照 " + snapTxt : "快照 " + m.snapshot);
   document.getElementById("snap2").textContent = snapTxt;
   document.getElementById("gen").textContent = m.generated;
+  renderRuler();
+}
+
+/* 三把尺子 + 档位换算，显式写在统计条下面（避免把「进榜门槛」误当成自己的定数） */
+function renderRuler(){
+  const el = document.getElementById("ruler");
+  if (!el) return;
+  const ana = (typeof A !== "undefined" && A) ? A : (DATA.analysis || {});
+  const b50 = ana.b50 && ana.b50.rating, cut = ana.gainCut;
+  if (b50 == null || cut == null){ el.textContent = ""; return; }
+  const r2 = x => Math.round(x * 100) / 100;
+  const ceil = DATA.meta.fcCeil;
+  el.innerHTML =
+    `📏 <b>三把尺子</b>：你的 <b>B50 = ${b50}</b>（前 50 均分，<b>档位拿它当基准</b>）`
+    + ` ｜ <b>进榜门槛 = ${cut}</b>（B50 榜第 50 名的分数，定数高于它才进得了榜 → 这才是「有收益」）`
+    + (ceil != null ? ` ｜ FC 上限 = ${ceil}（你已 FC 里最高定数，仅参照）` : "")
+    + `<br>档位换算：<b>🟢 不越级</b> 个人难度 &lt; ${r2(b50 + 1)} ｜ `
+    + `<b>🟡 略越级</b> ${r2(b50 + 1)}~${r2(b50 + 2)} ｜ <b>🔴 暂时先别碰</b> ≥ ${r2(b50 + 2)}`
+    + `　（个人难度 = 定数 + 0.10 ×(弱项分 − 强项分)；每个弱标签 1 分、|z|≥2 的重度弱项（读谱难/长曲）2 分）`;
 }
 
 /* ---------- 星级分布条（只数未 FC 的已实装曲）---------- */
@@ -1060,6 +1187,7 @@ function compute(){
       return false;
     if (S.lv.size && !S.lv.has(s.lv)) return false;
     if (S.quick && !s.quick) return false;
+    if (S.green && s.qtier !== "g") return false;
     if (S.var && !s.bpmVar) return false;
     if (S.low && s.conf !== "低") return false;
     if (S.q){
@@ -1073,7 +1201,9 @@ function compute(){
     teishu: s => shownTeishu(s) == null ? 999 : shownTeishu(s),
     lv: s => s.lv, notes: s => s.notes, nps: s => s.nps == null ? -1 : s.nps,
     bpm: BPM_HI, hs: s => s.hs,
-    name: s => s.cn || s.jp
+    name: s => s.cn || s.jp,
+    /* 推荐度（升序 = 该先打）：🟢→🟡→🔴，同档里收益高的在前；没有收益的排最后 */
+    rec: s => s.quick ? ((s.qtier === "g" ? 0 : (s.qtier === "y" ? 1 : 2)) * 1000 - (s.qgain || 0)) : 9e6
   }[S.sort];
   list.sort((a,b) => {
     const x = key(a), y = key(b);
@@ -1086,12 +1216,44 @@ function compute(){
 /* ---------- 卡片 ---------- */
 const esc = t => String(t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const bpmTxt = s => !s.bpm ? "—" : (s.bpm[0] === s.bpm[1] ? String(s.bpm[0]) : s.bpm[0] + "-" + s.bpm[1]);
+/* 收益标签的悬浮说明：把两把尺子分开讲清，并说清档位≠打得过 */
+function quickZmap(){ return (A && (A.zmap || A.tagZ)) || null; }
+function quickTitle(s){
+  const zm = quickZmap();
+  if (!zm || !Object.keys(zm).length || s.teishu == null)
+    return "「有收益」= 定数高于你 B50 榜的进榜门槛；档位按 个人难度 − B50 分（导入成绩后按你的数据算）";
+  const cut = A.gainCut || 0, b50 = (A.b50 && A.b50.rating != null) ? A.b50.rating : null;
+  const gain = (s.qgain != null) ? s.qgain : Math.round((s.teishu - cut) * 100) / 100;
+  const ws = (s.qweakS != null) ? s.qweakS : quickWeakScore(s.elems, zm);
+  const ss = (s.qstrongS != null) ? s.qstrongS : quickStrongScore(s.elems, zm);
+  const wn = (s.qweakN != null) ? s.qweakN : quickWeakN(s.elems, zm);
+  const sn = (s.qstrongN != null) ? s.qstrongN : quickStrongN(s.elems, zm);
+  const pdiff = s.teishu + QUICK_K * (ws - ss);
+  const gap = (b50 == null) ? null : Math.round((pdiff - b50) * 100) / 100;
+  const wList = (s.elems || []).filter(t => zm[t] != null && zm[t] <= QUICK_ZWEAK);
+  const st = (s.elems || []).filter(t => zm[t] != null && zm[t] >= QUICK_ZSTRONG);
+  let txt = `【能不能进榜】定数 ${s.teishu.toFixed(2)} − 进榜门槛 ${cut.toFixed(2)} = +${gain.toFixed(2)}`
+          + `（B50 第 50 名，${cut.toFixed(2)}）⇒ 能进榜；B50 实际约 +${(gain / 50).toFixed(3)}`;
+  if (gap != null)
+    txt += `　【越不越级】个人难度 ${pdiff.toFixed(2)} = 定数 + 0.10×(弱项分 ${ws}（${wn} 个弱标签，重度算 2）`
+         + ` − 强项分 ${ss}（${sn} 个强标签，重度算 2）)`
+         + `，相对你的 B50 ${b50.toFixed(2)} → 差 ${gap >= 0 ? "+" : ""}${gap.toFixed(2)} = ${TIER_LABEL[s.qtier] || ""}`;
+  if (wList.length) txt += `　苦手标签：${wList.join(" / ")}`;
+  if (st.length) txt += `　擅长标签：${st.join(" / ")}`;
+  txt += "　（档位只说越级程度；这本来就是你还 FC 不了的曲）";
+  return txt;
+}
 
 function card(s, rank){
   const st = statusOf(s);
   const t = [];
   if (s.unrel) t.push('<span class="tag v">未实装 ' + s.reldate.slice(5) + '</span>');
-  else if (s.quick) t.push('<span class="tag q">✅快速收益</span>');
+  else if (s.quick){
+    /* 只写档位名，不跟数字——数字是「进榜余量」，跟档位用的 B50 尺子不是同一把（栗子 10-04 指出会看混） */
+    const gate = s.qtier === "g" ? "🟢 不越级" : (s.qtier === "y" ? "🟡 略越级" : "🔴 暂时先别碰");
+    t.push('<span class="tag tier-' + (s.qtier || "r") + '" title="' + esc(quickTitle(s)) + '">'
+           + gate + '</span>');
+  }
   if (s.bpmVar) t.push('<span class="tag v">速度变化</span>');
   if (s.diff) t.push('<span class="tag w">⚠个人差</span>');
   if (s.conf === "低") t.push('<span class="tag low">低可信</span>');
@@ -1138,7 +1300,7 @@ function renderTable(list){
     <td class="num">${s.bpmVar?bpmTxt(s)+' <span class="tag v">变</span>':bpmTxt(s)}</td>
     <td class="num dim">${s.dur||'—'}</td>
     <td>${s.unrel ? `<span class="pill unrel">未实装 ${s.reldate.slice(5)}</span>`
-        : `<span class="pill ${st}">${ST_LABEL[st]}</span>${s.quick?' <span class="tag q">快</span>':''}`}</td>
+        : `<span class="pill ${st}">${ST_LABEL[st]}</span>${s.quick?' <span class="tag tier-'+(s.qtier||"r")+'" title="'+esc(quickTitle(s))+'">'+(s.qtier==="g"?"不越级":(s.qtier==="y"?"略越级":"暂时先别碰"))+'</span>':''}`}</td>
     <td class="num">${s.hs||'—'}</td>
     <td class="num">${s.teishu == null ? '<span class="dim">—</span>' : (isAdjusted(s) ? s.teishu.toFixed(2) : '<span class="dim">同左</span>')}</td>
     <td class="num ${getPlays(s.id) > 1 ? '' : 'dim'}">${getPlays(s.id) > 1 ? getPlays(s.id) : '1'}</td></tr>`;
@@ -1329,6 +1491,7 @@ function render(){
   document.querySelectorAll(".lvbar").forEach(el =>
     el.classList.toggle("on", S.lv.has(Number(el.dataset.lv))));
   if (PUBLIC) fixCovers(document);   // 公共版封面走远端 URL（卡片墙/表格/B50 都要改写）
+  else fixLocalCovers(document);      // 私用版：本地缺图 → 内联 SVG 占位，避免裂图
 }
 
 /* ---------- 详情弹窗 ---------- */
@@ -1364,6 +1527,18 @@ function openModal(id){
   const myPlays = plays[s.id] || 1;
   const persT = (s.teishu != null && !s.fc && myPlays > 1)
     ? Math.round((s.teishu + 0.01 * (myPlays - 1)) * 100) / 100 : null;
+  /* 快速收益 v3.1：收益 / 档位 / 个人难度（需要「你的」苦手分析，公共版导入成绩后才有） */
+  const zmapQ = (A && (A.zmap || A.tagZ)) || null;
+  const hasZ = !!zmapQ && Object.keys(zmapQ).length > 0;
+  const qPen = (hasZ && s.teishu != null) ? quickWeakScore(s.elems, zmapQ) : null;
+  const qBonus = (hasZ && s.teishu != null) ? quickStrongScore(s.elems, zmapQ) : null;
+  const qDiff = qPen == null ? null : s.teishu + QUICK_K * (qPen - qBonus);
+  const qTags = hasZ ? (s.elems || []).filter(t => zmapQ[t] != null && zmapQ[t] <= QUICK_ZWEAK) : [];
+  const qStrong = hasZ ? (s.elems || []).filter(t => zmapQ[t] != null && zmapQ[t] >= QUICK_ZSTRONG) : [];
+  const qHeavy = hasZ ? (s.elems || []).filter(t => zmapQ[t] != null && Math.abs(zmapQ[t]) >= QUICK_ZHEAVY) : [];
+  const qGain = (hasZ && s.teishu != null && A.gainCut != null) ? (s.teishu - A.gainCut) : null;
+  const qGap = (qDiff == null || !A.b50 || A.b50.rating == null) ? null : (qDiff - A.b50.rating);
+  const qTier = quickTier(qGap);
   const rows = [
     ["国服名", dup ? (s.cn ? s.cn + "（与日文名相同）" : "（沿用日文原名）") : s.cn],
     ["中文译名", s.alias || "—"],
@@ -1375,6 +1550,19 @@ function openModal(id){
     ["当前定数", (s.teishu == null ? "—" : shownTeishu(s).toFixed(2)) + (isAdjusted(s) ? `（个人 +${adjDelta(s).toFixed(2)}）` : "")],
     ["社区定数", (s.teishu == null ? "—" : s.teishu.toFixed(2)) + (s.iv ? "（区间 " + s.iv + "）" : "")],
     ["个人定数", persT == null ? "—" : persT.toFixed(2) + `（= 社区 + 0.01×${myPlays - 1} 次）`],
+    ["能不能进榜", qGain == null ? "—（导入成绩后算）"
+      : (qGain > 0
+         ? `能 ｜ 定数 ${s.teishu.toFixed(2)} − 进榜门槛 ${A.gainCut.toFixed(2)} = +${qGain.toFixed(2)}（B50 实际约 +${(qGain / 50).toFixed(3)}）`
+         : `不能 ｜ 定数 ${s.teishu.toFixed(2)} ≤ 进榜门槛 ${A.gainCut.toFixed(2)}（FC 只涨进度、不涨 B50）`)],
+    ["推荐档位", qTier == null ? "—" : TIER_LABEL[qTier] + `（个人难度 − 你的 B50 ${(A.b50 && A.b50.rating != null ? A.b50.rating.toFixed(2) : "—")} = 差 ${qGap >= 0 ? "+" : ""}${qGap.toFixed(2)}：${TIER_HINT[qTier]}）`],
+    ["个人难度", qDiff == null ? "—" : qDiff.toFixed(2)
+      + `（定数 ${s.teishu.toFixed(2)} + 0.10×(弱项分 ${qPen} − 强项分 ${qBonus}) = ${(qDiff).toFixed(2)}）`],
+    ["弱标签", qPen == null ? "—" : (qTags.length
+      ? `${qPen} 分（${qTags.length} 个）：` + qTags.join(" / ")
+        + (qHeavy.length ? `　⚠️ 重度算 2 分：${qHeavy.join(" / ")}` : "")
+      : "0 个（没有踩到你的弱项）")],
+    ["强标签", qBonus == null ? "—" : (qStrong.length
+      ? `${qBonus} 分（${qStrong.length} 个）：` + qStrong.join(" / ") : "0 个")],
     ["可信度", s.conf + (s.diff ? " " + s.diff : "")],
     ["状态", stTxt],
     ["最高分", s.hs || "—"],
@@ -1422,6 +1610,7 @@ function openModal(id){
       </div>
     </div>`;
   if (PUBLIC) fixCovers(document.getElementById("modal"));   // 公共版封面走远端 URL
+  else fixLocalCovers(document.getElementById("modal"));
   document.getElementById("mask").classList.add("show");
   document.getElementById("cls").onclick = closeModal;
   /* ---- 游玩次数维护 ---- */
@@ -1468,6 +1657,7 @@ const toggle = (id, key) => {
   el.onclick = () => { S[key] = !S[key]; el.classList.toggle("on", S[key]); render(); };
 };
 toggle("fFC","fc"); toggle("fNever","never"); toggle("fTried","tried"); toggle("fQuick","quick");
+toggle("fGreen","green");
 toggle("fVar","var"); toggle("fLow","low"); toggle("fUnrel","unrel"); toggle("fHide","hide");
 document.getElementById("q").oninput = e => { S.q = e.target.value.trim(); render(); };
 document.getElementById("sort").onchange = e => { S.sort = e.target.value; render(); };
@@ -1524,7 +1714,7 @@ document.addEventListener("keydown", e => {
 });
 document.getElementById("reset").onclick = () => {
   S.q = ""; S.sort = "teishu"; S.dir = 1; S.lv.clear();
-  ["fc","never","tried","quick","var","low","unrel","hide"].forEach(k => S[k] = false);
+  ["fc","never","tried","quick","green","var","low","unrel","hide"].forEach(k => S[k] = false);
   document.getElementById("q").value = "";
   document.getElementById("sort").value = "teishu";
   document.querySelectorAll("#listbar button").forEach(b => b.classList.remove("on"));
@@ -1575,10 +1765,11 @@ document.getElementById("impFile").onchange = e => {
   e.target.value = "";
 };
 
-/* 页脚显示 FC 上限 */
+/* 页脚显示 FC 上限 + 两个基准数字 */
 (function(){
   const el = document.getElementById("ceilTxt");
   if (el) el.textContent = DATA.meta.fcCeil == null ? "—" : DATA.meta.fcCeil.toFixed(2);
+  syncRulerTxt();
 })();
 
 if (PUBLIC) initPublic();   /* 公共版：读本机导入的成绩 → 投影成状态（私用版不走这条） */

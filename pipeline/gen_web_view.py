@@ -87,6 +87,14 @@ def main():
                 "hs": r.get("highScore") or 0,
                 "diff": r.get("personal_diff") or "",
                 "quick": bool(r.get("quick_income")),
+                # 快速收益 v3.2：进榜余量 / 难度差 / 档位 / 弱标签个数 / 强标签个数（公共版由模板 JS 现算）
+                "qgain": r.get("quick_gain"),
+                "qgap": r.get("quick_gap"),
+                "qtier": r.get("quick_tier"),
+                "qweakS": r.get("quick_pen"), "qstrongS": r.get("quick_bonus"),
+                "qweakN": r.get("quick_weakN"), "qstrongN": r.get("quick_strongN"),
+                "qheavy": r.get("quick_heavy") or [],
+                "qnet": r.get("quick_net"),
             })
 
     live = [s for s in songs if not s["unrel"]]
@@ -130,6 +138,7 @@ def main():
                 "lowConfAll": sum(1 for s in songs if s["conf"].startswith("低")),
                 "fcCeil": fc_ceil,
                 "quick": sum(1 for s in songs if s["quick"]),
+                "quickGreen": sum(1 for s in songs if s.get("qtier") == "g"),
                 "bpmVar": sum(1 for s in live if s["bpmVar"]),
                 "aliased": sum(1 for s in live if s["basis"] == "alias"),
                 "withTips": sum(1 for s in live if s["tips"]),

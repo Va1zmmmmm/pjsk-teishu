@@ -69,6 +69,15 @@ def rank_within(group, keyfn, reverse=False):
 
 def main():
     musics_raw = json.load(open(os.path.join(DATA, "cn_master_musics.json"), encoding="utf-8"))
+    # 日服 master：① 判「国服独占」（不能只看 id>=11000，2026-10 起国服已有低 id 独占曲 798~801）
+    #            ② 当日文名的权威源（国服 master 的 title 偶尔已被本地化，如 id=660）
+    _jp_path = os.path.join(DATA, "jp_master_musics.json")
+    _JP_MUSICS = ({m["id"]: m for m in json.load(open(_jp_path, encoding="utf-8"))}
+                  if os.path.exists(_jp_path) else {})
+    _JP_IDS = set(_JP_MUSICS)
+    _JP_TITLE = {i: html.unescape((m.get("title") or "")).strip() for i, m in _JP_MUSICS.items()}
+    if not _JP_IDS:
+        print("⚠️ 缺 data/jp_master_musics.json，「国服独占」判定退回 id>=11000（可能误标）")
     diffs = json.load(open(os.path.join(DATA, "cn_master_musicDifficulties.json"), encoding="utf-8"))
     mrows = list(csv.DictReader(open(os.path.join(DATA, "user_results_all_latest.csv"), encoding="utf-8-sig")))
     p8 = json.load(open(os.path.join(DATA, "pjsekai_master_8level.json"), encoding="utf-8"))
@@ -131,6 +140,12 @@ def main():
         infos = m.get("infos") or []
         title_cn = html.unescape((infos[0].get("title", "") if infos and isinstance(infos[0], dict) else "") or "").strip()
         title_jp = html.unescape((m.get("title") or "")).strip()
+        # ⚠️ 2026-10-04：国服 master 的 title 偶尔已被本地化（id=660「冲吧！Wonderpyoi」，
+        # 日服其实是「とびだせ！わんだぴょい」）。日文名错了 → 攻略/译名匹配全失败，
+        # 所以日文名以**日服 master 的 title** 为准（日服有这张谱、且国服 title 里没假名时）。
+        _jt = _JP_TITLE.get(mid)
+        if _jt and not KANA.search(title_jp):
+            title_jp = _jt
         rel = m.get("releasedAt") or 0
         unreleased = bool(rel and rel > now_ms)
 
@@ -266,19 +281,25 @@ def main():
                               if r["p8_judge"] in GAP_JUDGE or r["p8_pseudo_note"] == "判定困難/未定"
                               else "无日服数据(估算)")
 
-    # ---- 玩家 FC 上限 = 已 FC 曲目里的最高定数 ----
-    # 用于「快速收益」判定：必须拿玩家自己的水平线当基准。
-    # ⚠️ 2026-09-11 修的 bug：旧规则「定数 ≤ 官方星级+0.4」是拿曲子跟它自己的星级比，
-    #    完全没考虑玩家水平，导致 Lv34 的曲（定数 34.2）被标成快速收益——
-    #    而玩家 FC 上限只有 31.7，那首高他 2.5，根本打不过（用户实测反馈）。
+    # ---- 玩家 FC 上限 = 已 FC 曲目里的最高定数（仅作参考展示）----
+    # ⚠️ 2026-10-03：快速收益判定已从这里搬走 —— 旧口径「定数 ≤ FC 上限 + 0.3」
+    #    只看定数不看谱面配置，会把「整首都是你苦手配置」的曲推给玩家（栗子实测反馈）。
+    #    v3.2 口径 = 定数 + 0.15×(弱标签个数 − 强标签个数)，与 B50 比（见 quick_income.py），
+    #    由 build_analysis.py 标注并回写（它是唯一同时拿得到 B50 与标签 z 的地方）。
     fc_ceil = max((r["final_teishu"] for r in rows if r["fc"] and r["final_teishu"] is not None),
                   default=None)
-    QUICK_MARGIN = 0.3      # 留一点挑战余量；调紧改小、调松改大
     for r in rows:
-        r["quick_income"] = bool(
-            not r["played"] and not r["unreleased"]
-            and fc_ceil is not None and r["final_teishu"] is not None
-            and r["final_teishu"] <= fc_ceil + QUICK_MARGIN)
+        # 字段先占位，等 build_analysis.py 覆盖；单独跑本脚本时网页会显示 0 首而不报错
+        r["quick_income"] = False
+        r["quick_gain"] = None
+        r["quick_pdiff"] = None
+        r["quick_gap"] = None
+        r["quick_tier"] = None
+        r["quick_weakN"] = 0
+        r["quick_strongN"] = 0
+        r["quick_net"] = 0.0
+        r["quick_tags"] = []
+        r["quick_strong"] = []
 
     rows.sort(key=lambda r: (-r["playLevel"], r["title_cn"] or r["title_jp"]))
 
@@ -302,21 +323,15 @@ def main():
     print(f"攻略覆盖（memo或要素）: {cov}/{len(rows)}")
     miss = [r for r in rows if not (r["tips_memo"] or r["tips_elements"])]
     for r in miss:
-        flag = "✓国服独占" if r["musicId"] >= 11000 else "⚠️非独占!"
+        # 独占判定跟日服 master 比 id 集合（旧规矩 id>=11000 已失效，见 CLAUDE.md）
+        flag = "✓国服独占" if r["musicId"] not in _JP_IDS else "⚠️非独占!"
         print(f"   缺攻略 {flag} id={r['musicId']} Lv{r['playLevel']} {r['name_display']}")
     no_p8 = [r for r in rows if r["p8_pseudo"] is None]
     if no_p8:
         print(f"无 p8 判定 {len(no_p8)} 首:", [(r['musicId'], r['name_display']) for r in no_p8][:20])
     print("星级分布:", dict(sorted(Counter(r["playLevel"] for r in rows).items())))
-    print(f"\n玩家 FC 上限 = {fc_ceil}（快速收益阈值 = 上限 + {QUICK_MARGIN} = "
-          f"{round(fc_ceil + QUICK_MARGIN, 2) if fc_ceil else '—'}）")
-    q = sorted([r for r in rows if r["quick_income"]], key=lambda x: -x["final_teishu"])
-    print(f"快速收益 {len(q)} 首（全部应为没打过且定数≤阈值）:")
-    for r in q:
-        print(f"   Lv{r['playLevel']:2} 定数{r['final_teishu']:5.2f}  {r['name_display']}")
-    over = [r for r in q if r["final_teishu"] > fc_ceil + QUICK_MARGIN + 1e-9]
-    if over:
-        print("  ⚠️ 越界（不该出现）:", over)
+    print(f"\n玩家 FC 上限 = {fc_ceil}（仅为参考展示；快速收益 v3 不再以此为门槛）")
+    print("快速收益 quick_income 由 build_analysis.py 统一标注（占位为 0 首）")
 
 
 if __name__ == "__main__":
