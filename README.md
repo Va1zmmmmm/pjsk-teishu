@@ -116,6 +116,29 @@ cp web/public/index.html web/index.html        # 覆盖发布用的那份
 > 后者已在 `.gitignore` 里。**注意**：`build_master_all.py` 产出的 `master_all.json` 包含你的个人成绩，
 > `.gitignore` 已排除，分发前请再确认一次。
 
+## 已知情况（不是 bug）
+
+| 现象 | 原因 | 怎么处理 |
+|---|---|---|
+| 个别新曲显示「暂无封面」占位图 | 上游 `storage.sekai.best` 对新曲 / 国服独占曲**还没出图**（实测 2026-10-04：798~801 仍 404） | 页面有三级兜底（国服 → 日服 → 内联 SVG），**不会裂图**；想自己补见下 |
+| 某些曲子显示「暂无攻略」 | 攻略来自 pjsekai.com 的日服难度表，**国服独占曲在那边没有条目**；新曲也会晚几天收录 | 属预期；有要素标签的会照常显示 |
+| 曲目数比游戏里少 | 曲表按国服 master 镜像生成，**镜像更新有延迟**（那次更新前本地 624 首，更新后 652 首） | 重下 `musics.json` + `musicDifficulties.json` 两个文件后重跑即可 |
+| 未实装的未来曲目 | 国服 master 含「已排期未上线」的曲（`releasedAt` 在未来） | 页面默认隐藏，Excel 垫底 |
+
+**手动补一张封面**（自建版才有意义；公共版封面走远端 URL）：从游戏内截图抠出正方形封面，
+存成 `web/covers/<assetbundleName>.webp`（740×740，与其余封面同规格）即可，页面会自动用上。
+
+```python
+from PIL import Image, ImageFilter
+src = Image.open("截图.png").convert("RGB")
+crop = src.crop((35, 30, 407, 402))          # 封面面板边界：按行/列统计亮像素数找连续区间即可测得
+up = crop.resize((740, 740), Image.Resampling.LANCZOS)
+up.filter(ImageFilter.UnsharpMask(radius=2.0, percent=85, threshold=3)).save(
+    "web/covers/jacket_s_11018.webp", "WEBP", quality=92, method=6)
+```
+
+> 截图分辨率决定上限：1052×592 的截图里封面只有约 372 px，属 2× 插值放大；有原始分辨率截图会更锐。
+
 ## 免责声明
 
 本项目是**非官方同人工具**，与 SEGA / Colorful Palette 无任何关联。
