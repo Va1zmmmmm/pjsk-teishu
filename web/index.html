@@ -1708,6 +1708,7 @@ function openModal(id){
     if (bt) bt.textContent = s.teishu == null ? "—" : shownTeishu(s).toFixed(2);
     const ba = document.getElementById("curTeiAdj");
     if (ba) ba.innerHTML = adjTags(s);
+    render(); // 同步列表显示与排序，返回时无需再次切换视图或刷新。
   };
   document.getElementById("pMinus").onclick = () => syncPlays(getPlays(s.id) - 1);
   document.getElementById("pPlus").onclick  = () => syncPlays(getPlays(s.id) + 1);
@@ -1825,7 +1826,8 @@ document.getElementById("impFile").onchange = e => {
       Object.keys(m || {}).forEach(k => { if (!done[k]) { done[k] = 1; n++; } });
       Object.keys(p || {}).forEach(k => {
         const v = Math.max(1, parseInt(p[k], 10) || 1);
-        if (v > 1 && getPlays(k) !== v) { plays[k] = v; np++; } else if (v <= 1) delete plays[k];
+        // 与同步合并一致：旧备份不能减少已记录的次数；需要减少时在曲目详情里修改。
+        if (v > getPlays(k)) { plays[k] = v; np++; }
       });
       saveDone(); savePlays();
       if (PUBLIC) applyStatus();          // 公共版：标记影响 B50/分析，导入后重算
