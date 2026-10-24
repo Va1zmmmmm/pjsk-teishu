@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PJSK MASTER 定数表（全量）</title>
+<title>PJSK MASTER / EXPERT 定数表（全量）</title>
 <script>
 /* 开灯/关灯：首屏渲染前就从 localStorage 恢复主题，避免闪烁 */
 try{ if (localStorage.getItem("pjsk_theme") === "light")
@@ -339,6 +339,9 @@ footer b{color:var(--fg2)}
   .modal .top{flex-direction:column} .modal .cover{width:100%;height:auto;aspect-ratio:1/1}
   .bar{top:auto;position:static} th{top:0}
 }
+/* 难度标签（MASTER 紫 / EXPERT 粉） */
+.tag.dm{background:#ad45df18;border:1px solid #ad45df55;color:#c98cf0}
+.tag.de{background:#ed477118;border:1px solid #ed477155;color:#ff7fa2}
 </style>
 </head>
 <body>
@@ -346,7 +349,7 @@ footer b{color:var(--fg2)}
 <header>
   <div class="hd">
     <div class="brand">
-      <h1>PJSK MASTER 定数表</h1>
+      <h1>PJSK MASTER / EXPERT 定数表</h1>
       <span class="sub" id="snap">—</span>
     </div>
     <div class="stats" id="stats"></div>
@@ -389,6 +392,11 @@ footer b{color:var(--fg2)}
   </select>
   <button id="dir" title="切换升降序">▲ 升序</button>
   <div class="sep"></div>
+  <span class="lbl">难度</span>
+  <button id="dAll" class="on" title="浏览列表按难度筛选；B50 始终 MASTER+EXPERT 混合，不受这里影响">全部</button>
+  <button id="dMaster" title="只看 MASTER 谱面（B50 仍混合）">MASTER</button>
+  <button id="dExpert" title="只看 EXPERT 谱面（B50 仍混合）">EXPERT</button>
+  <div class="sep"></div>
   <span class="lbl">状态</span>
   <button id="fFC" class="green" title="只看已 FC（官方成绩或本地标记）">已 FC</button>
   <button id="fNever" class="pink">没打过</button>
@@ -423,8 +431,8 @@ footer b{color:var(--fg2)}
 <div class="mask" id="pubmask"><div class="modal" id="pubmodal"></div></div>
 
 <footer>
-  <b>状态</b>：已 FC = 该曲 MASTER 有 full_combo / full_perfect 记录（或你在本地标了已 FC）；「打过未 FC」= 有成绩但没 FC；「没打过」= 无 MASTER 游玩记录；「未实装」= 国服数据里已排期但尚未上线的曲（默认隐藏）。<br>
-  <b>定数</b>：源2 = pjsekai.com 日服 8 档难度分类 → 伪定数（官方星级 + 档内位置，映射 最下位−0 / 最下位0.2 / 下位0.4 / 適正0.5 / 上位0.7 / 最上位0.9 / 最上位＋0.95）；
+  <b>状态</b>：已 FC = 该谱面（MASTER 或 EXPERT）有 full_combo / full_perfect 记录（或你在本地标了已 FC）；「打过未 FC」= 有成绩但没 FC；「没打过」= 无该谱面游玩记录；「未实装」= 国服数据里已排期但尚未上线的曲（默认隐藏）。<br>
+  <b>定数</b>：源2 = pjsekai.com 日服 8 档难度分类 → 伪定数（官方星级 + 档内位置，映射 最下位−0 / 最下位0.2 / 下位0.4 / 適正0.5 / 上位0.7 / 最上位0.9 / 最上位＋0.95）；MASTER 用 MASTER 表、EXPERT 用 EXPERT 表；EXPERT 无社区数据时标「低可信」源C兜底，不冒充社区定数；
   源C = 同星级（全量 622 首内）「物量排名 + NPS 排名」/2 复合，仅 8 档缺时兜底（标「低可信」）。<br>
   <b>快速收益</b>（v3.2，2026-10-03/04）—— 下面两个概念用的是<b>不同的尺子</b>，别混：
   <b>① 能不能进榜</b>：<b>定数 &gt; 进榜门槛</b>（= 你 B50 榜第 50 名的分数，当前 <b id="cutTxt">—</b>）
@@ -444,7 +452,7 @@ footer b{color:var(--fg2)}
   同时在本机浏览器留一份缓存，服务端不可达时降级为纯本地并标「未同步」。
   也可用「导出我的数据」存成 JSON 备份。</span><br>
   <b>曲名</b>：以国服名（游戏自身本地化）为准；该名仍是日文时（多为未实装曲），改用萌娘百科社区中文译名并标「译」。<br>
-  <b>难点/攻略</b>：译自 pjsekai.com「楽曲難易度表 MASTER」的要素标签与说明文字，术语按中文音游圈习惯翻译（交互/楼梯/纵连/划键/尾判…）；国服独占曲日服 wiki 未收录，标「暂无攻略」。<br>
+  <b>难点/攻略</b>：译自 pjsekai.com「楽曲難易度表 MASTER / EXPERT」的对应难度要素标签与说明文字（不互相复用），术语按中文音游圈习惯翻译（交互/楼梯/纵连/划键/尾判…）；国服独占曲日服 wiki 未收录，标「暂无攻略」。<br>
   <b>数据快照</b>：<span id="frSnapLead">haruki suite</span> <span id="snap2">—</span> ｜ 生成 <span id="gen">—</span> ｜ 封面来自 sekai.best 静态资源（国服优先）。
   <span id="frSnapTail">FC 标记与游玩次数已同步到服务器（同时在本机留缓存，服务端不可达时降级为纯本地）。</span>
 </footer>
@@ -479,6 +487,20 @@ const LS_SUITE = "pjsk_suite_status_v1";   // 导入的成绩快照（压缩后�
 /* 把 haruki suite 的 userMusicResults 聚合成「每首 MASTER 的状态」
    口径：只看 musicDifficultyType==="master"；played=有记录；fc=任一 fullComboFlg；
         ap=任一 fullPerfectFlg；hs=最大 highScore。 */
+/* ---------- 谱面身份（唯一 key）----------
+   MASTER 继续用原数字 musicId（JSON 属性会字符串化为 "315"，旧备份天然兼容）；
+   EXPERT 用 "expert:<musicId>"。同一首歌两种难度是两张独立谱面，FC/次数/详情互不覆盖。 */
+function chartKey(musicId, difficulty){
+  const n = parseInt(musicId, 10);
+  if (!isFinite(n) || n <= 0) return null;
+  return difficulty === "expert" ? ("expert:" + n) : n;
+}
+function validChartKey(k){
+  return /^\d{1,7}$/.test(String(k)) || /^expert:\d{1,7}$/.test(String(k));
+}
+/* 把 haruki suite 的 userMusicResults 聚合成「每张谱面的状态」。
+   口径：master / expert 都解析；played=有记录；fc=任一 fullComboFlg；
+        ap=任一 fullPerfectFlg；hs=最大 highScore。两张难度分别累计。 */
 function aggregateSuite(obj){
   if (!obj || typeof obj !== "object" || Array.isArray(obj))
     return { ok:false, error:"文件内容不是一个 JSON 对象" };
@@ -486,23 +508,29 @@ function aggregateSuite(obj){
   if (!Array.isArray(arr))
     return { ok:false, error:"这看起来不是 haruki 的 suite 数据（缺少 userMusicResults 数组）" };
   const status = Object.create(null);
-  let n = 0;
+  let n = 0, nMaster = 0, nExpert = 0;
   for (let i = 0; i < arr.length; i++){
     const r = arr[i];
     if (!r || typeof r !== "object") continue;
-    if (r.musicDifficultyType !== "master") continue;
-    const id = parseInt(r.musicId, 10);
-    if (!isFinite(id)) continue;
+    const dt = String(r.musicDifficultyType || "");
+    if (dt !== "master" && dt !== "expert") continue;
+    const id = chartKey(r.musicId, dt);
+    if (id == null) continue;
     let e = status[id];
-    if (!e){ e = status[id] = { played:1, fc:0, ap:0, hs:0 }; n++; }
+    if (!e){
+      e = status[id] = { played:1, fc:0, ap:0, hs:0, difficulty:dt,
+                         musicId:parseInt(r.musicId, 10) };
+      n++; if (dt === "expert") nExpert++; else nMaster++;
+    }
     if (r.fullComboFlg) e.fc = 1;
     if (r.fullPerfectFlg) e.ap = 1;
     const hs = parseInt(r.highScore, 10) || 0;
     if (hs > e.hs) e.hs = hs;
   }
-  if (!n) return { ok:false, error:"这份数据里没有 MASTER 难度的游玩记录" };
+  if (!n) return { ok:false, error:"这份数据里没有 MASTER/EXPERT 难度的游玩记录" };
   const t = parseInt(obj.upload_time, 10);
-  return { ok:true, status, uploadTime: (isFinite(t) && t > 0) ? t : null, n };
+  return { ok:true, status, uploadTime: (isFinite(t) && t > 0) ? t : null,
+           n, nMaster, nExpert };
 }
 
 /* 压缩存盘：{v:1, t:upload_time, s:{musicId:[fc,ap,hs]}}（只存打过的曲子，十几 KB） */
@@ -603,20 +631,77 @@ function quickFields(s, b50, cut, zmap){
    算法与 scripts/build_analysis.py 逐行对应：
      B50      —— A 套：只算 FC/AP，score = 定数 + (AP ? 1.5 : 0)，rating = 前 50 之和 / 50
      苦手/擅长 —— 定数 0.5 一层 + 留一法基线 + z 检验，样本 < 10 不列入 */
-function buildAnalysis(songs, stateOf){
-  const MIN_TAG_SAMPLES = 10, BAND = 0.5;
-  const r2 = x => Math.round(x * 100) / 100;
-  const isFCany = u => !!(u && (u.fc || u.ap));
+/* 单标签统计：按难度分别做（EXPERT 不套用 MASTER 的标签 z）。 */
+function _tagStatsFor(rows, stateOf){
+  const MIN = 10, BAND = 0.5;
+  const played = rows.filter(s => stateOf(s.id) && s.teishu != null);
+  const bands = new Map();
+  played.forEach(s => {
+    const key = Math.round(s.teishu / BAND) * BAND;
+    if (!bands.has(key)) bands.set(key, []);
+    bands.get(key).push(s);
+  });
+  const tagMap = new Map();
+  bands.forEach(group => {
+    const n = group.length;
+    if (n <= 1) return;
+    const nFc = group.filter(s => _isFCany(stateOf(s.id))).length;
+    group.forEach(s => {
+      const own = _isFCany(stateOf(s.id)) ? 1 : 0;
+      const p = (nFc - own) / (n - 1);
+      (s.elems || []).forEach(tag => {
+        if (!tagMap.has(tag)) tagMap.set(tag, []);
+        tagMap.get(tag).push({ p: p, own: own, s: s });
+      });
+    });
+  });
+  const out = [];
+  tagMap.forEach((items, tag) => {
+    if (items.length < MIN) return;
+    const actual = items.reduce((a, i) => a + i.own, 0);
+    const expected = items.reduce((a, i) => a + i.p, 0);
+    const varr = items.reduce((a, i) => a + i.p * (1 - i.p), 0);
+    if (varr <= 1e-9) return;
+    const z = (actual - expected) / Math.sqrt(varr);
+    const examples = items.filter(i => !i.own)
+      .sort((a, b) => a.s.teishu - b.s.teishu).slice(0, 3)
+      .map(i => ({ id:i.s.id, chartId:i.s.id, difficulty:i.s.difficulty || "master",
+                   name:i.s.disp || i.s.jp, lv:i.s.lv, teishu:i.s.teishu }));
+    out.push({ tag:tag, n:items.length, fc:actual,
+               fcRate: Math.round(actual / items.length * 1000) / 1000,
+               expected: Math.round(expected * 10) / 10,
+               z: Math.round(z * 100) / 100, examples: examples });
+  });
+  out.sort((a, b) => a.z - b.z);
+  return out;
+}
+const _isFCany = u => !!(u && (u.fc || u.ap));
 
-  /* ---- B50 ---- */
+/* B50 + 提升空间 + 苦手/擅长 + 水平报告。
+   算法与 scripts/build_analysis.py 逐行对应：
+     B50      —— A 套：只算 FC/AP，score = 定数 + (AP ? 1.5 : 0)，rating = 前 50 之和 / 50
+                  MASTER + EXPERT 混合，每张谱面按自己的 chartId 独立；同曲两难度可同时入榜。
+                  同分稳定顺序：分数降序 → MASTER 先于 EXPERT → musicId 升序。
+     苦手/擅长 —— 每个难度各自 0.5 一层 + 留一法基线 + z 检验，样本 < 10 不列入；
+                  两张难度的标签 z 绝不互相套用。 */
+function buildAnalysis(songs, stateOf){
+  const MIN_TAG_SAMPLES = 10;
+  const r2 = x => Math.round(x * 100) / 100;
+
+  /* ---- 混合 B50 ---- */
   const pool = [];
   songs.forEach(s => {
     const u = stateOf(s.id);
-    if (!isFCany(u) || s.teishu == null) return;      // 非 FC/AP 不参与（已 clear 未 FC 的不进榜）
-    pool.push({ musicId: s.id, score: r2(s.teishu + (u.ap ? 1.5 : 0)),
+    if (!_isFCany(u) || s.teishu == null || s.unrel) return;
+    const diff = s.difficulty || "master";
+    pool.push({ musicId: s.musicId == null ? s.id : s.musicId, chartId: s.id,
+                difficulty: diff,
+                score: r2(s.teishu + (u.ap ? 1.5 : 0)),
                 teishu: s.teishu, ap: !!u.ap, lv: s.lv });
   });
-  pool.sort((a, b) => (b.score - a.score) || (a.musicId - b.musicId));
+  pool.sort((a, b) => (b.score - a.score)
+    || ((a.difficulty === "expert") - (b.difficulty === "expert"))
+    || (a.musicId - b.musicId));
   const top = pool.slice(0, 50);
   const b50 = {
     n: 50, count: top.length,
@@ -629,71 +714,48 @@ function buildAnalysis(songs, stateOf){
   const gains = [];
   songs.forEach(s => {
     const u = stateOf(s.id);
-    if (!u || isFCany(u) || s.teishu == null || s.teishu <= cut) return;
-    gains.push({ musicId: s.id, name: s.disp || s.jp, lv: s.lv, teishu: s.teishu,
+    if (!u || _isFCany(u) || s.unrel || s.teishu == null || s.teishu <= cut) return;
+    const diff = s.difficulty || "master";
+    gains.push({ musicId: s.musicId == null ? s.id : s.musicId, chartId: s.id,
+                 difficulty: diff, name: s.disp || s.jp, lv: s.lv, teishu: s.teishu,
                  gain: r2(s.teishu - cut), highScore: u.hs || 0 });
   });
-  gains.sort((a, b) => (b.teishu - a.teishu) || (a.musicId - b.musicId));
+  gains.sort((a, b) => (b.teishu - a.teishu)
+    || ((a.difficulty === "expert") - (b.difficulty === "expert"))
+    || (a.musicId - b.musicId));
   const optimistic = pool.map(e => e.score).concat(gains.map(g => g.teishu))
     .sort((a, b) => b - a).slice(0, 50);
   const b50opt = optimistic.length >= 50 ? r2(optimistic.reduce((a, b) => a + b, 0) / 50) : null;
 
-  /* ---- 苦手 / 擅长 ---- */
-  const played = songs.filter(s => stateOf(s.id) && s.teishu != null);
-  const bands = new Map();
-  played.forEach(s => {
-    const key = Math.round(s.teishu / BAND) * BAND;
-    if (!bands.has(key)) bands.set(key, []);
-    bands.get(key).push(s);
+  /* ---- 苦手 / 擅长：按难度分别统计 ---- */
+  const statsByDiff = {}, zmapByDiff = {};
+  ["master", "expert"].forEach(d => {
+    statsByDiff[d] = _tagStatsFor(songs.filter(s => (s.difficulty || "master") === d), stateOf);
+    const z = {};
+    statsByDiff[d].forEach(t => { z[t.tag] = t.z; });
+    zmapByDiff[d] = z;
   });
-  const tagMap = new Map();
-  bands.forEach(group => {
-    const n = group.length;
-    if (n <= 1) return;
-    const nFc = group.filter(s => isFCany(stateOf(s.id))).length;
-    group.forEach(s => {
-      const own = isFCany(stateOf(s.id)) ? 1 : 0;
-      const p = (nFc - own) / (n - 1);               // 留一法基线：去掉自己
-      (s.elems || []).forEach(tag => {
-        if (!tagMap.has(tag)) tagMap.set(tag, []);
-        tagMap.get(tag).push({ p: p, own: own, s: s });
-      });
-    });
-  });
-  const tags = [];
-  tagMap.forEach((items, tag) => {
-    if (items.length < MIN_TAG_SAMPLES) return;      // 小样本噪声，不列入
-    const actual = items.reduce((a, i) => a + i.own, 0);
-    const expected = items.reduce((a, i) => a + i.p, 0);
-    const varr = items.reduce((a, i) => a + i.p * (1 - i.p), 0);
-    if (varr <= 1e-9) return;
-    const z = (actual - expected) / Math.sqrt(varr);
-    const examples = items.filter(i => !i.own)
-      .sort((a, b) => a.s.teishu - b.s.teishu).slice(0, 3)
-      .map(i => ({ id: i.s.id, name: i.s.disp || i.s.jp, lv: i.s.lv, teishu: i.s.teishu }));
-    tags.push({ tag: tag, n: items.length, fc: actual,
-                fcRate: Math.round(actual / items.length * 1000) / 1000,
-                expected: Math.round(expected * 10) / 10,
-                z: Math.round(z * 100) / 100, examples: examples });
-  });
-  tags.sort((a, b) => a.z - b.z);
+  const tags = statsByDiff.master;
   const weak = tags.filter(t => t.z <= -0.5).slice(0, 8);
   const strong = tags.slice().reverse().filter(t => t.z >= 0.5).slice(0, 8);
-  const tagZ = {};                       // 全部标签的 z（快速收益按它判定弱/强标签，再数个数）
-  tags.forEach(t => { tagZ[t.tag] = t.z; });
+  const pick = (d, kind) => (kind === "weak"
+    ? statsByDiff[d].filter(t => t.z <= -0.5).slice(0, 8)
+    : statsByDiff[d].slice().reverse().filter(t => t.z >= 0.5).slice(0, 8));
+  const tagZ = zmapByDiff.master;
 
   /* ---- 水平报告素材 ---- */
   const firstMax = (arr, better) => arr.length ? arr.reduce((a, b) => better(a, b) ? a : b) : null;
-  const fcRows = songs.filter(s => isFCany(stateOf(s.id)));
+  const fcRows = songs.filter(s => _isFCany(stateOf(s.id)));
   const unfcPlayed = songs.filter(s => {
-    const u = stateOf(s.id); return u && !isFCany(u) && s.teishu != null;
+    const u = stateOf(s.id); return u && !_isFCany(u) && s.teishu != null && !s.unrel;
   });
   const highest = firstMax(fcRows, (a, b) => (a.teishu || 0) >= (b.teishu || 0));
   const easiestMiss = firstMax(unfcPlayed, (a, b) => a.teishu <= b.teishu);
   const hardestMiss = firstMax(unfcPlayed, (a, b) => a.teishu >= b.teishu);
   const live = songs.filter(s => !s.unrel);
-  const liveFc = live.filter(s => isFCany(stateOf(s.id))).length;
-  const brief = o => o ? { id: o.id, name: o.disp || o.jp, lv: o.lv, teishu: o.teishu } : null;
+  const liveFc = live.filter(s => _isFCany(stateOf(s.id))).length;
+  const brief = o => o ? { id:o.id, chartId:o.id, difficulty:o.difficulty || "master",
+                           name:o.disp || o.jp, lv:o.lv, teishu:o.teishu } : null;
   const report = {
     b50Rating: b50.rating, b50Optimistic: b50opt,
     prog: { total: live.length, fc: liveFc,
@@ -703,8 +765,12 @@ function buildAnalysis(songs, stateOf){
     nUnfcPool: unfcPlayed.length,
   };
   return { b50: b50, gainCut: cut, gains: gains.slice(0, 20), nGains: gains.length,
-           weak: weak, strong: strong, tagPool: played.length, tagTotal: tags.length,
-           zmap: tagZ,        /* 快速收益 v3 要用全部标签的 z（不只 weak/strong） */
+           weak: weak, strong: strong,
+           weakByDiff: { master: pick("master", "weak"), expert: pick("expert", "weak") },
+           strongByDiff: { master: pick("master", "strong"), expert: pick("expert", "strong") },
+           tagPool: songs.filter(s => stateOf(s.id) && s.teishu != null).length,
+           tagTotal: new Set([].concat(statsByDiff.master, statsByDiff.expert).map(t => t.tag)).size,
+           zmap: tagZ, zmapByDiff: zmapByDiff, tagZ: tagZ,
            report: report };
 }
 /*__PJSK_CORE_END__*/
@@ -734,7 +800,7 @@ function applyStatus(){
   /* ⚠️ 顺序要紧：快速收益依赖 B50 与榜尾门槛、标签 z，必须先算分析再标快速收益 */
   DATA.analysis = buildAnalysis(DATA.songs, stateOf);
   A = DATA.analysis;
-  const b50 = (A.b50 || {}).rating, cut = A.gainCut, zmap = A.zmap || {};
+  const b50 = (A.b50 || {}).rating, cut = A.gainCut;
   let nQuick = 0, nGreen = 0;
   DATA.songs.forEach(s => {
     const u = stateOf(s.id);
@@ -743,7 +809,7 @@ function applyStatus(){
     s.manualOnly = !suiteStatus[s.id] && !!done[s.id];
     s.ap = !!(u && u.ap);
     s.hs = u ? (u.hs || 0) : 0;
-    const q = quickFields(s, b50, cut, zmap);
+    const q = quickFields(s, b50, cut, ((A.zmapByDiff || {})[s.difficulty] || A.zmap || {}));
     s.qgain = q.gain; s.qgap = q.gap; s.qtier = q.tier;
     s.qweakS = q.weakS; s.qstrongS = q.strongS; s.qweakN = q.weakN; s.qstrongN = q.strongN;
     s.qnet = q.net; s.qtags = q.tags; s.qstrongTags = q.strongTags; s.qheavy = q.heavy;
@@ -821,7 +887,7 @@ function syncSuiteInfo(){
   if (suiteLoaded){
     el.className = "hint snapshot";
     el.textContent = "数据快照 " + (suiteTime ? fmtTime(suiteTime) : "未知")
-                   + " · MASTER " + Object.keys(suiteStatus).length + " 首";
+                   + " · 谱面 " + Object.keys(suiteStatus).length + " 张";
   } else {
     el.className = "hint snapshot none";
     el.textContent = "未导入成绩 · 当前是纯定数表模式";
@@ -910,7 +976,7 @@ function onSuiteFile(e){
     render();
     syncSuiteInfo();
     const k = Object.keys(suiteStatus);
-    const ok = "导入成功：MASTER 有成绩 " + k.length + " 首 · FC " + k.filter(x => suiteStatus[x].fc).length
+    const ok = "导入成功：有成绩 " + k.length + " 张谱面（MASTER+EXPERT）· FC " + k.filter(x => suiteStatus[x].fc).length
              + " 首 · AP " + k.filter(x => suiteStatus[x].ap).length
              + (suiteTime ? "（数据快照 " + fmtTime(suiteTime) + "）" : "");
     openSuiteDialog();                                   // 重建弹窗：出现快照时间与清除按钮
@@ -1080,7 +1146,7 @@ function playHint(s, n){
 
 /* ---------- 状态 ---------- */
 const S = { q:"", sort:"teishu", dir:1, fc:false, never:false, tried:false, quick:false, green:false,
-            var:false, low:false, hide:false, unrel:false, view:"cards", lv:new Set() };
+            var:false, low:false, hide:false, unrel:false, diff:"all", view:"cards", lv:new Set() };
 
 /* 四状态：已 FC（官方成绩或本地标记）/ 打过未 FC / 完全没打过 / 未实装 */
 const statusOf = s => s.unrel ? "unrel"
@@ -1097,23 +1163,23 @@ function renderStats(){
      免得 0 被误读成「你一首都没打过」 */
   if (PUBLIC && !hasUserData()){
     const lib = [
-      ["c", m.totalMaster, "MASTER 谱面"],
-      ["g", m.releasedMaster, "国服已实装"],
+      ["c", m.totalCharts, "谱面（M+E）"],
+      ["g", m.releasedCharts, "国服已实装"],
       ["v", m.unreleased, "未实装"],
       ["y", m.withTips, "有攻略"],
-      ["d", m.aliased, "社区中文译名"],
-      ["p", m.bpmVar, "速度变化谱"],
+      ["d", m.totalExpert, "EXPERT 谱面"],
+      ["p", m.expertCommunity || 0, "EXPERT 社区定数"],
     ];
     document.getElementById("stats").innerHTML = lib.map(
       ([k,v,l]) => `<div class="stat ${k}"><b>${v}</b><span>${l}</span></div>`).join("");
     document.getElementById("pfill").style.width = "0%";
-    document.getElementById("snap").textContent = "全量 " + m.totalMaster + " 首 · 未导入成绩";
+    document.getElementById("snap").textContent = "全量 " + m.totalCharts + " 张谱面 · 未导入成绩";
     document.getElementById("snap2").textContent = "未导入";
     document.getElementById("gen").textContent = m.generated;
     return;
   }
   const fcN = songs.filter(s => statusOf(s) === "fc" && !s.unrel).length;
-  const unfcN = m.releasedMaster - fcN;
+  const unfcN = m.releasedCharts - fcN;
   const triedN = songs.filter(s => statusOf(s) === "tried").length;
   const neverN = songs.filter(s => statusOf(s) === "never").length;
   const els = [
@@ -1127,10 +1193,10 @@ function renderStats(){
   ];
   document.getElementById("stats").innerHTML = els.map(
     ([k,v,l]) => `<div class="stat ${k}"><b>${v}</b><span>${l}</span></div>`).join("");
-  const pct = fcN / m.releasedMaster * 100;
+  const pct = fcN / m.releasedCharts * 100;
   document.getElementById("pfill").style.width = pct.toFixed(1) + "%";
   const snapTxt = PUBLIC ? (suiteLoaded ? (suiteTime ? fmtTime(suiteTime) : "未知") : "未导入") : m.snapshot;
-  document.getElementById("snap").textContent = "全量 " + m.totalMaster + " 首 · "
+  document.getElementById("snap").textContent = "全量 " + m.totalCharts + " 张谱面 · "
     + (PUBLIC ? "数据快照 " + snapTxt : "快照 " + m.snapshot);
   document.getElementById("snap2").textContent = snapTxt;
   document.getElementById("gen").textContent = m.generated;
@@ -1180,6 +1246,8 @@ function compute(){
   let list = DATA.songs.filter(s => {
     // 未实装曲目默认隐藏（国服还没上线，打不了）
     if (!S.unrel && s.unrel) return false;
+    // 难度筛选只控制浏览列表；B50 用 DATA.analysis，与本筛选无关
+    if (S.diff !== "all" && s.difficulty !== S.diff) return false;
     const st = statusOf(s);
     if (S.hide && st === "fc") return false;
     const anySt = S.fc || S.never || S.tried;
@@ -1192,7 +1260,8 @@ function compute(){
     if (S.low && s.conf !== "低") return false;
     if (S.q){
       const q = S.q.toLowerCase();
-      const hay = [s.disp, s.cn, s.jp, s.alias, s.id].join(" ").toLowerCase();
+      const hay = [s.disp, s.cn, s.jp, s.alias, s.id, s.musicId, s.difficulty]
+        .join(" ").toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;
@@ -1217,9 +1286,13 @@ function compute(){
 const esc = t => String(t).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const bpmTxt = s => !s.bpm ? "—" : (s.bpm[0] === s.bpm[1] ? String(s.bpm[0]) : s.bpm[0] + "-" + s.bpm[1]);
 /* 收益标签的悬浮说明：把两把尺子分开讲清，并说清档位≠打得过 */
-function quickZmap(){ return (A && (A.zmap || A.tagZ)) || null; }
+function quickZmap(s){
+  const by = A && A.zmapByDiff;
+  if (by && s && by[s.difficulty]) return by[s.difficulty];
+  return (A && (A.zmap || A.tagZ)) || null;
+}
 function quickTitle(s){
-  const zm = quickZmap();
+  const zm = quickZmap(s);
   if (!zm || !Object.keys(zm).length || s.teishu == null)
     return "「有收益」= 定数高于你 B50 榜的进榜门槛；档位按 个人难度 − B50 分（导入成绩后按你的数据算）";
   const cut = A.gainCut || 0, b50 = (A.b50 && A.b50.rating != null) ? A.b50.rating : null;
@@ -1254,6 +1327,8 @@ function card(s, rank){
     t.push('<span class="tag tier-' + (s.qtier || "r") + '" title="' + esc(quickTitle(s)) + '">'
            + gate + '</span>');
   }
+  t.push('<span class="tag ' + (s.difficulty === "expert" ? "de" : "dm") + '">'
+         + (s.difficulty === "expert" ? "EXPERT" : "MASTER") + '</span>');
   if (s.bpmVar) t.push('<span class="tag v">速度变化</span>');
   if (s.diff) t.push('<span class="tag w">⚠个人差</span>');
   if (s.conf === "低") t.push('<span class="tag low">低可信</span>');
@@ -1291,7 +1366,7 @@ function renderTable(list){
     return `<tr data-id="${s.id}" class="${st === 'fc' ? 'fcrow' : ''}">
     <td class="num dim">${i+1}</td>
     <td><img loading="lazy" src="covers/${s.abn}.webp" alt="" style="${s.unrel?'filter:grayscale(.55)':''}">${st === 'fc' ? ' <span class="tag q">✓</span>' : ''}</td>
-    <td>${esc(s.disp)}${s.basis==='alias'?' <span class="tag t">译</span>':''}
+    <td><span class="tag ${s.difficulty==='expert'?'de':'dm'}">${s.difficulty==='expert'?'EXPERT':'MASTER'}</span>${esc(s.disp)}${s.basis==='alias'?' <span class="tag t">译</span>':''}
         <div class="dim" style="font-size:10.5px">${esc(s.jp)}${s.cn && s.cn!==s.disp ? '　·　国服名 ' + esc(s.cn) : ''}</div></td>
     <td class="num">${s.lv}</td>
     <td class="num ${s.teishu==null?'dim':''}"><b>${s.teishu==null?'—':shownTeishu(s).toFixed(2)}</b>${isAdjusted(s)?` <span class="tag t">+${adjDelta(s).toFixed(2)}</span>`:''}</td>
@@ -1316,7 +1391,7 @@ function renderTable(list){
     syncDir(); render();
   });
   document.querySelectorAll("#tablewrap tbody tr").forEach(el =>
-    el.onclick = () => openModal(Number(el.dataset.id)));
+    el.onclick = () => openModal(el.dataset.id));
 }
 
 /* ---------- B50 榜单 ---------- */
@@ -1327,27 +1402,29 @@ function renderB50(){
   const b = A.b50 || {};
   const songs = DATA.songs;
   const byId = {};
-  songs.forEach(s => byId[s.id] = s);
+  songs.forEach(s => byId[String(s.id)] = s);
   const list = (b.list || []).map((e, i) => {
-    const s = byId[e.musicId] || {};
+    const s = byId[String(e.chartId != null ? e.chartId : e.musicId)] || {};
     const cls = i === 0 ? "rk1" : i === 1 ? "rk2" : i === 2 ? "rk3" : "";
-    return `<div class="brow ${i<3?'top3':''}" data-id="${e.musicId}">
+    const dc = e.difficulty === "expert" ? "de" : "dm";
+    return `<div class="brow ${i<3?'top3':''}" data-id="${e.chartId != null ? e.chartId : e.musicId}">
       <div class="rk ${cls}">${i+1}</div>
       <img loading="lazy" src="covers/${s.abn || "noimg"}.webp" alt="">
       <div><div class="nm">${esc(s.disp || e.musicId)}</div>
-        <div class="mt">Lv${e.lv}　·　社区定数 ${e.teishu}</div></div>
+        <div class="mt"><span class="tag ${dc}">${e.difficulty === "expert" ? "EXPERT" : "MASTER"}</span>Lv${e.lv}　·　社区定数 ${e.teishu}</div></div>
       <div class="bg">${e.ap ? '<span class="apbd">AP +1.5</span>' : '<span class="fcbd">FC</span>'}</div>
       <div class="sc">${e.score}<small>= ${e.teishu}${e.ap?" + 1.5":""}</small></div>
     </div>`;
   }).join("");
 
   const gains = (A.gains || []).map((g, i) => {
-    const s = byId[g.musicId] || {};
-    return `<div class="brow" data-id="${g.musicId}">
+    const s = byId[String(g.chartId != null ? g.chartId : g.musicId)] || {};
+    const gc = g.difficulty === "expert" ? "de" : "dm";
+    return `<div class="brow" data-id="${g.chartId != null ? g.chartId : g.musicId}">
       <div class="rk">${i+1}</div>
       <img loading="lazy" src="covers/${s.abn || "noimg"}.webp" alt="">
       <div><div class="nm">${esc(g.name)}</div>
-        <div class="mt">Lv${g.lv}　·　定数 ${g.teishu}　·　当前最高分 ${g.highScore || "—"}</div></div>
+        <div class="mt"><span class="tag ${gc}">${g.difficulty === "expert" ? "EXPERT" : "MASTER"}</span>Lv${g.lv}　·　定数 ${g.teishu}　·　当前最高分 ${g.highScore || "—"}</div></div>
       <div class="bg"><span class="tag q">打过未FC</span></div>
       <div class="sc">+${g.gain}<small>超门槛</small></div>
     </div>`;
@@ -1357,6 +1434,7 @@ function renderB50(){
     <div class="b50head">
       <div class="b50big"><b>${b.rating ?? "—"}</b><span>B50 RATING</span></div>
       <div class="b50sub">
+        MASTER + EXPERT 混合：同一首歌两种难度各自独立，可同时入榜<br>
         算法：AP = 定数+1.5，FC = 定数，取前 ${b.n} 之和 ÷ ${b.n}<br>
         参与排名 <b>${b.count}</b> 首 · 榜尾门槛 <b>${A.gainCut}</b> · 池子共 ${DATA.songs.filter(s=>s.fc||s.ap).length} 首<br>
         若把下面 ${A.nGains} 首都 FC，理论上界 <b>${(A.report||{}).b50Optimistic ?? "—"}</b>
@@ -1379,7 +1457,7 @@ function renderB50(){
   const exportName=box.querySelector('#b50ExportName');
   if(exportName)exportName.addEventListener('change',()=>{try{localStorage.setItem('pjsk_b50_export_name',exportName.value.trim().slice(0,40));}catch(_){}});
   box.querySelectorAll(".brow").forEach(el =>
-    el.onclick = () => openModal(Number(el.dataset.id)));
+    el.onclick = () => openModal(el.dataset.id));
 }
 
 /*__B50_EXPORT_BEGIN__*/
@@ -1580,6 +1658,7 @@ function renderReport(){
   const box = document.getElementById("repwrap");
   const R = A.report || {}, pr = R.prog || {};
   const weak = A.weak || [], strong = A.strong || [];
+  const weakBy = A.weakByDiff || {}, strongBy = A.strongByDiff || {};
   const persona = buildPersona();
   box.innerHTML = `
     <div class="persona">
@@ -1591,7 +1670,7 @@ function renderReport(){
     <div class="rgrid">
       <div class="rcard"><div class="lb">B50 RATING</div><div class="vl">${R.b50Rating ?? "—"}</div>
         <div class="sub">前 50 首 FC/AP 的定数均值</div></div>
-      <div class="rcard green"><div class="lb">MASTER 已 FC</div>
+      <div class="rcard green"><div class="lb">已 FC 谱面</div>
         <div class="vl">${pr.fc} <span style="font-size:14px;color:var(--fg3)">/ ${pr.total}</span></div>
         <div class="sub">完成度 ${pr.pct}%　·　AP ${pr.ap} 首</div></div>
       <div class="rcard gold"><div class="lb">最高 FC 定数</div>
@@ -1610,17 +1689,19 @@ function renderReport(){
         <div class="sub">把高于门槛的 ${A.nGains} 首打过未 FC 全清掉的理论上界（${R.b50Optimistic ?? "—"}）</div></div>
     </div>
 
-    <div class="sechead"><b>苦手配置</b>
-      <span class="src">z 越负 = 含该要素的曲子，比同定数水平的其他曲子更难 FC</span></div>
-    <div class="bars">${weak.map(t => barRow(t, "weak")).join("") || '<div class="hint">样本不足</div>'}</div>
+    ${["master","expert"].map(d => `
+    <div class="sechead"><b>${d === "expert" ? "EXPERT" : "MASTER"} 苦手配置</b>
+      <span class="src">同难度内按定数分层；z 越负越难 FC（两难度不共用标签 z）</span></div>
+    <div class="bars">${((d === "master" ? weak : null) || weakBy[d] || []).map(t => barRow(t, "weak")).join("") || '<div class="hint">样本不足</div>'}</div>`).join("")}
     <div class="repnote">统计口径：取你<b>打过</b>的 ${A.tagPool} 首，按定数每 0.5 一档分层，
       用<b>留一法</b>算每首的基线 FC 率（避开自身），再对每个要素做「期望 FC 数 vs 实际 FC 数」的
       标准化偏差（z）。样本 &lt; 10 首的要素不列入（共统计 ${A.tagTotal} 个要素）。
       <br>⚠️ 控制定数是必须的——难曲天然含更多硬要素，直接比 FC 率会得出「所有要素都难」的废话。</div>
 
-    <div class="sechead"><b>擅长配置</b>
-      <span class="src">z 越正 = 这类要素你反而比同水平更稳</span></div>
-    <div class="bars">${strong.map(t => barRow(t, "strong")).join("") || '<div class="hint">样本不足</div>'}</div>
+    ${["master","expert"].map(d => `
+    <div class="sechead"><b>${d === "expert" ? "EXPERT" : "MASTER"} 擅长配置</b>
+      <span class="src">同难度内按定数分层；z 越正 = 这类要素你反而比同水平更稳</span></div>
+    <div class="bars">${((d === "master" ? strong : null) || strongBy[d] || []).map(t => barRow(t, "strong")).join("") || '<div class="hint">样本不足</div>'}</div>`).join("")}
     <div class="repnote">擅长的判定同样经过定数分层——所以「物量 z=+0.75」的意思不是
       「你物量曲打得多」，而是「<b>同定数水平下</b>，含物量要素的曲子你 FC 得比预期更多」。</div>`;
 }
@@ -1662,7 +1743,7 @@ function render(){
   const list = compute();
   const nMark = DATA.songs.filter(s => done[s.id] && !s.fc).length;
   document.getElementById("cnt").textContent =
-    `显示 ${list.length} / ${DATA.songs.length} 首` + (nMark ? `　·　本地标记 ${nMark} 首` : "");
+    `显示 ${list.length} / ${DATA.songs.length} 张谱面` + (nMark ? `　·　本地标记 ${nMark} 首` : "");
   const grid = document.getElementById("grid"), tw = document.getElementById("tablewrap");
   const b50w = document.getElementById("b50wrap"), repw = document.getElementById("repwrap");
   // 先全部隐藏，再显示当前视图
@@ -1671,7 +1752,7 @@ function render(){
   if (S.view === "cards"){
     grid.style.display = "grid";
     grid.innerHTML = list.map((s,i) => card(s,i+1)).join("");
-    grid.querySelectorAll(".card").forEach(el => el.onclick = () => openModal(Number(el.dataset.id)));
+    grid.querySelectorAll(".card").forEach(el => el.onclick = () => openModal(el.dataset.id));
   } else if (S.view === "table"){
     renderTable(list);
   } else if (S.view === "b50"){
@@ -1702,7 +1783,7 @@ function tipsHtml(s){
   const chips = (s.elems || []).map(e =>
     `<span class="chip ${HARD_ELEMS.includes(e) ? "hard" : ""}">${esc(e)}</span>`).join("");
   return `<div class="sec">
-    <h3>难点 / 攻略<span class="src">译自 pjsekai.com 楽曲難易度表 MASTER</span></h3>
+    <h3>难点 / 攻略<span class="src">译自 pjsekai.com 楽曲難易度表 ${s.tipsSrc || "MASTER"}</span></h3>
     ${chips ? `<div class="chips">${chips}</div>` : ""}
     ${s.tips ? `<div class="tips">${esc(s.tips)}${s.tipsNote ? `<span class="jn">社区判定备注：${esc(s.tipsNote)}</span>` : ""}</div>`
              : `<div class="hint">该曲暂无攻略（多为国服独占曲，日服 wiki 未收录）</div>`}
@@ -1710,7 +1791,7 @@ function tipsHtml(s){
 }
 
 function openModal(id){
-  const s = DATA.songs.find(x => x.id === id);
+  const s = DATA.songs.find(x => String(x.id) === String(id));
   if (!s) return;
   const st = statusOf(s);
   const dup = !s.cn || s.cn === s.jp;
@@ -1721,7 +1802,7 @@ function openModal(id){
   const persT = (s.teishu != null && !s.fc && myPlays > 1)
     ? Math.round((s.teishu + 0.01 * (myPlays - 1)) * 100) / 100 : null;
   /* 快速收益 v3.1：收益 / 档位 / 个人难度（需要「你的」苦手分析，公共版导入成绩后才有） */
-  const zmapQ = (A && (A.zmap || A.tagZ)) || null;
+  const zmapQ = quickZmap(s);
   const hasZ = !!zmapQ && Object.keys(zmapQ).length > 0;
   const qPen = (hasZ && s.teishu != null) ? quickWeakScore(s.elems, zmapQ) : null;
   const qBonus = (hasZ && s.teishu != null) ? quickStrongScore(s.elems, zmapQ) : null;
@@ -1772,7 +1853,7 @@ function openModal(id){
       <img class="cover" src="covers/${s.abn}.webp" alt="" style="${s.unrel?'filter:grayscale(.5) brightness(.8)':''}">
       <div style="flex:1">
         <h2>${esc(s.disp)}</h2>
-        <div class="jp2">${esc(s.jp)}　·　musicId ${s.id}
+        <div class="jp2">${esc(s.jp)}　·　${s.difficulty === "expert" ? "EXPERT" : "MASTER"}　·　musicId ${s.musicId != null ? s.musicId : s.id}
           <span class="tag q" id="curTeiTag">定数 <b id="curTei">${s.teishu == null ? "—" : shownTeishu(s).toFixed(2)}</b></span>
           ${s.basis === "alias" ? '<span class="tag t">显示的是中文译名</span>' : ""}
           ${s.unrel ? '<span class="tag v">国服未实装</span>' : ""}
@@ -1853,6 +1934,18 @@ const toggle = (id, key) => {
 toggle("fFC","fc"); toggle("fNever","never"); toggle("fTried","tried"); toggle("fQuick","quick");
 toggle("fGreen","green");
 toggle("fVar","var"); toggle("fLow","low"); toggle("fUnrel","unrel"); toggle("fHide","hide");
+/* 难度筛选：只切浏览列表；B50/分析读 DATA.analysis，不受影响 */
+const setDiff = d => {
+  S.diff = d;
+  [["dAll","all"],["dMaster","master"],["dExpert","expert"]].forEach(([id, v]) => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle("on", d === v);
+  });
+  render();
+};
+document.getElementById("dAll").onclick = () => setDiff("all");
+document.getElementById("dMaster").onclick = () => setDiff("master");
+document.getElementById("dExpert").onclick = () => setDiff("expert");
 document.getElementById("q").oninput = e => { S.q = e.target.value.trim(); render(); };
 document.getElementById("sort").onchange = e => { S.sort = e.target.value; render(); };
 function syncDir(){ document.getElementById("dir").textContent = S.dir > 0 ? "▲ 升序" : "▼ 降序"; }
@@ -1909,9 +2002,12 @@ document.addEventListener("keydown", e => {
 document.getElementById("reset").onclick = () => {
   S.q = ""; S.sort = "teishu"; S.dir = 1; S.lv.clear();
   ["fc","never","tried","quick","green","var","low","unrel","hide"].forEach(k => S[k] = false);
+  S.diff = "all";
   document.getElementById("q").value = "";
   document.getElementById("sort").value = "teishu";
   document.querySelectorAll("#listbar button").forEach(b => b.classList.remove("on"));
+  const dAllBtn = document.getElementById("dAll");
+  if (dAllBtn) dAllBtn.classList.add("on");
   // ⚠️ 不重置 S.view——「重置筛选」不该把你踢出当前视图
   syncDir(); render();
 };
@@ -1919,7 +2015,8 @@ document.getElementById("reset").onclick = () => {
 /* ---------- 我的数据 导出 / 导入（FC 标记 + 游玩次数，防止换浏览器或清缓存后丢失）---------- */
 document.getElementById("exp").onclick = () => {
   const blob = new Blob([JSON.stringify(
-    { v: 2, snapshot: DATA.meta.snapshot, marks: done, plays: plays }, null, 1)],
+    { v: 3, snapshot: DATA.meta.snapshot, charts: "master=数字 musicId；expert=expert:<musicId>",
+      marks: done, plays: plays }, null, 1)],
     { type: "application/json" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
@@ -1936,15 +2033,29 @@ document.getElementById("impFile").onchange = e => {
     let msg;
     try {
       const j = JSON.parse(fr.result);
-      const m = (j && j.marks) ? j.marks : j;                  // 兼容旧版只有 marks 的文件
-      const p = (j && j.plays) || {};
+      if (!j || typeof j !== "object" || Array.isArray(j))
+        throw new Error("备份文件不是 JSON 对象");
+      const hasMarks = Object.prototype.hasOwnProperty.call(j, "marks");
+      const hasPlays = Object.prototype.hasOwnProperty.call(j, "plays");
+      const m = hasMarks ? j.marks : (hasPlays ? {} : j);                  // 兼容旧版只有 marks 的文件
+      const p = hasPlays ? j.plays : {};
+      if (!m || typeof m !== "object" || Array.isArray(m) ||
+          !p || typeof p !== "object" || Array.isArray(p))
+        throw new Error("marks/plays 必须是对象；本次导入未改动任何数据");
       let n = 0, np = 0;
-      Object.keys(m || {}).forEach(k => { if (!done[k]) { done[k] = 1; n++; } });
-      Object.keys(p || {}).forEach(k => {
-        const v = Math.max(1, parseInt(p[k], 10) || 1);
-        // 与同步合并一致：旧备份不能减少已记录的次数；需要减少时在曲目详情里修改。
-        if (v > getPlays(k)) { plays[k] = v; np++; }
+      const addMarks = {}, addPlays = {};
+      Object.keys(m).forEach(k => {
+        if (!validChartKey(k)) return;   // 非法 key 忽略；纯数字 key 继续代表 MASTER
+        if (!done[k]) addMarks[k] = 1;
       });
+      Object.keys(p).forEach(k => {
+        if (!validChartKey(k)) return;
+        const v = Math.max(1, Math.min(9999, parseInt(p[k], 10) || 1));
+        // 与同步合并一致：旧备份不能减少已记录的次数；需要减少时在曲目详情里修改。
+        if (v > getPlays(k)) addPlays[k] = v;
+      });
+      Object.keys(addMarks).forEach(k => { done[k] = 1; n++; });
+      Object.keys(addPlays).forEach(k => { plays[k] = addPlays[k]; np++; });
       saveDone(); savePlays();
       if (PUBLIC) applyStatus();          // 公共版：标记影响 B50/分析，导入后重算
       render();
