@@ -576,14 +576,14 @@ function quickTier(gap){
   return gap == null ? null : (gap < QUICK_OK ? "g" : (gap < QUICK_MID ? "y" : "r"));
 }
 /* 能进榜 = 还没 FC 且已实装 且 进榜余量 > 0（定数高于进榜门槛） */
-function isQuickIncome(s, u, cut){
-  if (s.unrel || s.teishu == null || cut == null) return false;
+function isQuickIncome(s, u, cut, b50){
+  if (s.unrel || s.teishu == null || !Number.isFinite(cut) || !Number.isFinite(b50)) return false;
   if (u && (u.fc || u.ap)) return false;
   return (s.teishu - cut) > 0;
 }
 /* 一次性算出这首的进榜余量/弱项分/难度差/档位（两版共用，免得跟烘焙值打架） */
 function quickFields(s, b50, cut, zmap){
-  if (s.teishu == null || cut == null)
+  if (s.teishu == null || !Number.isFinite(cut) || !Number.isFinite(b50))
     return { gain:null, gap:null, tier:null, weakS:0, strongS:0, weakN:0, strongN:0, net:0, tags:[], strongTags:[], heavy:[] };
   const ws = quickWeakScore(s.elems, zmap), ss = quickStrongScore(s.elems, zmap);
   const pdiff = s.teishu + QUICK_K * (ws - ss);
@@ -747,7 +747,7 @@ function applyStatus(){
     s.qgain = q.gain; s.qgap = q.gap; s.qtier = q.tier;
     s.qweakS = q.weakS; s.qstrongS = q.strongS; s.qweakN = q.weakN; s.qstrongN = q.strongN;
     s.qnet = q.net; s.qtags = q.tags; s.qstrongTags = q.strongTags; s.qheavy = q.heavy;
-    s.quick = isQuickIncome(s, u, cut);
+    s.quick = isQuickIncome(s, u, cut, b50);
     if (s.quick){ nQuick++; if (s.qtier === "g") nGreen++; }
   });
   DATA.meta.fcCeil = ceil;
@@ -1722,7 +1722,7 @@ function openModal(id){
     ? Math.round((s.teishu + 0.01 * (myPlays - 1)) * 100) / 100 : null;
   /* 快速收益 v3.1：收益 / 档位 / 个人难度（需要「你的」苦手分析，公共版导入成绩后才有） */
   const zmapQ = (A && (A.zmap || A.tagZ)) || null;
-  const hasZ = !!zmapQ && Object.keys(zmapQ).length > 0;
+  const hasZ = Number.isFinite((A.b50 || {}).rating) && !!zmapQ && Object.keys(zmapQ).length > 0;
   const qPen = (hasZ && s.teishu != null) ? quickWeakScore(s.elems, zmapQ) : null;
   const qBonus = (hasZ && s.teishu != null) ? quickStrongScore(s.elems, zmapQ) : null;
   const qDiff = qPen == null ? null : s.teishu + QUICK_K * (qPen - qBonus);
