@@ -34,8 +34,10 @@ function b50Cover(url){
     const img = new Image();
     let settled = false;
     const finish = value => { if (!settled){ settled=true; clearTimeout(timer); img.onload=img.onerror=null; resolve(value); } };
-    const timer = setTimeout(()=>{finish(null);img.src='';},7000);
-    img.crossOrigin='anonymous'; img.referrerPolicy='no-referrer';
+    const timer = setTimeout(()=>{finish(null);img.src='';},12000);
+    // Same-origin images can reuse the page's in-flight/cache request directly.
+    if(new URL(url,location.href).origin!==location.origin)img.crossOrigin='anonymous';
+    img.referrerPolicy='no-referrer';
     img.onload=()=>finish(img.naturalWidth ? img : null);
     img.onerror=()=>finish(null); img.src=url;
   });
@@ -150,6 +152,13 @@ async function exportB50PNG(options={}){
     await Promise.all(Array.from({length:Math.min(8,covers.length)},async()=>{
       while(cursor<covers.length){const index=cursor++;covers[index]=await b50LoadCover(model.entries[index]);complete++;announce(`封面 ${complete} / ${covers.length}`);}
     }));
+    const retry=covers.map((img,index)=>img?null:index).filter(index=>index!==null);
+    if(retry.length){
+      announce('正在重试暂未加载的封面…');let next=0;
+      await Promise.all(Array.from({length:Math.min(4,retry.length)},async()=>{
+        while(next<retry.length){const index=retry[next++];covers[index]=await b50LoadCover(model.entries[index]);}
+      }));
+    }
     const {canvas,missing}=b50Draw(model,covers);
     const blob=await new Promise((resolve,reject)=>{
       try{canvas.toBlob(value=>value?resolve(value):reject(new Error('图片编码失败，请重试。')),'image/png');}
@@ -157,7 +166,7 @@ async function exportB50PNG(options={}){
     });
     b50ClosePreview();b50ExportURL=URL.createObjectURL(blob);
     const filename='PJSK-B50-'+model.generated.replace(/[^0-9]/g,'')+'.png';
-    const report={count:model.count,rating:model.rating,width:canvas.width,height:canvas.height,missingCovers:missing,filename,entries:model.entries};
+    const report={count:model.count,rating:model.rating,width:canvas.width,height:canvas.height,missingCovers:missing,missingCoverIds:model.entries.filter((entry,index)=>!covers[index]).map(entry=>entry.chartId),filename,entries:model.entries};
     window.PJSKB50Export.lastReport=report;
     if(options.download!==false){
       const a=document.createElement('a');a.href=b50ExportURL;a.download=filename;document.body.appendChild(a);a.click();a.remove();
