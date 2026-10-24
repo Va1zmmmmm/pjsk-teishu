@@ -1158,48 +1158,44 @@ const confShort = c => c.startsWith("高") ? "高" : c.startsWith("中") ? "中"
 
 /* ---------- 头部统计 ---------- */
 function renderStats(){
-  const m = DATA.meta, songs = DATA.songs;
-  /* 公共版还没导入任何成绩：按「纯定数表 / 攻略库」口径显示，
-     免得 0 被误读成「你一首都没打过」 */
-  if (PUBLIC && !hasUserData()){
-    const lib = [
-      ["c", m.totalCharts, "谱面（M+E）"],
-      ["g", m.releasedCharts, "国服已实装"],
-      ["v", m.unreleased, "未实装"],
-      ["y", m.withTips, "有攻略"],
-      ["d", m.totalExpert, "EXPERT 谱面"],
-      ["p", m.expertCommunity || 0, "EXPERT 社区定数"],
+  const m=DATA.meta,songs=DATA.songs,box=document.getElementById('stats');
+  const personal=!(PUBLIC && !hasUserData());
+  const groups=['master','expert'].map(difficulty=>{
+    const charts=songs.filter(s=>(s.difficulty||'master')===difficulty);
+    const live=charts.filter(s=>!s.unrel);
+    const fc=live.filter(s=>statusOf(s)==='fc').length;
+    const quick=live.filter(s=>s.quick && statusOf(s)!=='fc');
+    const fields=personal ? [
+      ['g',fc,'已 FC','fc'],
+      ['c',live.length-fc,'未 FC','unfc'],
+      ['d',live.filter(s=>statusOf(s)==='tried').length,'打过未 FC','tried'],
+      ['p',live.filter(s=>statusOf(s)==='never').length,'没打过','never'],
+      ['v',charts.length-live.length,'未实装','unreleased'],
+      ['y',quick.length,'能进 B50','quick'],
+      ['p',quick.filter(s=>s.qtier==='g').length,'🟢 不越级','green'],
+    ] : [
+      ['c',charts.length,'谱面','total'],
+      ['g',live.length,'已实装','released'],
+      ['v',charts.length-live.length,'未实装','unreleased'],
+      ['y',live.filter(s=>s.tips || (s.elems||[]).length).length,'有攻略','tips'],
+      ['d',live.filter(s=>s.basis==='alias').length,'中文译名','alias'],
+      ['p',live.filter(s=>s.bpmVar).length,'变速谱','bpmVar'],
     ];
-    document.getElementById("stats").innerHTML = lib.map(
-      ([k,v,l]) => `<div class="stat ${k}"><b>${v}</b><span>${l}</span></div>`).join("");
-    document.getElementById("pfill").style.width = "0%";
-    document.getElementById("snap").textContent = "全量 " + m.totalCharts + " 张谱面 · 未导入成绩";
-    document.getElementById("snap2").textContent = "未导入";
-    document.getElementById("gen").textContent = m.generated;
-    return;
-  }
-  const fcN = songs.filter(s => statusOf(s) === "fc" && !s.unrel).length;
-  const unfcN = m.releasedCharts - fcN;
-  const triedN = songs.filter(s => statusOf(s) === "tried").length;
-  const neverN = songs.filter(s => statusOf(s) === "never").length;
-  const els = [
-    ["g", fcN, "已 FC"],
-    ["c", unfcN, "未 FC"],
-    ["d", triedN, "打过未 FC"],
-    ["p", neverN, "没打过"],
-    ["v", m.unreleased, "未实装"],
-    ["y", m.quick, "能进 B50"],
-    ["p", (m.quickGreen != null ? m.quickGreen : songs.filter(s => s.qtier === "g").length), "🟢 不越级"],
-  ];
-  document.getElementById("stats").innerHTML = els.map(
-    ([k,v,l]) => `<div class="stat ${k}"><b>${v}</b><span>${l}</span></div>`).join("");
-  const pct = fcN / m.releasedCharts * 100;
-  document.getElementById("pfill").style.width = pct.toFixed(1) + "%";
-  const snapTxt = PUBLIC ? (suiteLoaded ? (suiteTime ? fmtTime(suiteTime) : "未知") : "未导入") : m.snapshot;
-  document.getElementById("snap").textContent = "全量 " + m.totalCharts + " 张谱面 · "
-    + (PUBLIC ? "数据快照 " + snapTxt : "快照 " + m.snapshot);
-  document.getElementById("snap2").textContent = snapTxt;
-  document.getElementById("gen").textContent = m.generated;
+    const master=difficulty==='master',color=master?'var(--purple)':'var(--pink)';
+    const title=master?'MASTER':'EXPERT',name=master?'紫谱':'红谱';
+    return `<div class="stat-group" data-difficulty="${difficulty}" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;border-left:3px solid ${color};padding:3px 0 3px 10px">
+      <div style="min-width:65px;color:${color};font-size:11px;font-weight:800;line-height:1.4">${title}<br><span style="font-size:10px;font-weight:500">${name}</span></div>
+      ${fields.map(([cls,value,label,key])=>`<div class="stat ${cls}" data-metric="${key}" style="min-width:45px"><b>${value}</b><span>${label}</span></div>`).join('')}
+    </div>`;
+  });
+  box.style.display='flex';box.style.flexDirection='column';box.style.alignItems='stretch';box.style.gap='9px';box.style.maxWidth='100%';
+  box.innerHTML=groups.join('');
+  const live=songs.filter(s=>!s.unrel),fc=live.filter(s=>statusOf(s)==='fc').length;
+  document.getElementById('pfill').style.width=personal&&live.length?(fc/live.length*100).toFixed(1)+'%':'0%';
+  const snapshot=PUBLIC?(suiteLoaded?(suiteTime?fmtTime(suiteTime):'未知'):(personal?'手动标记':'未导入')):m.snapshot;
+  document.getElementById('snap').textContent='全量 '+songs.length+' 张谱面 · '+(personal?'快照 '+snapshot:'未导入成绩');
+  document.getElementById('snap2').textContent=snapshot;
+  document.getElementById('gen').textContent=m.generated;
   renderRuler();
 }
 
