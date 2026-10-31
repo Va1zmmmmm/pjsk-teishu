@@ -342,6 +342,21 @@ footer b{color:var(--fg2)}
 /* 难度标签（MASTER 紫 / EXPERT 粉） */
 .tag.dm{background:#ad45df18;border:1px solid #ad45df55;color:#c98cf0}
 .tag.de{background:#ed477118;border:1px solid #ed477155;color:#ff7fa2}
+/* PJSK mobile controls: 2026-10-31 */
+@media(max-width:820px){
+  header{position:static}
+  .tabs{position:static;height:auto}
+  .tabs .in{flex-wrap:wrap;gap:8px}
+  .tabs .seg{flex:1 0 100%;min-width:0}
+  .tabs .seg button{flex:1;min-width:0;padding:7px 6px}
+  .tabs .hint{flex:1 0 100%;white-space:normal;overflow-wrap:anywhere}
+  .tabs .grow{display:none}
+  #btnSuite{margin-left:auto;white-space:nowrap;flex-shrink:0}
+  #btnTheme{margin-left:auto;flex-shrink:0}
+  #btnSuite:not([hidden]) + #btnTheme{margin-left:0}
+  .snapshot,.syndot{white-space:normal;overflow-wrap:anywhere}
+  .bar input[type=search]{max-width:100%}
+}
 </style>
 </head>
 <body>
