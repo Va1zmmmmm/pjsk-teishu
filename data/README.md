@@ -15,6 +15,11 @@
 | `moegirl_bpm.json` | BPM / 时长（含 BPM 区间 = 速度变化谱） | 萌娘百科歌曲表（`parse_moegirl_bpm.py`） |
 | `moegirl_names.json` | 社区中文译名（日文名 → 译名） | 萌娘百科（`parse_moegirl_names.py`） |
 
+> **VS 版条目的攻略映射说明（2026-11-09）**：シャルル、ノマド、雨とペトラ、命ばっかり、花に風、Worlders、ペンタトニック
+> 这 7 首在 pjsekai.com 只以「_バーチャル・シンガーver.」名收录；攻略映射到国服同名谱面共 14 张（MASTER/EXPERT 各 7）。
+> 攻略等级与谱面等级一致（0 冲突），但源站没有谱面指纹，**谱面同一性未证实**；不得据此认定两者是同一张谱。
+> 映射逻辑见 `build_charts_all.py` 的后缀回退。
+
 ⚠️ **CN / JP 两个 master 镜像会持续更新**（2026-10-04 实测：国服 624 → 652 首，新增曲目若不重下就会静默缺失）；
 补新曲要**同时**更新 `cn_master_musics.json` 与 `cn_master_musicDifficulties.json`，只换前者会漏掉新曲的 MASTER 谱面。
 
